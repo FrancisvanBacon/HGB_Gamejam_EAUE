@@ -1,5 +1,5 @@
-﻿using Actors.Items;
-using Actors.Player;
+﻿using Actors.Player;
+using Items;
 
 namespace Interactables {
     public interface IInteractable {

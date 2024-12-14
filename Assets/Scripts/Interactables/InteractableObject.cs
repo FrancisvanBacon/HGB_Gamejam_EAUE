@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Actors.Items;
 using Actors.Player;
+using Items;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -29,6 +29,7 @@ namespace Interactables {
             if (m_eventDictionary.TryGetValue(classType.ToString() + item.ToString(), out UnityEvent reaction)) {
                 reaction?.Invoke();
             }
+            Debug.Log(classType.ToString() + item.ToString());
         }
 
         public void Select() {

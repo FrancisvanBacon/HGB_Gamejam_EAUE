@@ -22,6 +22,11 @@ namespace Interactables {
             
         }
 
+        private void OnDisable() {
+            if (m_currentInteractable != null) m_currentInteractable.Deselect();
+            m_currentInteractable = null;
+        }
+
         private void HandleRaycastHit(RaycastHit2D hit) {
             
             Debug.DrawRay(transform.position, gameObject.transform.up * hit.distance, Color.yellow);

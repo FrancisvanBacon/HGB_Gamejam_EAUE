@@ -1,4 +1,5 @@
-﻿using Actors.Items;
+﻿using System.Collections;
+using Items;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -49,7 +50,7 @@ namespace Actors.Player {
         public void PlayerUseItem() {
             
             if (m_equippedItem == null) return;
-            m_equippedItem.Use();
+            StartCoroutine(ItemUseRoutine());
         }
 
         public void PlayerDropItem() {
@@ -58,13 +59,19 @@ namespace Actors.Player {
             m_equippedItem.Unequip();
             m_equippedItem = null;
         }
-
+        
         public void PlayerEquipItem(IEquippableItem equippedItem) {
             if (m_equippedItem != null) {
                 m_equippedItem.Unequip();
             }
             
             m_equippedItem = equippedItem;
+        }
+
+        private IEnumerator ItemUseRoutine() {
+
+            yield return StartCoroutine(m_moveController.Snap());
+            m_equippedItem.Use();
         }
         
     }
