@@ -2,8 +2,9 @@
 
 namespace Actors.Items {
     public interface IEquippableItem {
-        public void Equipt(ClassType classType);
+        public ItemType ItemType { get; set; }
+        public void Equipt(CharacterStateController character);
         public void Unequipt();
-        public void Use(ClassType classType);
+        public void Use();
     }
 }

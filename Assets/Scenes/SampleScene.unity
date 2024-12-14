@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -38,12 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 12
-  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -66,9 +66,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -212,6 +209,8 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -332,12 +331,12 @@ MonoBehaviour:
   m_RequiresColorTexture: 0
   m_Version: 2
   m_TaaSettings:
-    m_Quality: 3
-    m_FrameInfluence: 0.1
-    m_JitterScale: 1
-    m_MipBias: 0
-    m_VarianceClampScale: 0.9
-    m_ContrastAdaptiveSharpening: 0
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -447,14 +446,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ComponentVersion: 1
+  m_ComponentVersion: 2
   m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
-  m_LightVolumeIntensityEnabled: 0
+  m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
@@ -464,8 +463,10 @@ MonoBehaviour:
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
+  m_ShadowsEnabled: 0
   m_ShadowIntensity: 0.75
+  m_ShadowSoftness: 0
+  m_ShadowSoftnessFalloffIntensity: 0.5
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
@@ -512,7 +513,7 @@ GameObject:
   - component: {fileID: 1405778523}
   - component: {fileID: 1405778522}
   - component: {fileID: 1405778521}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -527,6 +528,7 @@ BoxCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1405778520}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -550,7 +552,8 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -561,7 +564,6 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &1405778522
@@ -576,13 +578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33b9d13f489547f0a304f5da6813ffdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  validItems: 
-  onValidInteraction:
-    m_PersistentCalls:
-      m_Calls: []
-  onInvalidInteraction:
-    m_PersistentCalls:
-      m_Calls: []
+  itemInteractions: []
 --- !u!212 &1405778523
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -600,6 +596,8 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -740,6 +738,8 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -877,7 +877,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 5d2ff1af-e075-4cb9-8b7c-97e6ef4ace57
-    m_ActionName: Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/XInputControllerWindows1/leftStick]
+    m_ActionName: 'Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/XInputControllerWindows1/leftStick]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1915717699}
@@ -893,23 +893,23 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 05e16452-e552-46ae-98a5-037b60fa22da
-    m_ActionName: Player/Look[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow,/XInputControllerWindows1/rightStick]
+    m_ActionName: 'Player/Look[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow,/XInputControllerWindows1/rightStick]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: a63caf3c-fda4-46c2-8b86-d5acf86b4535
-    m_ActionName: Player/Interact[/Keyboard/f,/XInputControllerWindows1/rightTrigger,/Mouse/rightButton,/XInputControllerWindows1/buttonSouth]
+    m_ActionName: 'Player/Interact[/Keyboard/f,/XInputControllerWindows1/rightTrigger,/Mouse/rightButton,/XInputControllerWindows1/buttonSouth]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 276d8f80-2f18-43b3-85a7-d462894485f1
-    m_ActionName: Player/DropItem[/Keyboard/c,/XInputControllerWindows1/buttonEast]
+    m_ActionName: 'Player/DropItem[/Keyboard/c,/XInputControllerWindows1/buttonEast]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: e7444619-bb4c-4826-82fc-1a4d7fc6210f
-    m_ActionName: Player/UseItem[/Mouse/press,/XInputControllerWindows1/leftTrigger,/Keyboard/space,/XInputControllerWindows1/buttonWest]
+    m_ActionName: 'Player/UseItem[/Mouse/press,/XInputControllerWindows1/leftTrigger,/Keyboard/space,/XInputControllerWindows1/buttonWest]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: c4bf60ac-1678-45b4-8e43-da82e218a1f1
-    m_ActionName: Player/Pause[/Keyboard/escape,/Keyboard/p,/XInputControllerWindows1/start,/XInputControllerWindows1/select]
+    m_ActionName: 'Player/Pause[/Keyboard/escape,/Keyboard/p,/XInputControllerWindows1/start,/XInputControllerWindows1/select]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1915717699}
@@ -925,7 +925,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 3fb7809e-2972-4f07-b8be-fe3d4541d392
-    m_ActionName: Player/SwitchToJester[/Keyboard/1,/XInputControllerWindows1/dpad/left]
+    m_ActionName: 'Player/SwitchToJester[/Keyboard/1,/XInputControllerWindows1/dpad/left]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1915717699}
@@ -941,7 +941,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 331eae7c-543b-4394-9c75-d7443a308866
-    m_ActionName: Player/SwitchToWarrior[/Keyboard/2,/XInputControllerWindows1/dpad/up]
+    m_ActionName: 'Player/SwitchToWarrior[/Keyboard/2,/XInputControllerWindows1/dpad/up]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1915717699}
@@ -957,7 +957,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 447f1325-4033-4b8b-8ca3-34943a5dff8c
-    m_ActionName: Player/SwitchToHunter[/Keyboard/3,/XInputControllerWindows1/dpad/right]
+    m_ActionName: 'Player/SwitchToHunter[/Keyboard/3,/XInputControllerWindows1/dpad/right]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1915717699}
@@ -973,7 +973,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: b72e9ba8-9e08-4cd7-98f2-5937087ec06b
-    m_ActionName: Player/SwitchToLastUsed[/XInputControllerWindows1/dpad/down,/Keyboard/4]
+    m_ActionName: 'Player/SwitchToLastUsed[/XInputControllerWindows1/dpad/down,/Keyboard/4]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1915717699}
@@ -989,7 +989,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 49e1ab51-218f-4b59-862e-e493436353e1
-    m_ActionName: Player/SwitchToNext[/Keyboard/e,/XInputControllerWindows1/rightShoulder]
+    m_ActionName: 'Player/SwitchToNext[/Keyboard/e,/XInputControllerWindows1/rightShoulder]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1915717699}
@@ -1005,7 +1005,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: bc6d5392-4bce-4fab-aa4a-af0082e17cf3
-    m_ActionName: Player/SwitchToPrevious[/Keyboard/q,/XInputControllerWindows1/leftShoulder]
+    m_ActionName: 'Player/SwitchToPrevious[/Keyboard/q,/XInputControllerWindows1/leftShoulder]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -1064,6 +1064,8 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1191,7 +1193,7 @@ GameObject:
   - component: {fileID: 2133659849}
   - component: {fileID: 2133659851}
   - component: {fileID: 2133659852}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1215,6 +1217,8 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1277,13 +1281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33b9d13f489547f0a304f5da6813ffdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  validItems: 
-  onValidInteraction:
-    m_PersistentCalls:
-      m_Calls: []
-  onInvalidInteraction:
-    m_PersistentCalls:
-      m_Calls: []
+  itemInteractions: []
 --- !u!61 &2133659852
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1292,6 +1290,7 @@ BoxCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2133659848}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1315,7 +1314,8 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -1326,7 +1326,6 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!1660057539 &9223372036854775807

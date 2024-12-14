@@ -7,13 +7,20 @@ namespace Actors.Player {
     public class CharacterStateController : ActorStateController {
         
         [SerializeField] private ClassType classType;
+        public ClassType ClassType => classType;
         
         private bool m_isPLayerControlled = false;
         public bool IsPlayerControlled => m_isPLayerControlled;
         
         private MoveController m_moveController;
         private IEquippableItem m_equippedItem;
-        
+        public ItemType CurrentItemType {
+            get {
+                if (m_equippedItem == null) return ItemType.None;
+                return m_equippedItem.ItemType;
+            }
+        }
+
         protected override void Update() {
             base.Update();
         }
@@ -42,7 +49,7 @@ namespace Actors.Player {
         public void PlayerUseItem() {
             
             if (m_equippedItem == null) return;
-            m_equippedItem.Use(classType);
+            m_equippedItem.Use();
         }
 
         public void PlayerDropItem() {

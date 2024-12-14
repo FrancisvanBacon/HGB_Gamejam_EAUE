@@ -10,7 +10,7 @@ namespace Interactables {
 
         void FixedUpdate() {
             
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, gameObject.transform.up, searchRadius);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, gameObject.transform.up, searchRadius, LayerMask.GetMask("Interactable"));
             
             if (hit) {
                 HandleRaycastHit(hit);
