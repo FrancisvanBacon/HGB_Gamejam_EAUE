@@ -40,9 +40,8 @@ namespace Actors.Player {
         }
 
         public void PlayerUseItem() {
-
-            if (m_equippedItem == null) return;
             
+            if (m_equippedItem == null) return;
             m_equippedItem.Use(classType);
         }
 

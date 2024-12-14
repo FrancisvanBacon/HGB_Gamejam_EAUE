@@ -4,9 +4,9 @@ using UnityEngine;
 namespace Interactables {
     public class InteractableFinder : MonoBehaviour {
         
-        
         [SerializeField] private float searchRadius = 5f;
         private IInteractable m_currentInteractable;
+        public IInteractable CurrentInteractable() => m_currentInteractable;
 
         void FixedUpdate() {
             

@@ -1,16 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Actors.Items;
+using Actors.Player;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
 
 namespace Interactables {
     public class InteractableObject : MonoBehaviour, IInteractable {
 
-        [SerializeField] private List<ItemType> validItems;
-        [SerializeField] private UnityEvent onValidInteraction;
-        [SerializeField] private UnityEvent onInvalidInteraction;
-
+        [SerializeField] private List<ItemReaction> itemInteractions;
+        
+        private Dictionary<string, UnityEvent> m_eventDictionary = new Dictionary<string, UnityEvent>();
+        
         private void Start() {
             gameObject.layer = LayerMask.NameToLayer("Interactable");
             
@@ -18,15 +19,20 @@ namespace Interactables {
             if (image != null) {
                 image.color = Color.yellow;
             }
+
+            foreach (var itemReaction in itemInteractions) {
+                m_eventDictionary.Add(itemReaction.ClassType.ToString() + itemReaction.ItemType.ToString(), itemReaction.OnReaction);
+            }
         }
         
-        public void Interact(IEquippableItem item) {
-            
+        public void Interact(ClassType classType, ItemType item) {
+            if (m_eventDictionary.TryGetValue(classType.ToString() + item.ToString(), out UnityEvent reaction)) {
+                reaction?.Invoke();
+            }
         }
 
         public void Select() {
             SpriteRenderer image = gameObject.GetComponent<SpriteRenderer>();
-            Debug.Log("Selected");
 
             if (image != null) {
                 image.color = Color.red;
@@ -34,7 +40,6 @@ namespace Interactables {
         }
 
         public void Deselect() {
-            Debug.Log("Deselected");
             SpriteRenderer image = gameObject.GetComponent<SpriteRenderer>();
 
             if (image != null) {
@@ -42,4 +47,11 @@ namespace Interactables {
             }
         }
     }
+
+    [Serializable]
+    public class ItemReaction {
+        public ClassType ClassType;
+        public ItemType ItemType;
+        public UnityEvent OnReaction;
+    } 
 }
