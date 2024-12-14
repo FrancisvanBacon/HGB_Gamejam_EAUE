@@ -55,13 +55,13 @@ namespace Actors.Player {
         public void PlayerDropItem() {
             if (m_equippedItem == null) return;
             
-            m_equippedItem.Unequipt();
+            m_equippedItem.Unequip();
             m_equippedItem = null;
         }
 
         public void PlayerEquipItem(IEquippableItem equippedItem) {
             if (m_equippedItem != null) {
-                m_equippedItem.Unequipt();
+                m_equippedItem.Unequip();
             }
             
             m_equippedItem = equippedItem;

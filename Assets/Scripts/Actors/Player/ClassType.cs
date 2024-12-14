@@ -4,6 +4,5 @@
         Jester,
         Warrior,
         Hunter,
-        
     }
 }

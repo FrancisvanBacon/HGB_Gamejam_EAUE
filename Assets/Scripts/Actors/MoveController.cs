@@ -2,19 +2,19 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Actors {
-    [RequireComponent(typeof(CharacterController))]
+    [RequireComponent(typeof(Rigidbody2D))]
     public class MoveController : MonoBehaviour {
         
         public float Speed = 4.0f;
         
-        private CharacterController m_controller;
+        private Rigidbody2D m_rigidbody2D;
         private Vector3 m_playerVelocity;
         
         private Vector2 m_movementInput = Vector2.zero;
         private Vector2 m_lookInput = Vector2.zero;
         
         private void Start() {
-            m_controller = gameObject.GetComponent<CharacterController>();
+            m_rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
             m_lookInput = gameObject.transform.up;
         }
 
@@ -31,17 +31,15 @@ namespace Actors {
             m_lookInput = lookDirection.normalized;
         }
         
-
-        void Update() {
-
+        void FixedUpdate() {
             Vector3 move = new Vector3(m_movementInput.x, m_movementInput.y, 0);
-            m_controller.Move(move * Time.deltaTime * Speed);
-                
+            
+            m_rigidbody2D.MovePosition(m_rigidbody2D.position + (m_movementInput * Speed * Time.fixedDeltaTime));
+            
+            HandleLookInput();
             if (move != Vector3.zero) {
                 gameObject.transform.up = move;
             }
-            
-            HandleLookInput();
         }
 
         private void HandleLookInput() {

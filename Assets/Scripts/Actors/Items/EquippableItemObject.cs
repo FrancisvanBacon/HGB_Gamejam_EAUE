@@ -20,26 +20,31 @@ namespace Actors.Items {
         }
 
         private void OnTriggerEnter2D(Collider2D other) {
-
+            
+            Debug.Log("Entered");
+            
             if (other.gameObject.TryGetComponent(out CharacterStateController character) 
             && character.CurrentItemType == ItemType.None) {
-                Equipt(character);
+                Equip(character);
             }
             
         }
 
         public ItemType ItemType { get; set; }
 
-        public void Equipt(CharacterStateController character) {
+        public void Equip(CharacterStateController character) {
 
             m_currentClass = character.ClassType;
             transform.parent = character.transform;
-            transform.position = Vector3.zero;
+            transform.localPosition = Vector3.zero;
+            Debug.Log("Equipped Item");
         }
 
-        public void Unequipt() {
+        public void Unequip() {
+        
             transform.parent = null;
             m_currentClass = ClassType.None;
+            Debug.Log("Unequipped Item");
         }
 
         public void Use() {
@@ -47,6 +52,7 @@ namespace Actors.Items {
             if (m_interactableFinder.CurrentInteractable() == null) return;
             
             m_interactableFinder.CurrentInteractable().Interact(m_currentClass, type);
+            Debug.Log(m_currentClass.ToString() + type.ToString());
         }
     }
 }
