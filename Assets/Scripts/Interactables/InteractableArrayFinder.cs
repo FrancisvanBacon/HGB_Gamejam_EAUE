@@ -12,6 +12,8 @@ namespace Interactables {
         private List<IInteractable> m_interactables = new List<IInteractable>();
         public override bool HasInteractable() => m_interactables.Count > 0;
 
+        [SerializeField] private bool adressStopGlobally;
+
         private void Start() {
             gameObject.GetComponent<Collider2D>().isTrigger = true;
         }
@@ -31,7 +33,7 @@ namespace Interactables {
             LayerMask.GetMask("Interactable"));
 
             foreach (var collider in colliders) {
-
+                
                 if (collider.collider.gameObject.TryGetComponent<IInteractable>(out IInteractable interactable)) {
                     m_interactables.Add(interactable);
                     interactable.Select();
@@ -54,10 +56,17 @@ namespace Interactables {
         protected override void OnDisable() {
             m_interactables.Clear();
         }
-
+        
         public override void Interact(ClassType classType, ItemType itemType, string param = "") {
-            
-            Debug.Log("Interacting");
+
+            if (adressStopGlobally && param.Equals("Stop")) {
+                var interactables = GameObject.FindObjectsByType<InteractableObject>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+
+                foreach (var interactable in interactables) {
+                    interactable.Interact(classType, itemType, param);
+                }
+
+            }
             
             foreach (IInteractable interactable in m_interactables) {
                 interactable.Interact(classType, itemType, param);

@@ -41,7 +41,12 @@ namespace Input {
             
             if (context.performed && m_currentCharacterController != null) {
                 m_currentCharacterController.PlayerDropItem();
-                Debug.Log("Drop Input");
+            }
+        }
+
+        public void Interact(InputAction.CallbackContext context) {
+            if (context.performed && m_currentCharacterController != null) {
+                m_currentCharacterController.PlayerInteract();
             }
         }
 

@@ -1,22 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Actors.Enemys {
     public class PatrolState : MonoBehaviour, IState {
     
         [SerializeField] private List<Transform> waypoints;
+        private float m_moveSpeed;
         private int currentWaypointIndex;
-
-        private bool m_isPatroling;
         
         public void OnEnter(ActorStateController actor) {
             SetIndexToNearestWaypoint();
-            m_isPatroling = true;
-            StartCoroutine(PatrolRoutine((EnemyStateController)actor));
+            m_moveSpeed = actor.Speed;
         }
 
         public void FixedUpdateState(ActorStateController actor) {
+        
+            if (Vector3.Distance(actor.transform.position, waypoints[currentWaypointIndex].position) > 0.01f) {
+                actor.transform.position = Vector3.MoveTowards(
+                actor.transform.position,
+                    waypoints[currentWaypointIndex].position,
+                    0.01f * m_moveSpeed);
+            }
+            else {
+                currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Count;
+            }
             
         }
 
@@ -29,24 +38,6 @@ namespace Actors.Enemys {
         }
 
         public void OnExit(ActorStateController actor) {
-            ((EnemyStateController)actor).CurrentTarget = this.transform;
-            m_isPatroling = false;
-            StopCoroutine("PatrolRoutine");
-        }
-
-        private IEnumerator PatrolRoutine(EnemyStateController actor) {
-            
-            actor.CurrentTarget = waypoints[currentWaypointIndex];
-            
-            while (m_isPatroling) {
-                
-                yield return actor.MoveToTargetRoutine();
-                
-                currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Count;
-                actor.CurrentTarget = waypoints[currentWaypointIndex];
-                
-                yield return null;
-            }
             
         }
 

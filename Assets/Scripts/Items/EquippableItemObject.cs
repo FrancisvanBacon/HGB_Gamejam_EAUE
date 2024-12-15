@@ -1,23 +1,30 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Actors.Player;
 using Interactables;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 namespace Items {
-    [RequireComponent(typeof(BoxCollider2D), typeof(InteractableFinder), typeof(GridSnap))]
+    [RequireComponent(typeof(BoxCollider2D), typeof(FinderSwitcher), typeof(GridSnap))]
     public class EquippableItemObject : MonoBehaviour, IEquippableItem {
 
         [SerializeField] protected ItemType type;
-        [SerializeField] private List<ClassType> toggleableInteraction;
+        [SerializeField] private List<ClassType> optionalParamInteraction;
+        
         private bool m_toggle;
         
+        private FinderSwitcher m_FinderSwitcherr;
         private InteractableFinder m_interactableFinder;
         
-        private ClassType m_currentClass;
+        private CharacterStateController m_currentClass;
 
         private bool m_wasDropped;
         
         private GridSnap m_gridSnap;
+        
+        [SerializeField] private UnityEvent<ClassType> OnEquipped;
 
         private void Start() {
             BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
@@ -25,14 +32,12 @@ namespace Items {
             boxCollider.isTrigger = true;
             ItemType = type;
             
-            m_interactableFinder = gameObject.GetComponent<InteractableFinder>();
+            m_FinderSwitcherr = gameObject.GetComponent<FinderSwitcher>();
             
             m_gridSnap = gameObject.GetComponent<GridSnap>();
         }
 
         private void OnTriggerEnter2D(Collider2D other) {
-            
-            Debug.Log("Entered");
             
             if (other.gameObject.TryGetComponent(out CharacterStateController character) 
             && character.CurrentItemType == ItemType.None) {
@@ -42,8 +47,6 @@ namespace Items {
         }
 
         private void OnTriggerExit2D(Collider2D other) {
-        
-            Debug.Log("Exited");
             
             if (other.gameObject.TryGetComponent(out CharacterStateController character)) {
                 m_wasDropped = false;
@@ -55,43 +58,62 @@ namespace Items {
         public void Equip(CharacterStateController character) {
             
             if (m_wasDropped) return;
-
-            m_interactableFinder.enabled = true;
-            m_currentClass = character.ClassType;
+            
+            m_currentClass = character;
             transform.parent = character.transform;
             transform.rotation = character.transform.rotation;
             transform.localPosition = Vector3.zero;
             character.PlayerEquipItem(this);
-            Debug.Log("Equipped Item");
+            gameObject.GetComponent<Collider2D>().enabled = false;
+            
+            m_FinderSwitcherr.SwitchFinders(character.ClassType);
+            m_interactableFinder = m_FinderSwitcherr.CurrentFinder;
+            
+            if (optionalParamInteraction.Contains(m_currentClass.ClassType)) {
+                m_toggle = false;
+            }
         }
 
         public void Unequip() {
             
-            if (toggleableInteraction.Contains(m_currentClass)) {
-                m_interactableFinder.Interact(m_currentClass, type, "Stop");
-                return;
+            if (optionalParamInteraction.Contains(m_currentClass.ClassType)) {
+                m_interactableFinder.Interact(m_currentClass.ClassType, type, "Stop");
+                m_currentClass.InterpretToggleInteraction(m_currentClass.ClassType, type, "Stop");
+                m_toggle = true;
             }
             m_interactableFinder.enabled = false;
             transform.parent = null;
             transform.rotation = Quaternion.identity;
-            m_currentClass = ClassType.None;
+            m_currentClass = null;
             m_wasDropped = true;
+            gameObject.GetComponent<Collider2D>().enabled = true;
             StartCoroutine(m_gridSnap.SnapCoroutine());
-            Debug.Log("Unequipped Item");
         }
 
         public virtual void Use() {
             
             if (!m_interactableFinder.HasInteractable()) return;
-
-            if (toggleableInteraction.Contains(m_currentClass)) {
+            
+            if (optionalParamInteraction.Contains(m_currentClass.ClassType)) {
                 m_toggle = !m_toggle;
-                Debug.Log(m_toggle ? "Start" : "Stop");
-                m_interactableFinder.Interact(m_currentClass, type, m_toggle ? "Start" : "Stop");
+                m_interactableFinder.Interact(m_currentClass.ClassType, type, m_toggle ? "Start" : "Stop");
+                m_currentClass.InterpretToggleInteraction(m_currentClass.ClassType, type, m_toggle ? "Start" : "Stop");
                 return;
             }
-            
-            m_interactableFinder.Interact(m_currentClass, type);
+            m_currentClass.InterpretToggleInteraction(m_currentClass.ClassType, type, "");
+            m_interactableFinder.Interact(m_currentClass.ClassType, type);
         }
+        
+        public void SetInteractableFinderStringTage(string tagName) {
+            if (m_interactableFinder is TagInteractableFinder) {
+                ((TagInteractableFinder)m_interactableFinder).InteractableTag = tagName;
+            }
+        }
+    }
+
+    [Serializable]
+    public class ClassStringWrapper {
+        public ClassType ClassType;
+        public string value;
     }
 }

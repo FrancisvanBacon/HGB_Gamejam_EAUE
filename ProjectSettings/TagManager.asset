@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - HeavyObject
+  - LightObject
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -12,14 +15,14 @@ TagManager:
   - Water
   - UI
   - PlayerActors
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Walls
+  - HidingPlayerActors
+  - PassthroughWalls
+  - Projectiles
+  - Pit
+  - SurfingPlayerActors
+  - Waterboundary
+  - Pier
   - 
   - 
   - 

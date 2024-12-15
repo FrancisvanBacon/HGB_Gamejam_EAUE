@@ -1,15 +1,25 @@
-﻿namespace Actors.Player {
+﻿using UnityEngine;
+
+namespace Actors.Player {
     public class HidingState : IState {
+
+        private float m_lastSpeed;
+        private const float HIDINGSPEED = 2;
         public void OnEnter(ActorStateController actor) {
-            throw new System.NotImplementedException();
+            m_lastSpeed = actor.Speed;
+            actor.gameObject.layer = LayerMask.NameToLayer("HidingPlayerActors");
+
+            var character = actor as CharacterStateController;
+            
+            character.SetSpeed(HIDINGSPEED);
         }
 
         public void FixedUpdateState(ActorStateController actor) {
-            throw new System.NotImplementedException();
+            
         }
 
         public void OnAction(ActorStateController actor) {
-            throw new System.NotImplementedException();
+            
         }
 
         public void OnHurt(ActorStateController actor) {
@@ -17,7 +27,10 @@
         }
 
         public void OnExit(ActorStateController actor) {
-            throw new System.NotImplementedException();
+            var character = actor as CharacterStateController;
+            
+            character.SetSpeed(m_lastSpeed);
+            actor.gameObject.layer = LayerMask.NameToLayer("PlayerActors");
         }
     }
 }

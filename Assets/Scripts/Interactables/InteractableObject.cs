@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using Actors;
 using Actors.Player;
 using Items;
 using UnityEngine;
 using UnityEngine.Events;
 
 namespace Interactables {
-    public class InteractableObject : MonoBehaviour, IInteractable {
-
+    public class InteractableObject : ActorStateController, IInteractable {
+        
         [SerializeField] private List<ItemReaction> itemInteractions;
         
         private Dictionary<string, UnityEvent> m_eventDictionary = new Dictionary<string, UnityEvent>();
         
-        private void Start() {
-            gameObject.layer = LayerMask.NameToLayer("Interactable");
+        protected override void Start() {
+            base.Start();
             
             SpriteRenderer image = gameObject.GetComponent<SpriteRenderer>();
             if (image != null) {
@@ -31,10 +32,10 @@ namespace Interactables {
         public void Interact(ClassType classType, ItemType item, string param = "") {
             if (m_eventDictionary.TryGetValue(classType.ToString() + item.ToString() + param, out UnityEvent reaction)) {
                 reaction?.Invoke();
-                Debug.Log(classType.ToString() + item.ToString() + param + "Succesfully interacted");
+                Debug.Log(classType.ToString() + item.ToString() + param + "Succesfully interacted with Interactable");
             }
             else {
-                Debug.Log(classType.ToString() + item.ToString() + param + " Not interacted");
+                Debug.Log(classType.ToString() + item.ToString() + param + "Interactable did not react");
             }
             
         }
