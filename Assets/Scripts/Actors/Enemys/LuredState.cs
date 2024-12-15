@@ -1,26 +1,22 @@
-﻿using UnityEngine;
+﻿using Items;
+using UnityEngine;
 
 namespace Actors.Enemys {
     public class LuredState : IState {
 
         private Transform m_targetTransform;
         private float m_lureDistance = 3f;
-        private float m_moveSpeed = 2.0f;
+        private float m_maxDistance = 5f;
+        private float m_moveSpeed = 2.3f;
 
-        public LuredState(Transform mTargetTransform, float mLureDistance, float mMoveSpeed) {
+        public LuredState(Transform mTargetTransform) {
             m_targetTransform = mTargetTransform;
-            m_lureDistance = mLureDistance;
-            m_moveSpeed = mMoveSpeed;
         }
 
         public void OnEnter(ActorStateController actor) {
-            
-            EnemyStateController enemy = actor as EnemyStateController;
-
-            if (enemy == null) {
-                Debug.LogWarning("No EnemyController found");
-                return;
-            }
+            var rigidbody = actor.gameObject.GetComponent<Rigidbody2D>();
+            rigidbody.constraints = RigidbodyConstraints2D.None;
+            rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
         
         public void FixedUpdateState(ActorStateController actor) {
@@ -30,6 +26,12 @@ namespace Actors.Enemys {
                 actor.transform.position,
                     m_targetTransform.position,
                     0.01f * m_moveSpeed);
+            }
+
+            if (Vector3.Distance(actor.transform.position, m_targetTransform.position) > m_maxDistance) {
+                
+                m_targetTransform.gameObject.GetComponentInChildren<EquippableItemObject>().Use();
+                actor.ResetState();
             }
             
         }
@@ -43,7 +45,8 @@ namespace Actors.Enemys {
         }
 
         public void OnExit(ActorStateController actor) {
-            
+            var rigidbody = actor.gameObject.GetComponent<Rigidbody2D>();
+            rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
         }
     }
 }

@@ -1,21 +1,29 @@
 ﻿using System;
+using System.Collections.Generic;
 using Actors.Player;
 using Items;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Interactables {
     public class InteractableFinder : MonoBehaviour {
         
         [SerializeField] protected float searchRadius = 5f;
-        private IInteractable m_currentInteractable;
+        [SerializeField] private List<string> layers;
+        protected IInteractable m_currentInteractable;
+        private int m_layerMask;
         public virtual bool HasInteractable() => m_currentInteractable != null;
+        
+        private void Start() {
+            m_layerMask = LayerMask.GetMask(layers.ToArray());
+        }
 
         protected virtual void FixedUpdate() {
-            
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, 
-            gameObject.transform.up, 
-            searchRadius, 
-            LayerMask.GetMask("Interactable"));
+
+            RaycastHit2D hit = Physics2D.Raycast(transform.position,
+                gameObject.transform.up,
+                searchRadius,
+                m_layerMask);
             
             if (hit) {
                 HandleRaycastHit(hit);
@@ -36,8 +44,8 @@ namespace Interactables {
                 m_currentInteractable.Interact(classType, itemType, param);
             }
         }
-
-        private void HandleRaycastHit(RaycastHit2D hit) {
+        
+        protected virtual void HandleRaycastHit(RaycastHit2D hit) {
             
             Debug.DrawRay(transform.position, gameObject.transform.up * hit.distance, Color.yellow);
             IInteractable interactable = hit.collider.gameObject.GetComponent<IInteractable>();

@@ -7,7 +7,7 @@ namespace Actors {
     [RequireComponent(typeof(Rigidbody2D), typeof(GridSnap))]
     public class MoveController : MonoBehaviour {
         
-        public float Speed = 4.0f;
+        [HideInInspector] public float Speed = 4.0f;
         
         private Rigidbody2D m_rigidbody2D;
         private Vector3 m_playerVelocity;
@@ -16,6 +16,8 @@ namespace Actors {
         private Vector2 m_lookInput = Vector2.zero;
 
         private GridSnap m_gridSnap;
+
+        public bool LockRotation;
         
         private void Start() {
             m_rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
@@ -33,11 +35,8 @@ namespace Actors {
         }
 
         public IEnumerator Snap() {
+            m_movementInput = Vector2.zero;
             yield return m_gridSnap.SnapCoroutine();
-        }
-
-        public void SnapInstant() {
-            m_gridSnap.SnapInstant();
         }
 
         public void Stop() {
@@ -54,6 +53,8 @@ namespace Actors {
         }
 
         private void HandleLookInput() {
+
+            if (LockRotation) return;
 
             if (m_movementInput == Vector2.zero && m_lookInput == Vector2.zero) {
                 return;
