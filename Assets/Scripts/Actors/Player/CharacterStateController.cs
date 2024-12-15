@@ -1,4 +1,5 @@
-﻿using Actors.Items;
+﻿using System.Collections;
+using Items;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,35 +22,28 @@ namespace Actors.Player {
             }
         }
 
-        protected override void Update() {
-            base.Update();
+        protected override void FixedUpdate() {
+            base.FixedUpdate();
         }
 
         private void Start() {
             m_moveController = gameObject.GetComponent<MoveController>();
         }
 
-        public void EnablePlayerControl() {
-            m_isPLayerControlled = true;
-        }
+        public void EnablePlayerControl() => m_isPLayerControlled = true;
 
         public void DisablePlayerControl() {
             m_moveController.Stop();
             m_isPLayerControlled = false;
         }
         
-        public void PlayerMove(InputAction.CallbackContext context) {
-            m_moveController.Move(context.ReadValue<Vector2>());
-        }
-
-        public void PlayerLook(InputAction.CallbackContext context) {
-            m_moveController.Look(context.ReadValue<Vector2>());
-        }
+        public void PlayerMove(InputAction.CallbackContext context) => m_moveController.Move(context.ReadValue<Vector2>());
+        public void PlayerLook(InputAction.CallbackContext context) => m_moveController.Look(context.ReadValue<Vector2>());
 
         public void PlayerUseItem() {
             
             if (m_equippedItem == null) return;
-            m_equippedItem.Use();
+            StartCoroutine(ItemUseRoutine());
         }
 
         public void PlayerDropItem() {
@@ -58,13 +52,39 @@ namespace Actors.Player {
             m_equippedItem.Unequip();
             m_equippedItem = null;
         }
-
+        
         public void PlayerEquipItem(IEquippableItem equippedItem) {
             if (m_equippedItem != null) {
                 m_equippedItem.Unequip();
             }
             
             m_equippedItem = equippedItem;
+        }
+
+        private IEnumerator ItemUseRoutine() {
+
+            yield return StartCoroutine(m_moveController.Snap());
+            m_equippedItem.Use();
+        }
+
+        public void Drag() {
+            
+        }
+
+        public void Hide() {
+            
+        }
+
+        public void Grapple() {
+            
+        }
+
+        public void Lure() {
+            
+        }
+
+        public void Surf() {
+            
         }
         
     }

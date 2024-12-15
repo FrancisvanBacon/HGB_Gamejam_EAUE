@@ -1,4 +1,4 @@
-﻿namespace Actors.Items {
+﻿namespace Items {
     public enum ItemType {
         None,
         Lute,

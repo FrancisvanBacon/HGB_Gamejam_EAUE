@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Actors.Items;
 using Actors.Player;
+using Items;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -19,16 +19,24 @@ namespace Interactables {
             if (image != null) {
                 image.color = Color.yellow;
             }
-
+            
             foreach (var itemReaction in itemInteractions) {
-                m_eventDictionary.Add(itemReaction.ClassType.ToString() + itemReaction.ItemType.ToString(), itemReaction.OnReaction);
+                m_eventDictionary.Add(itemReaction.ClassType.ToString() + 
+                itemReaction.ItemType.ToString() + 
+                itemReaction.optionalparam, 
+                itemReaction.OnReaction);
             }
         }
         
-        public void Interact(ClassType classType, ItemType item) {
-            if (m_eventDictionary.TryGetValue(classType.ToString() + item.ToString(), out UnityEvent reaction)) {
+        public void Interact(ClassType classType, ItemType item, string param = "") {
+            if (m_eventDictionary.TryGetValue(classType.ToString() + item.ToString() + param, out UnityEvent reaction)) {
                 reaction?.Invoke();
+                Debug.Log(classType.ToString() + item.ToString() + param + "Succesfully interacted");
             }
+            else {
+                Debug.Log(classType.ToString() + item.ToString() + param + " Not interacted");
+            }
+            
         }
 
         public void Select() {
@@ -52,6 +60,7 @@ namespace Interactables {
     public class ItemReaction {
         public ClassType ClassType;
         public ItemType ItemType;
+        public string optionalparam;
         public UnityEvent OnReaction;
     } 
 }
