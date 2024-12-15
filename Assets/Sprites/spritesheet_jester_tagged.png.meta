@@ -1,0 +1,2352 @@
+fileFormatVersion: 2
+guid: 6b4324824e2c2704896acac7f17a6741
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5443518338199793561
+    second: spritesheet_jester_tagged_0
+  - first:
+      213: 2904699377948411209
+    second: spritesheet_jester_tagged_1
+  - first:
+      213: -2610010916905859196
+    second: spritesheet_jester_tagged_2
+  - first:
+      213: -2780809131990074627
+    second: spritesheet_jester_tagged_3
+  - first:
+      213: 8563181313332106871
+    second: spritesheet_jester_tagged_4
+  - first:
+      213: -4517681219418967015
+    second: spritesheet_jester_tagged_5
+  - first:
+      213: -557551982107126901
+    second: spritesheet_jester_tagged_6
+  - first:
+      213: 6696939099842422899
+    second: spritesheet_jester_tagged_7
+  - first:
+      213: -8691894528419167371
+    second: spritesheet_jester_tagged_8
+  - first:
+      213: -63039787067512769
+    second: spritesheet_jester_tagged_9
+  - first:
+      213: -5911981273145315407
+    second: spritesheet_jester_tagged_10
+  - first:
+      213: -1935647780126159765
+    second: spritesheet_jester_tagged_11
+  - first:
+      213: 936288903990495916
+    second: spritesheet_jester_tagged_12
+  - first:
+      213: 5379457147493618153
+    second: spritesheet_jester_tagged_13
+  - first:
+      213: 2231695458203879760
+    second: spritesheet_jester_tagged_14
+  - first:
+      213: 5771036659277065745
+    second: spritesheet_jester_tagged_15
+  - first:
+      213: -8971476787353542768
+    second: spritesheet_jester_tagged_16
+  - first:
+      213: -8381171717393049707
+    second: spritesheet_jester_tagged_17
+  - first:
+      213: 5816597272073315527
+    second: spritesheet_jester_tagged_18
+  - first:
+      213: 2827582808934518095
+    second: spritesheet_jester_tagged_19
+  - first:
+      213: -6457990345464105719
+    second: spritesheet_jester_tagged_20
+  - first:
+      213: 1186022023869964216
+    second: spritesheet_jester_tagged_21
+  - first:
+      213: -6129075460699403174
+    second: spritesheet_jester_tagged_22
+  - first:
+      213: -6149810437863503447
+    second: spritesheet_jester_tagged_23
+  - first:
+      213: -844285207938592434
+    second: spritesheet_jester_tagged_24
+  - first:
+      213: -136167521177683417
+    second: spritesheet_jester_tagged_25
+  - first:
+      213: -5693871798657350285
+    second: spritesheet_jester_tagged_26
+  - first:
+      213: -8775615817838299222
+    second: spritesheet_jester_tagged_27
+  - first:
+      213: -2412773979054145838
+    second: spritesheet_jester_tagged_28
+  - first:
+      213: 165777962155029824
+    second: spritesheet_jester_tagged_29
+  - first:
+      213: -8222225400817489804
+    second: spritesheet_jester_tagged_30
+  - first:
+      213: 7942578299467438060
+    second: spritesheet_jester_tagged_31
+  - first:
+      213: -7674488449868514442
+    second: spritesheet_jester_tagged_32
+  - first:
+      213: -1217514631534257923
+    second: spritesheet_jester_tagged_33
+  - first:
+      213: 246500907401636525
+    second: spritesheet_jester_tagged_34
+  - first:
+      213: 6641582480454196210
+    second: spritesheet_jester_tagged_35
+  - first:
+      213: -512575965930435916
+    second: spritesheet_jester_tagged_36
+  - first:
+      213: -2270403992045432836
+    second: spritesheet_jester_tagged_37
+  - first:
+      213: 3534602746221666438
+    second: spritesheet_jester_tagged_38
+  - first:
+      213: 7587533081459471357
+    second: spritesheet_jester_tagged_39
+  - first:
+      213: 1281992344584022645
+    second: spritesheet_jester_tagged_40
+  - first:
+      213: 3031434349624917051
+    second: spritesheet_jester_tagged_41
+  - first:
+      213: -2265828536584083603
+    second: spritesheet_jester_tagged_42
+  - first:
+      213: -5797081034353627742
+    second: spritesheet_jester_tagged_43
+  - first:
+      213: 2838955095103054771
+    second: spritesheet_jester_tagged_44
+  - first:
+      213: -145228234625043537
+    second: spritesheet_jester_tagged_45
+  - first:
+      213: -4635387601034224256
+    second: spritesheet_jester_tagged_46
+  - first:
+      213: 4259346997392987224
+    second: spritesheet_jester_tagged_47
+  - first:
+      213: -4663980015877802964
+    second: spritesheet_jester_tagged_48
+  - first:
+      213: -3967677552392459869
+    second: spritesheet_jester_tagged_49
+  - first:
+      213: 4692041092419715841
+    second: spritesheet_jester_tagged_50
+  - first:
+      213: -4637853765201711424
+    second: spritesheet_jester_tagged_51
+  - first:
+      213: -6881084305195174450
+    second: spritesheet_jester_tagged_52
+  - first:
+      213: -7369698284627156947
+    second: spritesheet_jester_tagged_53
+  - first:
+      213: 4851524865242260575
+    second: spritesheet_jester_tagged_54
+  - first:
+      213: -7823018797924468384
+    second: spritesheet_jester_tagged_55
+  - first:
+      213: -34355308477197742
+    second: spritesheet_jester_tagged_56
+  - first:
+      213: -3617617311171597083
+    second: spritesheet_jester_tagged_57
+  - first:
+      213: 5089957028996701306
+    second: spritesheet_jester_tagged_58
+  - first:
+      213: 8291388988798854729
+    second: spritesheet_jester_tagged_59
+  - first:
+      213: -7122469132697466155
+    second: spritesheet_jester_tagged_60
+  - first:
+      213: 4010688674964179259
+    second: spritesheet_jester_tagged_61
+  - first:
+      213: 9159848386384799974
+    second: spritesheet_jester_tagged_62
+  - first:
+      213: 509733964729102408
+    second: spritesheet_jester_tagged_63
+  - first:
+      213: 1049946420806825519
+    second: spritesheet_jester_tagged_64
+  - first:
+      213: -1022177814197077840
+    second: spritesheet_jester_tagged_65
+  - first:
+      213: 6738468752760648287
+    second: spritesheet_jester_tagged_66
+  - first:
+      213: 2720442540331273269
+    second: spritesheet_jester_tagged_67
+  - first:
+      213: 2649076926326769242
+    second: spritesheet_jester_tagged_68
+  - first:
+      213: -6377651758859814677
+    second: spritesheet_jester_tagged_69
+  - first:
+      213: -8159103588535771745
+    second: spritesheet_jester_tagged_70
+  - first:
+      213: 713145894731718722
+    second: spritesheet_jester_tagged_71
+  - first:
+      213: -7520735417561958790
+    second: spritesheet_jester_tagged_72
+  - first:
+      213: 7792563206082598590
+    second: spritesheet_jester_tagged_73
+  - first:
+      213: 3971488895306604763
+    second: spritesheet_jester_tagged_74
+  - first:
+      213: -7246741878148059055
+    second: spritesheet_jester_tagged_75
+  - first:
+      213: 6205294026027100680
+    second: spritesheet_jester_tagged_76
+  - first:
+      213: -6135492336563142927
+    second: spritesheet_jester_tagged_77
+  - first:
+      213: 904026431562251401
+    second: spritesheet_jester_tagged_78
+  - first:
+      213: -471140139879254664
+    second: spritesheet_jester_tagged_79
+  - first:
+      213: -7150852007306226373
+    second: spritesheet_jester_tagged_80
+  - first:
+      213: -2657290352116546864
+    second: spritesheet_jester_tagged_81
+  - first:
+      213: 6464416045962744363
+    second: spritesheet_jester_tagged_82
+  - first:
+      213: 8159806543212923910
+    second: spritesheet_jester_tagged_83
+  - first:
+      213: 8689754988094135506
+    second: spritesheet_jester_tagged_84
+  - first:
+      213: 8608448590274063972
+    second: spritesheet_jester_tagged_85
+  - first:
+      213: 1434861321798378893
+    second: spritesheet_jester_tagged_86
+  - first:
+      213: 8321285130545668023
+    second: spritesheet_jester_tagged_87
+  - first:
+      213: -1069336304152966564
+    second: spritesheet_jester_tagged_88
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 912
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 760d64399ecb474b0800000000000000
+      internalID: -5443518338199793561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 912
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 945c9e9c1b09f4820800000000000000
+      internalID: 2904699377948411209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 912
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4874fe546e067cbd0800000000000000
+      internalID: -2610010916905859196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 912
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfab19be3d49869d0800000000000000
+      internalID: -2780809131990074627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 912
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7765c68e80886d670800000000000000
+      internalID: 8563181313332106871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 912
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 914341cddd8fd41c0800000000000000
+      internalID: -4517681219418967015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 912
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8390b22d6d2348f0800000000000000
+      internalID: -557551982107126901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_7
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 912
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 378288021ae40fc50800000000000000
+      internalID: 6696939099842422899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 912
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5730a606aff206780800000000000000
+      internalID: -8691894528419167371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_9
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 912
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f38ef1dc5a9002ff0800000000000000
+      internalID: -63039787067512769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_10
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 912
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bf6967ea5c64fda0800000000000000
+      internalID: -5911981273145315407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_11
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 912
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6c8e4779923325e0800000000000000
+      internalID: -1935647780126159765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 864
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caa4e792ccd5efc00800000000000000
+      internalID: 936288903990495916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_13
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 864
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e11bc826cba7aa40800000000000000
+      internalID: 5379457147493618153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_14
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 864
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0594819f13398fe10800000000000000
+      internalID: 2231695458203879760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_15
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 864
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11e67fde347d61050800000000000000
+      internalID: 5771036659277065745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 816
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09f11231569ee7380800000000000000
+      internalID: -8971476787353542768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_17
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 816
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5979c377ab810bb80800000000000000
+      internalID: -8381171717393049707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_18
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 816
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c4af6bb664b8b050800000000000000
+      internalID: 5816597272073315527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_19
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 816
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4d0b8365979d3720800000000000000
+      internalID: 2827582808934518095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 905b5b72ffb9066a0800000000000000
+      internalID: -6457990345464105719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_21
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 768
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bf1f843fb8957010800000000000000
+      internalID: 1186022023869964216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_22
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 768
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5cc27b775621faa0800000000000000
+      internalID: -6129075460699403174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_23
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 768
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a908276dfb77aaa0800000000000000
+      internalID: -6149810437863503447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4114bb931f7844f0800000000000000
+      internalID: -844285207938592434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_25
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 720
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72a32466c5c3c1ef0800000000000000
+      internalID: -136167521177683417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 672
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3750a6c34cd4bf0b0800000000000000
+      internalID: -5693871798657350285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_27
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 672
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa7f27ca8efb63680800000000000000
+      internalID: -8775615817838299222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_28
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 672
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2defb2779da148ed0800000000000000
+      internalID: -2412773979054145838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_29
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 672
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 045b6d1ad26fc4200800000000000000
+      internalID: 165777962155029824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 672
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4786419af89c4ed80800000000000000
+      internalID: -8222225400817489804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_31
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 672
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce79b7cb1e4b93e60800000000000000
+      internalID: 7942578299467438060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_32
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 672
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67bbfb08a6dbe7590800000000000000
+      internalID: -7674488449868514442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_33
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 672
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df85f8ea4e48a1fe0800000000000000
+      internalID: -1217514631534257923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 624
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daa6c7ee44fbb6300800000000000000
+      internalID: 246500907401636525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_35
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 624
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fb1eedc314ab2c50800000000000000
+      internalID: 6641582480454196210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_36
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 624
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ba405eefd6f2e8f0800000000000000
+      internalID: -512575965930435916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cffc08d2997ed70e0800000000000000
+      internalID: -2270403992045432836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_38
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 576
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 680a9a6787e6d0130800000000000000
+      internalID: 3534602746221666438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_39
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 576
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df3bae913255c4960800000000000000
+      internalID: 7587533081459471357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_40
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 576
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57a63bfbe3d8ac110800000000000000
+      internalID: 1281992344584022645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 528
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3c7f41da71d11a20800000000000000
+      internalID: 3031434349624917051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_42
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 528
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6766fa63f82e80e0800000000000000
+      internalID: -2265828536584083603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_43
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 528
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ada2357381ac8fa0800000000000000
+      internalID: -5797081034353627742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_44
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 528
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b327e81e9ef56720800000000000000
+      internalID: 2838955095103054771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa331d7a0bb0cfdf0800000000000000
+      internalID: -145228234625043537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_46
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08dda14498bcbafb0800000000000000
+      internalID: -4635387601034224256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_47
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8545cb2f68d3c1b30800000000000000
+      internalID: 4259346997392987224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_48
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c24351ae2e6364fb0800000000000000
+      internalID: -4663980015877802964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a92b5aa94affe8c0800000000000000
+      internalID: -3967677552392459869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_50
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1038639938a7d1140800000000000000
+      internalID: 4692041092419715841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_51
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cea1fca29803afb0800000000000000
+      internalID: -4637853765201711424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_52
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec5735f284a7180a0800000000000000
+      internalID: -6881084305195174450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d202efad47299b990800000000000000
+      internalID: -7369698284627156947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_54
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f546db31924145340800000000000000
+      internalID: 4851524865242260575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_55
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0693286f9dd0f6390800000000000000
+      internalID: -7823018797924468384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_56
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 252511a6702f58ff0800000000000000
+      internalID: -34355308477197742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ec2052f834abcdc0800000000000000
+      internalID: -3617617311171597083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_58
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7cd95b33f823a640800000000000000
+      internalID: 5089957028996701306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_59
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 946e0fb0b5ee01370800000000000000
+      internalID: 8291388988798854729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_60
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5da02ed6f08e72d90800000000000000
+      internalID: -7122469132697466155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_61
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b390cefa914d8a730800000000000000
+      internalID: 4010688674964179259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_62
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e8a6e293915e1f70800000000000000
+      internalID: 9159848386384799974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_63
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84031a91750f21700800000000000000
+      internalID: 509733964729102408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_64
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f263265f4b8229e00800000000000000
+      internalID: 1049946420806825519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_65
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b87f7791be70d1f0800000000000000
+      internalID: -1022177814197077840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_66
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f523e52f0a9d38d50800000000000000
+      internalID: 6738468752760648287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_67
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53c8e40b314f0c520800000000000000
+      internalID: 2720442540331273269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_68
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a560468dd6963c420800000000000000
+      internalID: 2649076926326769242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_69
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be8f30cf3870e77a0800000000000000
+      internalID: -6377651758859814677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_70
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9dd5b7d38a05ce80800000000000000
+      internalID: -8159103588535771745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_71
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2402380b96a95e900800000000000000
+      internalID: 713145894731718722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_72
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a76358afbfaf0a790800000000000000
+      internalID: -7520735417561958790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_73
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb6155cf2feb42c60800000000000000
+      internalID: 7792563206082598590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_74
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd0a822cb109d1730800000000000000
+      internalID: 3971488895306604763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_75
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 150b90e18a66e6b90800000000000000
+      internalID: -7246741878148059055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_76
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80ae2342a02ad1650800000000000000
+      internalID: 6205294026027100680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1feb5052a3a5adaa0800000000000000
+      internalID: -6135492336563142927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_78
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98cf4d0ff3fbb8c00800000000000000
+      internalID: 904026431562251401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_79
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 875b11bf98c2679f0800000000000000
+      internalID: -471140139879254664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_80
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b359f177cf113cc90800000000000000
+      internalID: -7150852007306226373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d24501f0886f1bd0800000000000000
+      internalID: -2657290352116546864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_82
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b22d1f3d42836b950800000000000000
+      internalID: 6464416045962744363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_83
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60c4d1c81d47d3170800000000000000
+      internalID: 8159806543212923910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_84
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dc97821f16389870800000000000000
+      internalID: 8689754988094135506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_85
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46e6f72226a577770800000000000000
+      internalID: 8608448590274063972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_86
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d856dbb15c6a9e310800000000000000
+      internalID: 1434861321798378893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_87
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bf1ae8fcb42b7370800000000000000
+      internalID: 8321285130545668023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_jester_tagged_88
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5a88850c44f821f0800000000000000
+      internalID: -1069336304152966564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9bab8fa4c06feb649aae53e6ceb5ad40
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      spritesheet_jester_tagged_0: -5443518338199793561
+      spritesheet_jester_tagged_1: 2904699377948411209
+      spritesheet_jester_tagged_10: -5911981273145315407
+      spritesheet_jester_tagged_11: -1935647780126159765
+      spritesheet_jester_tagged_12: 936288903990495916
+      spritesheet_jester_tagged_13: 5379457147493618153
+      spritesheet_jester_tagged_14: 2231695458203879760
+      spritesheet_jester_tagged_15: 5771036659277065745
+      spritesheet_jester_tagged_16: -8971476787353542768
+      spritesheet_jester_tagged_17: -8381171717393049707
+      spritesheet_jester_tagged_18: 5816597272073315527
+      spritesheet_jester_tagged_19: 2827582808934518095
+      spritesheet_jester_tagged_2: -2610010916905859196
+      spritesheet_jester_tagged_20: -6457990345464105719
+      spritesheet_jester_tagged_21: 1186022023869964216
+      spritesheet_jester_tagged_22: -6129075460699403174
+      spritesheet_jester_tagged_23: -6149810437863503447
+      spritesheet_jester_tagged_24: -844285207938592434
+      spritesheet_jester_tagged_25: -136167521177683417
+      spritesheet_jester_tagged_26: -5693871798657350285
+      spritesheet_jester_tagged_27: -8775615817838299222
+      spritesheet_jester_tagged_28: -2412773979054145838
+      spritesheet_jester_tagged_29: 165777962155029824
+      spritesheet_jester_tagged_3: -2780809131990074627
+      spritesheet_jester_tagged_30: -8222225400817489804
+      spritesheet_jester_tagged_31: 7942578299467438060
+      spritesheet_jester_tagged_32: -7674488449868514442
+      spritesheet_jester_tagged_33: -1217514631534257923
+      spritesheet_jester_tagged_34: 246500907401636525
+      spritesheet_jester_tagged_35: 6641582480454196210
+      spritesheet_jester_tagged_36: -512575965930435916
+      spritesheet_jester_tagged_37: -2270403992045432836
+      spritesheet_jester_tagged_38: 3534602746221666438
+      spritesheet_jester_tagged_39: 7587533081459471357
+      spritesheet_jester_tagged_4: 8563181313332106871
+      spritesheet_jester_tagged_40: 1281992344584022645
+      spritesheet_jester_tagged_41: 3031434349624917051
+      spritesheet_jester_tagged_42: -2265828536584083603
+      spritesheet_jester_tagged_43: -5797081034353627742
+      spritesheet_jester_tagged_44: 2838955095103054771
+      spritesheet_jester_tagged_45: -145228234625043537
+      spritesheet_jester_tagged_46: -4635387601034224256
+      spritesheet_jester_tagged_47: 4259346997392987224
+      spritesheet_jester_tagged_48: -4663980015877802964
+      spritesheet_jester_tagged_49: -3967677552392459869
+      spritesheet_jester_tagged_5: -4517681219418967015
+      spritesheet_jester_tagged_50: 4692041092419715841
+      spritesheet_jester_tagged_51: -4637853765201711424
+      spritesheet_jester_tagged_52: -6881084305195174450
+      spritesheet_jester_tagged_53: -7369698284627156947
+      spritesheet_jester_tagged_54: 4851524865242260575
+      spritesheet_jester_tagged_55: -7823018797924468384
+      spritesheet_jester_tagged_56: -34355308477197742
+      spritesheet_jester_tagged_57: -3617617311171597083
+      spritesheet_jester_tagged_58: 5089957028996701306
+      spritesheet_jester_tagged_59: 8291388988798854729
+      spritesheet_jester_tagged_6: -557551982107126901
+      spritesheet_jester_tagged_60: -7122469132697466155
+      spritesheet_jester_tagged_61: 4010688674964179259
+      spritesheet_jester_tagged_62: 9159848386384799974
+      spritesheet_jester_tagged_63: 509733964729102408
+      spritesheet_jester_tagged_64: 1049946420806825519
+      spritesheet_jester_tagged_65: -1022177814197077840
+      spritesheet_jester_tagged_66: 6738468752760648287
+      spritesheet_jester_tagged_67: 2720442540331273269
+      spritesheet_jester_tagged_68: 2649076926326769242
+      spritesheet_jester_tagged_69: -6377651758859814677
+      spritesheet_jester_tagged_7: 6696939099842422899
+      spritesheet_jester_tagged_70: -8159103588535771745
+      spritesheet_jester_tagged_71: 713145894731718722
+      spritesheet_jester_tagged_72: -7520735417561958790
+      spritesheet_jester_tagged_73: 7792563206082598590
+      spritesheet_jester_tagged_74: 3971488895306604763
+      spritesheet_jester_tagged_75: -7246741878148059055
+      spritesheet_jester_tagged_76: 6205294026027100680
+      spritesheet_jester_tagged_77: -6135492336563142927
+      spritesheet_jester_tagged_78: 904026431562251401
+      spritesheet_jester_tagged_79: -471140139879254664
+      spritesheet_jester_tagged_8: -8691894528419167371
+      spritesheet_jester_tagged_80: -7150852007306226373
+      spritesheet_jester_tagged_81: -2657290352116546864
+      spritesheet_jester_tagged_82: 6464416045962744363
+      spritesheet_jester_tagged_83: 8159806543212923910
+      spritesheet_jester_tagged_84: 8689754988094135506
+      spritesheet_jester_tagged_85: 8608448590274063972
+      spritesheet_jester_tagged_86: 1434861321798378893
+      spritesheet_jester_tagged_87: 8321285130545668023
+      spritesheet_jester_tagged_88: -1069336304152966564
+      spritesheet_jester_tagged_9: -63039787067512769
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

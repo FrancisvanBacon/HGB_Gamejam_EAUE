@@ -1,0 +1,2730 @@
+fileFormatVersion: 2
+guid: 5a4863c2ca85d3a47b52a6b7d8d1eca2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7690347048355621523
+    second: spritesheet_hunter_tagged_0
+  - first:
+      213: 3136650167557756128
+    second: spritesheet_hunter_tagged_1
+  - first:
+      213: 9041094435770677941
+    second: spritesheet_hunter_tagged_2
+  - first:
+      213: -6328854289739368331
+    second: spritesheet_hunter_tagged_3
+  - first:
+      213: -831970664374406296
+    second: spritesheet_hunter_tagged_4
+  - first:
+      213: 5508365356557557313
+    second: spritesheet_hunter_tagged_5
+  - first:
+      213: -5523607798919205183
+    second: spritesheet_hunter_tagged_6
+  - first:
+      213: -6726499918494301665
+    second: spritesheet_hunter_tagged_7
+  - first:
+      213: -6165421400907571604
+    second: spritesheet_hunter_tagged_8
+  - first:
+      213: 384093241839885546
+    second: spritesheet_hunter_tagged_9
+  - first:
+      213: -7554749868390044748
+    second: spritesheet_hunter_tagged_10
+  - first:
+      213: -2638046888831997988
+    second: spritesheet_hunter_tagged_11
+  - first:
+      213: -5872864438346814124
+    second: spritesheet_hunter_tagged_12
+  - first:
+      213: 2364201471365660763
+    second: spritesheet_hunter_tagged_13
+  - first:
+      213: 3763936479697441492
+    second: spritesheet_hunter_tagged_14
+  - first:
+      213: -4285550651913928860
+    second: spritesheet_hunter_tagged_15
+  - first:
+      213: 3101949511945115982
+    second: spritesheet_hunter_tagged_16
+  - first:
+      213: -6515253549447685065
+    second: spritesheet_hunter_tagged_17
+  - first:
+      213: -8078424281288381244
+    second: spritesheet_hunter_tagged_18
+  - first:
+      213: -5862960493051739347
+    second: spritesheet_hunter_tagged_19
+  - first:
+      213: 2419916393996664101
+    second: spritesheet_hunter_tagged_20
+  - first:
+      213: -1746279518634307607
+    second: spritesheet_hunter_tagged_21
+  - first:
+      213: -907143451510691240
+    second: spritesheet_hunter_tagged_22
+  - first:
+      213: -1758831728253903746
+    second: spritesheet_hunter_tagged_23
+  - first:
+      213: 1565475778579949798
+    second: spritesheet_hunter_tagged_24
+  - first:
+      213: -2595048206621670115
+    second: spritesheet_hunter_tagged_25
+  - first:
+      213: 438370893747612433
+    second: spritesheet_hunter_tagged_26
+  - first:
+      213: -4702148340161681835
+    second: spritesheet_hunter_tagged_27
+  - first:
+      213: 5949097338809617629
+    second: spritesheet_hunter_tagged_28
+  - first:
+      213: 7515914999361419630
+    second: spritesheet_hunter_tagged_29
+  - first:
+      213: -7157664006893813437
+    second: spritesheet_hunter_tagged_30
+  - first:
+      213: 6541668889677357030
+    second: spritesheet_hunter_tagged_31
+  - first:
+      213: -8653158795738613496
+    second: spritesheet_hunter_tagged_32
+  - first:
+      213: 8964002568589383088
+    second: spritesheet_hunter_tagged_33
+  - first:
+      213: -1995171107472589110
+    second: spritesheet_hunter_tagged_34
+  - first:
+      213: -1173228045685484140
+    second: spritesheet_hunter_tagged_35
+  - first:
+      213: -2986652202979828626
+    second: spritesheet_hunter_tagged_36
+  - first:
+      213: -7708432640426355498
+    second: spritesheet_hunter_tagged_37
+  - first:
+      213: 940629043027048899
+    second: spritesheet_hunter_tagged_38
+  - first:
+      213: 1650646299333167595
+    second: spritesheet_hunter_tagged_39
+  - first:
+      213: -2224890737380508328
+    second: spritesheet_hunter_tagged_40
+  - first:
+      213: -3006186291043338936
+    second: spritesheet_hunter_tagged_41
+  - first:
+      213: 5217278089998831178
+    second: spritesheet_hunter_tagged_42
+  - first:
+      213: 987710475490157496
+    second: spritesheet_hunter_tagged_43
+  - first:
+      213: -7370382530815071511
+    second: spritesheet_hunter_tagged_44
+  - first:
+      213: -3547103812903008765
+    second: spritesheet_hunter_tagged_45
+  - first:
+      213: 4761781713129275793
+    second: spritesheet_hunter_tagged_46
+  - first:
+      213: -7781122553169590434
+    second: spritesheet_hunter_tagged_47
+  - first:
+      213: -6878527112081285550
+    second: spritesheet_hunter_tagged_48
+  - first:
+      213: 4000198383298928513
+    second: spritesheet_hunter_tagged_49
+  - first:
+      213: -5690397762309019963
+    second: spritesheet_hunter_tagged_50
+  - first:
+      213: -3571142734000119953
+    second: spritesheet_hunter_tagged_51
+  - first:
+      213: 6824562208018324624
+    second: spritesheet_hunter_tagged_52
+  - first:
+      213: 3907054385811237875
+    second: spritesheet_hunter_tagged_53
+  - first:
+      213: -8981046739828443993
+    second: spritesheet_hunter_tagged_54
+  - first:
+      213: -8564417155763600989
+    second: spritesheet_hunter_tagged_55
+  - first:
+      213: -3929959025846756811
+    second: spritesheet_hunter_tagged_56
+  - first:
+      213: -3069649305609628366
+    second: spritesheet_hunter_tagged_57
+  - first:
+      213: 4552026582803960067
+    second: spritesheet_hunter_tagged_58
+  - first:
+      213: -4110378801615653232
+    second: spritesheet_hunter_tagged_59
+  - first:
+      213: -7790563829978308429
+    second: spritesheet_hunter_tagged_60
+  - first:
+      213: 1884081709357349708
+    second: spritesheet_hunter_tagged_61
+  - first:
+      213: -3799002969065222824
+    second: spritesheet_hunter_tagged_62
+  - first:
+      213: 6430825811449500660
+    second: spritesheet_hunter_tagged_63
+  - first:
+      213: 2429507098099512638
+    second: spritesheet_hunter_tagged_64
+  - first:
+      213: 7350159542717187683
+    second: spritesheet_hunter_tagged_65
+  - first:
+      213: -788160543061532656
+    second: spritesheet_hunter_tagged_66
+  - first:
+      213: -1145633083295015660
+    second: spritesheet_hunter_tagged_67
+  - first:
+      213: -6352548114586936806
+    second: spritesheet_hunter_tagged_68
+  - first:
+      213: -4769793043694447255
+    second: spritesheet_hunter_tagged_69
+  - first:
+      213: 2273865494089939328
+    second: spritesheet_hunter_tagged_70
+  - first:
+      213: -7744021910263537238
+    second: spritesheet_hunter_tagged_71
+  - first:
+      213: 1701641873705676319
+    second: spritesheet_hunter_tagged_72
+  - first:
+      213: 3178998805574067126
+    second: spritesheet_hunter_tagged_73
+  - first:
+      213: 4316877514421781289
+    second: spritesheet_hunter_tagged_74
+  - first:
+      213: 5230976378084865074
+    second: spritesheet_hunter_tagged_75
+  - first:
+      213: 6917578767150938712
+    second: spritesheet_hunter_tagged_76
+  - first:
+      213: -6371409753834585972
+    second: spritesheet_hunter_tagged_77
+  - first:
+      213: 6132240890177691505
+    second: spritesheet_hunter_tagged_78
+  - first:
+      213: -3357221706518740764
+    second: spritesheet_hunter_tagged_79
+  - first:
+      213: -5424002807777649203
+    second: spritesheet_hunter_tagged_80
+  - first:
+      213: 6474965978290185391
+    second: spritesheet_hunter_tagged_81
+  - first:
+      213: -1520578072681619020
+    second: spritesheet_hunter_tagged_82
+  - first:
+      213: -8960691384802631093
+    second: spritesheet_hunter_tagged_83
+  - first:
+      213: -1919384983216981345
+    second: spritesheet_hunter_tagged_84
+  - first:
+      213: -7732593713229109673
+    second: spritesheet_hunter_tagged_85
+  - first:
+      213: 4185992348424599394
+    second: spritesheet_hunter_tagged_86
+  - first:
+      213: 2818232158120437277
+    second: spritesheet_hunter_tagged_87
+  - first:
+      213: 4780556310442182899
+    second: spritesheet_hunter_tagged_88
+  - first:
+      213: -4310953176251677575
+    second: spritesheet_hunter_tagged_89
+  - first:
+      213: -6255647486905285738
+    second: spritesheet_hunter_tagged_90
+  - first:
+      213: -7692147421717051419
+    second: spritesheet_hunter_tagged_91
+  - first:
+      213: 541151929145126719
+    second: spritesheet_hunter_tagged_92
+  - first:
+      213: -7644243107464721809
+    second: spritesheet_hunter_tagged_93
+  - first:
+      213: -8558584666146334407
+    second: spritesheet_hunter_tagged_94
+  - first:
+      213: 8011278434750057208
+    second: spritesheet_hunter_tagged_95
+  - first:
+      213: 4748542857504829398
+    second: spritesheet_hunter_tagged_96
+  - first:
+      213: -4265685324527556272
+    second: spritesheet_hunter_tagged_97
+  - first:
+      213: 5589547313572652
+    second: spritesheet_hunter_tagged_98
+  - first:
+      213: -3799090945973217449
+    second: spritesheet_hunter_tagged_99
+  - first:
+      213: 6552395498880910084
+    second: spritesheet_hunter_tagged_100
+  - first:
+      213: 1798519807063931901
+    second: spritesheet_hunter_tagged_101
+  - first:
+      213: 6415034203179406896
+    second: spritesheet_hunter_tagged_102
+  - first:
+      213: -8135935740243504173
+    second: spritesheet_hunter_tagged_103
+  - first:
+      213: 4909177637938899709
+    second: spritesheet_hunter_tagged_104
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 864
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d651a4fca16664590800000000000000
+      internalID: -7690347048355621523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 864
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e413fd65be978b20800000000000000
+      internalID: 3136650167557756128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 864
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ba3fd0dc7b687d70800000000000000
+      internalID: 9041094435770677941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 864
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 578b0e02e846b28a0800000000000000
+      internalID: -6328854289739368331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 864
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 863fa66b61f3474f0800000000000000
+      internalID: -831970664374406296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 864
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14e5ea27b15a17c40800000000000000
+      internalID: 5508365356557557313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 864
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cee7d2e8f33853b0800000000000000
+      internalID: -5523607798919205183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_7
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 864
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f12047076fba6a2a0800000000000000
+      internalID: -6726499918494301665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 864
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6e1054d6e5007aa0800000000000000
+      internalID: -6165421400907571604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_9
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 864
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aec9e78b4c2945500800000000000000
+      internalID: 384093241839885546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_10
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 864
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bbaeaf7503282790800000000000000
+      internalID: -7554749868390044748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_11
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 864
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd72852e456c36bd0800000000000000
+      internalID: -2638046888831997988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 816
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45d605ab8e46f7ea0800000000000000
+      internalID: -5872864438346814124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_13
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 816
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b50c43e46b45fc020800000000000000
+      internalID: 2364201471365660763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_14
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 816
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d2108d39403c3430800000000000000
+      internalID: 3763936479697441492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_15
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 816
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46ff9bd436aa684c0800000000000000
+      internalID: -4285550651913928860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e495fa275a65c0b20800000000000000
+      internalID: 3101949511945115982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_17
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 768
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73c51938a6b2595a0800000000000000
+      internalID: -6515253549447685065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_18
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 768
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cc6ae0eaeba3ef80800000000000000
+      internalID: -8078424281288381244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_19
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 768
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d23808fae7492aea0800000000000000
+      internalID: -5862960493051739347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52db05a9325459120800000000000000
+      internalID: 2419916393996664101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_21
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 720
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ef034da708f3c7e0800000000000000
+      internalID: -1746279518634307607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_22
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 720
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85a226c46dd2963f0800000000000000
+      internalID: -907143451510691240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_23
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 720
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7c5db1acdf5797e0800000000000000
+      internalID: -1758831728253903746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 672
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e86cb62defa9b510800000000000000
+      internalID: 1565475778579949798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_25
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 672
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d150d4db7698cfbd0800000000000000
+      internalID: -2595048206621670115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_26
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 672
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11b62b95108651600800000000000000
+      internalID: 438370893747612433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 624
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55668776ffc9ebeb0800000000000000
+      internalID: -4702148340161681835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_28
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 624
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddc08fd82807f8250800000000000000
+      internalID: 5949097338809617629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_29
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 624
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e69b7f2fed4ed4860800000000000000
+      internalID: 7515914999361419630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_30
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 624
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 341ce77328edaac90800000000000000
+      internalID: -7157664006893813437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_31
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 624
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ef5177223da8ca50800000000000000
+      internalID: 6541668889677357030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_32
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 624
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 809f3f2fbedc9e780800000000000000
+      internalID: -8653158795738613496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_33
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 624
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b59572c7d8866c70800000000000000
+      internalID: 8964002568589383088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_34
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 624
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ace39f8d27abf44e0800000000000000
+      internalID: -1995171107472589110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4951468fe4bd7bfe0800000000000000
+      internalID: -1173228045685484140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_36
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 576
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6cdfb535a74d86d0800000000000000
+      internalID: -2986652202979828626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_37
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 576
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d45c54ca55260590800000000000000
+      internalID: -7708432640426355498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 528
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c9fa078129cd0d00800000000000000
+      internalID: 940629043027048899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_39
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 528
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be90191501648e610800000000000000
+      internalID: 1650646299333167595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_40
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 528
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85db06e89a99f11e0800000000000000
+      internalID: -2224890737380508328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_41
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 528
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84576b9ee71e746d0800000000000000
+      internalID: -3006186291043338936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_42
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 528
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4e0fc0d7ce776840800000000000000
+      internalID: 5217278089998831178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_43
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 528
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b3e580c17d05bd00800000000000000
+      internalID: 987710475490157496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_44
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 528
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eae500632427b990800000000000000
+      internalID: -7370382530815071511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_45
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 528
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3068b7220e726cec0800000000000000
+      internalID: -3547103812903008765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19185053d3f351240800000000000000
+      internalID: 4761781713129275793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_47
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e57cb889346e30490800000000000000
+      internalID: -7781122553169590434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_48
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25e508a19009a80a0800000000000000
+      internalID: -6878527112081285550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18fdf935c3f838730800000000000000
+      internalID: 4000198383298928513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_50
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c6a4ea5265a701b0800000000000000
+      internalID: -5690397762309019963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_51
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6f94b9aa90c07ec0800000000000000
+      internalID: -3571142734000119953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_52
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09cdc7c8b27b5be50800000000000000
+      internalID: 6824562208018324624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_53
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fb29607345a83630800000000000000
+      internalID: 3907054385811237875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_54
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a47851e299ec5380800000000000000
+      internalID: -8981046739828443993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_55
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a1037a19f3152980800000000000000
+      internalID: -8564417155763600989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_56
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53a509a761bf579c0800000000000000
+      internalID: -3929959025846756811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2351d12683a6665d0800000000000000
+      internalID: -3069649305609628366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_58
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3015a243f0c0c2f30800000000000000
+      internalID: 4552026582803960067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_59
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0963765f14005f6c0800000000000000
+      internalID: -4110378801615653232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_60
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b0e22a097b52e390800000000000000
+      internalID: -7790563829978308429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_61
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4b3e06155a952a10800000000000000
+      internalID: 1884081709357349708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_62
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85d86387dea374bc0800000000000000
+      internalID: -3799002969065222824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_63
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f35cd7e002ee3950800000000000000
+      internalID: 6430825811449500660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_64
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e35f28965d757b120800000000000000
+      internalID: 2429507098099512638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_65
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3660b1a4923010660800000000000000
+      internalID: 7350159542717187683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_66
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 010a6d47924ef05f0800000000000000
+      internalID: -788160543061532656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_67
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41dd343d7c4e910f0800000000000000
+      internalID: -1145633083295015660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_68
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1ad773a52737d7a0800000000000000
+      internalID: -6352548114586936806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_69
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 965967a8f7a4ecdb0800000000000000
+      internalID: -4769793043694447255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_70
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 089bf329e946e8f10800000000000000
+      internalID: 2273865494089939328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_71
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa166e92a15b78490800000000000000
+      internalID: -7744021910263537238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_72
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1e2829b4427d9710800000000000000
+      internalID: 1701641873705676319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_73
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b322a312921e1c20800000000000000
+      internalID: 3178998805574067126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_74
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9234bf14a31a8eb30800000000000000
+      internalID: 4316877514421781289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_75
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 234353c0d49289840800000000000000
+      internalID: 5230976378084865074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_76
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85af0d1ec3d200060800000000000000
+      internalID: 6917578767150938712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_77
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c800b3806943497a0800000000000000
+      internalID: -6371409753834585972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_78
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17f9a2089981a1550800000000000000
+      internalID: 6132240890177691505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_79
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e048be25a0c861d0800000000000000
+      internalID: -3357221706518740764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_80
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcd11b51f221ab4b0800000000000000
+      internalID: -5424002807777649203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_81
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa4e9bc5043bbd950800000000000000
+      internalID: 6474965978290185391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_82
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b1609c9c42d5eae0800000000000000
+      internalID: -1520578072681619020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_83
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b42afea49aa35a380800000000000000
+      internalID: -8960691384802631093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_84
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9af120f689fc55e0800000000000000
+      internalID: -1919384983216981345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_85
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7566f82acfe40b490800000000000000
+      internalID: -7732593713229109673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_86
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 267f950dcd1a71a30800000000000000
+      internalID: 4185992348424599394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_87
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d16e957573f5c1720800000000000000
+      internalID: 2818232158120437277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f888a8c2a2f75240800000000000000
+      internalID: 4780556310442182899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_89
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9744d263dea6c24c0800000000000000
+      internalID: -4310953176251677575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_90
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69302f621c97f29a0800000000000000
+      internalID: -6255647486905285738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_91
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e74e98bca0004590800000000000000
+      internalID: -7692147421717051419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_92
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3f663affce828700800000000000000
+      internalID: 541151929145126719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_93
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6a46da05613ae590800000000000000
+      internalID: -7644243107464721809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_94
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9391e3a679cc93980800000000000000
+      internalID: -8558584666146334407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_95
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fa46047a47cd2f60800000000000000
+      internalID: 8011278434750057208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_96
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6df2b4ee19636e140800000000000000
+      internalID: 4748542857504829398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_97
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05920f34ccd3dc4c0800000000000000
+      internalID: -4265685324527556272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_98
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2ba416e9abd31000800000000000000
+      internalID: 5589547313572652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_99
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7571ddfb9eae64bc0800000000000000
+      internalID: -3799090945973217449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_100
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4034aaa7df8ceea50800000000000000
+      internalID: 6552395498880910084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_101
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfbbc8d4c30a5f810800000000000000
+      internalID: 1798519807063931901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_102
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0365d769e97c60950800000000000000
+      internalID: 6415034203179406896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_hunter_tagged_103
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d3916fdc89571f80800000000000000
+      internalID: -8135935740243504173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 31f9daecb377f22408bb032904dfb93f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      spritesheet_hunter_tagged_0: -7690347048355621523
+      spritesheet_hunter_tagged_1: 3136650167557756128
+      spritesheet_hunter_tagged_10: -7554749868390044748
+      spritesheet_hunter_tagged_100: 6552395498880910084
+      spritesheet_hunter_tagged_101: 1798519807063931901
+      spritesheet_hunter_tagged_102: 6415034203179406896
+      spritesheet_hunter_tagged_103: -8135935740243504173
+      spritesheet_hunter_tagged_11: -2638046888831997988
+      spritesheet_hunter_tagged_12: -5872864438346814124
+      spritesheet_hunter_tagged_13: 2364201471365660763
+      spritesheet_hunter_tagged_14: 3763936479697441492
+      spritesheet_hunter_tagged_15: -4285550651913928860
+      spritesheet_hunter_tagged_16: 3101949511945115982
+      spritesheet_hunter_tagged_17: -6515253549447685065
+      spritesheet_hunter_tagged_18: -8078424281288381244
+      spritesheet_hunter_tagged_19: -5862960493051739347
+      spritesheet_hunter_tagged_2: 9041094435770677941
+      spritesheet_hunter_tagged_20: 2419916393996664101
+      spritesheet_hunter_tagged_21: -1746279518634307607
+      spritesheet_hunter_tagged_22: -907143451510691240
+      spritesheet_hunter_tagged_23: -1758831728253903746
+      spritesheet_hunter_tagged_24: 1565475778579949798
+      spritesheet_hunter_tagged_25: -2595048206621670115
+      spritesheet_hunter_tagged_26: 438370893747612433
+      spritesheet_hunter_tagged_27: -4702148340161681835
+      spritesheet_hunter_tagged_28: 5949097338809617629
+      spritesheet_hunter_tagged_29: 7515914999361419630
+      spritesheet_hunter_tagged_3: -6328854289739368331
+      spritesheet_hunter_tagged_30: -7157664006893813437
+      spritesheet_hunter_tagged_31: 6541668889677357030
+      spritesheet_hunter_tagged_32: -8653158795738613496
+      spritesheet_hunter_tagged_33: 8964002568589383088
+      spritesheet_hunter_tagged_34: -1995171107472589110
+      spritesheet_hunter_tagged_35: -1173228045685484140
+      spritesheet_hunter_tagged_36: -2986652202979828626
+      spritesheet_hunter_tagged_37: -7708432640426355498
+      spritesheet_hunter_tagged_38: 940629043027048899
+      spritesheet_hunter_tagged_39: 1650646299333167595
+      spritesheet_hunter_tagged_4: -831970664374406296
+      spritesheet_hunter_tagged_40: -2224890737380508328
+      spritesheet_hunter_tagged_41: -3006186291043338936
+      spritesheet_hunter_tagged_42: 5217278089998831178
+      spritesheet_hunter_tagged_43: 987710475490157496
+      spritesheet_hunter_tagged_44: -7370382530815071511
+      spritesheet_hunter_tagged_45: -3547103812903008765
+      spritesheet_hunter_tagged_46: 4761781713129275793
+      spritesheet_hunter_tagged_47: -7781122553169590434
+      spritesheet_hunter_tagged_48: -6878527112081285550
+      spritesheet_hunter_tagged_49: 4000198383298928513
+      spritesheet_hunter_tagged_5: 5508365356557557313
+      spritesheet_hunter_tagged_50: -5690397762309019963
+      spritesheet_hunter_tagged_51: -3571142734000119953
+      spritesheet_hunter_tagged_52: 6824562208018324624
+      spritesheet_hunter_tagged_53: 3907054385811237875
+      spritesheet_hunter_tagged_54: -8981046739828443993
+      spritesheet_hunter_tagged_55: -8564417155763600989
+      spritesheet_hunter_tagged_56: -3929959025846756811
+      spritesheet_hunter_tagged_57: -3069649305609628366
+      spritesheet_hunter_tagged_58: 4552026582803960067
+      spritesheet_hunter_tagged_59: -4110378801615653232
+      spritesheet_hunter_tagged_6: -5523607798919205183
+      spritesheet_hunter_tagged_60: -7790563829978308429
+      spritesheet_hunter_tagged_61: 1884081709357349708
+      spritesheet_hunter_tagged_62: -3799002969065222824
+      spritesheet_hunter_tagged_63: 6430825811449500660
+      spritesheet_hunter_tagged_64: 2429507098099512638
+      spritesheet_hunter_tagged_65: 7350159542717187683
+      spritesheet_hunter_tagged_66: -788160543061532656
+      spritesheet_hunter_tagged_67: -1145633083295015660
+      spritesheet_hunter_tagged_68: -6352548114586936806
+      spritesheet_hunter_tagged_69: -4769793043694447255
+      spritesheet_hunter_tagged_7: -6726499918494301665
+      spritesheet_hunter_tagged_70: 2273865494089939328
+      spritesheet_hunter_tagged_71: -7744021910263537238
+      spritesheet_hunter_tagged_72: 1701641873705676319
+      spritesheet_hunter_tagged_73: 3178998805574067126
+      spritesheet_hunter_tagged_74: 4316877514421781289
+      spritesheet_hunter_tagged_75: 5230976378084865074
+      spritesheet_hunter_tagged_76: 6917578767150938712
+      spritesheet_hunter_tagged_77: -6371409753834585972
+      spritesheet_hunter_tagged_78: 6132240890177691505
+      spritesheet_hunter_tagged_79: -3357221706518740764
+      spritesheet_hunter_tagged_8: -6165421400907571604
+      spritesheet_hunter_tagged_80: -5424002807777649203
+      spritesheet_hunter_tagged_81: 6474965978290185391
+      spritesheet_hunter_tagged_82: -1520578072681619020
+      spritesheet_hunter_tagged_83: -8960691384802631093
+      spritesheet_hunter_tagged_84: -1919384983216981345
+      spritesheet_hunter_tagged_85: -7732593713229109673
+      spritesheet_hunter_tagged_86: 4185992348424599394
+      spritesheet_hunter_tagged_87: 2818232158120437277
+      spritesheet_hunter_tagged_88: 4780556310442182899
+      spritesheet_hunter_tagged_89: -4310953176251677575
+      spritesheet_hunter_tagged_9: 384093241839885546
+      spritesheet_hunter_tagged_90: -6255647486905285738
+      spritesheet_hunter_tagged_91: -7692147421717051419
+      spritesheet_hunter_tagged_92: 541151929145126719
+      spritesheet_hunter_tagged_93: -7644243107464721809
+      spritesheet_hunter_tagged_94: -8558584666146334407
+      spritesheet_hunter_tagged_95: 8011278434750057208
+      spritesheet_hunter_tagged_96: 4748542857504829398
+      spritesheet_hunter_tagged_97: -4265685324527556272
+      spritesheet_hunter_tagged_98: 5589547313572652
+      spritesheet_hunter_tagged_99: -3799090945973217449
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
