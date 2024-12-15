@@ -1,18 +1,23 @@
-﻿using Actors.Player;
+﻿using System.Collections.Generic;
+using Actors.Player;
 using Interactables;
 using UnityEngine;
 
 namespace Items {
-    [RequireComponent(typeof(BoxCollider2D), typeof(InteractableFinder))]
+    [RequireComponent(typeof(BoxCollider2D), typeof(InteractableFinder), typeof(GridSnap))]
     public class EquippableItemObject : MonoBehaviour, IEquippableItem {
 
-        [SerializeField] private ItemType type;
+        [SerializeField] protected ItemType type;
+        [SerializeField] private List<ClassType> toggleableInteraction;
+        private bool m_toggle;
         
         private InteractableFinder m_interactableFinder;
         
         private ClassType m_currentClass;
 
         private bool m_wasDropped;
+        
+        private GridSnap m_gridSnap;
 
         private void Start() {
             BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
@@ -21,6 +26,8 @@ namespace Items {
             ItemType = type;
             
             m_interactableFinder = gameObject.GetComponent<InteractableFinder>();
+            
+            m_gridSnap = gameObject.GetComponent<GridSnap>();
         }
 
         private void OnTriggerEnter2D(Collider2D other) {
@@ -60,19 +67,31 @@ namespace Items {
 
         public void Unequip() {
             
+            if (toggleableInteraction.Contains(m_currentClass)) {
+                m_interactableFinder.Interact(m_currentClass, type, "Stop");
+                return;
+            }
             m_interactableFinder.enabled = false;
             transform.parent = null;
             transform.rotation = Quaternion.identity;
             m_currentClass = ClassType.None;
             m_wasDropped = true;
+            StartCoroutine(m_gridSnap.SnapCoroutine());
             Debug.Log("Unequipped Item");
         }
 
-        public void Use() {
+        public virtual void Use() {
             
-            if (m_interactableFinder.CurrentInteractable() == null) return;
+            if (!m_interactableFinder.HasInteractable()) return;
+
+            if (toggleableInteraction.Contains(m_currentClass)) {
+                m_toggle = !m_toggle;
+                Debug.Log(m_toggle ? "Start" : "Stop");
+                m_interactableFinder.Interact(m_currentClass, type, m_toggle ? "Start" : "Stop");
+                return;
+            }
             
-            m_interactableFinder.CurrentInteractable().Interact(m_currentClass, type);
+            m_interactableFinder.Interact(m_currentClass, type);
         }
     }
 }

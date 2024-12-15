@@ -37,7 +37,7 @@ namespace Actors {
         }
 
         public void SnapInstant() {
-            
+            m_gridSnap.SnapInstant();
         }
 
         public void Stop() {

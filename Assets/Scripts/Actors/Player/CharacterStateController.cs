@@ -22,30 +22,23 @@ namespace Actors.Player {
             }
         }
 
-        protected override void Update() {
-            base.Update();
+        protected override void FixedUpdate() {
+            base.FixedUpdate();
         }
 
         private void Start() {
             m_moveController = gameObject.GetComponent<MoveController>();
         }
 
-        public void EnablePlayerControl() {
-            m_isPLayerControlled = true;
-        }
+        public void EnablePlayerControl() => m_isPLayerControlled = true;
 
         public void DisablePlayerControl() {
             m_moveController.Stop();
             m_isPLayerControlled = false;
         }
         
-        public void PlayerMove(InputAction.CallbackContext context) {
-            m_moveController.Move(context.ReadValue<Vector2>());
-        }
-
-        public void PlayerLook(InputAction.CallbackContext context) {
-            m_moveController.Look(context.ReadValue<Vector2>());
-        }
+        public void PlayerMove(InputAction.CallbackContext context) => m_moveController.Move(context.ReadValue<Vector2>());
+        public void PlayerLook(InputAction.CallbackContext context) => m_moveController.Look(context.ReadValue<Vector2>());
 
         public void PlayerUseItem() {
             
@@ -72,6 +65,26 @@ namespace Actors.Player {
 
             yield return StartCoroutine(m_moveController.Snap());
             m_equippedItem.Use();
+        }
+
+        public void Drag() {
+            
+        }
+
+        public void Hide() {
+            
+        }
+
+        public void Grapple() {
+            
+        }
+
+        public void Lure() {
+            
+        }
+
+        public void Surf() {
+            
         }
         
     }

@@ -1,16 +1,21 @@
 ﻿using System;
+using Actors.Player;
+using Items;
 using UnityEngine;
 
 namespace Interactables {
     public class InteractableFinder : MonoBehaviour {
         
-        [SerializeField] private float searchRadius = 5f;
+        [SerializeField] protected float searchRadius = 5f;
         private IInteractable m_currentInteractable;
-        public IInteractable CurrentInteractable() => m_currentInteractable;
+        public virtual bool HasInteractable() => m_currentInteractable != null;
 
-        void FixedUpdate() {
+        protected virtual void FixedUpdate() {
             
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, gameObject.transform.up, searchRadius, LayerMask.GetMask("Interactable"));
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, 
+            gameObject.transform.up, 
+            searchRadius, 
+            LayerMask.GetMask("Interactable"));
             
             if (hit) {
                 HandleRaycastHit(hit);
@@ -22,9 +27,14 @@ namespace Interactables {
             
         }
 
-        private void OnDisable() {
-            if (m_currentInteractable != null) m_currentInteractable.Deselect();
+        protected virtual void OnDisable() {
             m_currentInteractable = null;
+        }
+
+        public virtual void Interact(ClassType classType, ItemType itemType, string param = "") {
+            if (m_currentInteractable != null) {
+                m_currentInteractable.Interact(classType, itemType, param);
+            }
         }
 
         private void HandleRaycastHit(RaycastHit2D hit) {

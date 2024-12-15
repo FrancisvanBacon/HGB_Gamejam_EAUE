@@ -6,11 +6,11 @@ namespace Actors {
         protected IState m_currentState;
 
         private void Awake() {
-            m_currentState = new MoveState();
+            m_currentState = new DefaultState();
         }
 
-        protected virtual void Update() {
-            m_currentState.UpdateState(this);
+        protected virtual void FixedUpdate() {
+            m_currentState.FixedUpdateState(this);
         }
 
         public void ChangeState(IState newState) {
