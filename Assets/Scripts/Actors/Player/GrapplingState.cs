@@ -4,7 +4,6 @@ namespace Actors.Player {
     public class GrapplingState : IState {
     
         private GridSnap m_gridSnap;
-        private bool m_grappling;
         private CharacterStateController m_characterController;
 
         private int m_layerMask;
@@ -35,20 +34,11 @@ namespace Actors.Player {
 
         }
 
-        public void OnAction(ActorStateController actor) {
-            
-        }
-
-        public void OnHurt(ActorStateController actor) {
-            
-        }
-
         public void OnExit(ActorStateController actor) {
-        
+            
             m_characterController.LockInput = false;
-        
             m_characterController.GetComponent<Collider2D>().enabled = true;
-            m_grappling = false;
+            m_gridSnap.SnapToAdjacentCell(Vector3.zero);
         }
     }
 }

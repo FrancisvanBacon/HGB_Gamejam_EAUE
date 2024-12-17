@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Interactables;
+using UnityEngine;
 
 namespace Actors.Enemys {
     public class SentryState : IState {
@@ -8,14 +9,6 @@ namespace Actors.Enemys {
         }
 
         public void FixedUpdateState(ActorStateController actor) {
-            
-        }
-
-        public void OnAction(ActorStateController actor) {
-            
-        }
-
-        public void OnHurt(ActorStateController actor) {
             
         }
 

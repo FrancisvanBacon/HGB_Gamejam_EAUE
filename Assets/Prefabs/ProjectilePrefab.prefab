@@ -100,3 +100,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 8
+  projectileType: 0
+  lifeTime: 10

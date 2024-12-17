@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 namespace Interactables {
-    public class InteractableObject : ActorStateController, IInteractable {
+    public class InteractableStateController : ActorStateController, IInteractable {
         
         [SerializeField] private List<ItemReaction> itemInteractions;
         

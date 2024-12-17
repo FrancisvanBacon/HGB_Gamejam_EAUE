@@ -9,7 +9,7 @@ namespace Interactables {
         [SerializeField] private bool StartShootingOnStart;
         private IEnumerator coroutine;
 
-        protected override void Start() {
+        private void Start() {
             coroutine = ShootRoutine();
             
             StartCoroutine(coroutine);

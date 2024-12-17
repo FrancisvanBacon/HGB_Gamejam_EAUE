@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Actors.Enemys;
+using Actors.Player;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 namespace Actors {
@@ -11,44 +14,42 @@ namespace Actors {
         
         protected GridSnap m_gridSnap;
         
-        [SerializeField] private StateType beginningState;
+        [SerializeField] protected StateType defaultState;
+        public StateType DefaultState => defaultState;
         
         [SerializeField] protected float speed = 4.0f;
         public float Speed => speed;
         [SerializeField] protected Transform targetTransform;
-        
-
-        [SerializeField] private int m_direction;
-        public int CurrentDirection => m_direction;
+        [FormerlySerializedAs("onAnyStateExit")] [FormerlySerializedAs("onAnyStateEnter")] [SerializeField] private UnityEvent onAnyStateChange;
         
         private void Awake() {
-            m_currentState = GetBeginningState();
+            m_currentState = StateTypeToIState(defaultState);
             m_gridSnap = GetComponent<GridSnap>();
         }
 
         protected virtual void Start() {
-            m_currentState = GetBeginningState();
+            m_currentState = StateTypeToIState(defaultState);
             ChangeState(m_currentState, false);
         }
 
         protected virtual void FixedUpdate() {
             m_currentState.FixedUpdateState(this);
-            CalculateDirection();
         }
 
-        public void ChangeState(IState newState, bool snap = true) {
+        protected void ChangeState(IState newState, bool snap = false) {
             if (snap) {
                 StartCoroutine(StateChange(newState));
             }
             else {
                 m_currentState.OnExit(this);
                 m_currentState = newState;
+                onAnyStateChange?.Invoke();
                 m_currentState.OnEnter(this);
             }
         }
         
         public void Lure(Transform _targetTransform) {
-
+        
             targetTransform = _targetTransform;
             
             if (m_currentState is LuredState) {
@@ -57,7 +58,7 @@ namespace Actors {
             
             ChangeState(new LuredState(targetTransform));
         }
-
+        
         public void Push(Transform originTransform) {
             
             if (m_currentState is PushedState) return;
@@ -65,59 +66,51 @@ namespace Actors {
 
         }
         
-        private void CalculateDirection() {
-            int angle = (int)transform.rotation.eulerAngles.z % 360;
-            
-            switch (angle) {
-                case 270:
-                    m_direction = 1;
-                    break;
-                case 180:
-                    m_direction = 2;
-                    break;
-                case 90:
-                    m_direction = 3;
-                    break;
-                case 0:
-                    m_direction = 0;
-                    break;
+        public void SetDefaultState(StateType state) {
+            defaultState = state;
+        }
+        
+        public void SetDefaultState(string state) {
+            if (Enum.TryParse<StateType>(state, out StateType stateType)) {
+                SetDefaultState(stateType);
             }
         }
         
-        private IState GetBeginningState() {
-            switch (beginningState) {
+        protected IState StateTypeToIState(StateType type) {
+            
+            switch (type) {
                 case StateType.Default:
                     break;
                 case StateType.Patrol:
                     return gameObject.GetComponent<PatrolState>();
-                
                 case StateType.Sentry:
                     return new SentryState();
                 case StateType.Lured:
                     return new LuredState(targetTransform);
+                case StateType.Blocking:
+                    return new GuardState(StateType.Blocking);
+                case StateType.AimingBow:
+                    return new GuardState(StateType.AimingBow);
+                case StateType.AimingWhip:
+                    return new GuardState(StateType.AimingWhip);
+                case StateType.AimingGrapple:
+                    return new GuardState(StateType.AimingGrapple);
             }
 
             return new DefaultState();
         }
         
         public void ResetState() {
-            ChangeState(GetBeginningState());
+            ChangeState(StateTypeToIState(defaultState));
         }
         
         protected virtual IEnumerator StateChange(IState newState) {
-        
             yield return m_gridSnap.SnapCoroutine();
             m_currentState.OnExit(this);
+            onAnyStateChange?.Invoke();
             m_currentState = newState;
             m_currentState.OnEnter(this);
        }
-       
-       public enum StateType {
-        Default,
-        Sentry,
-        Patrol,
-        Lured
-    }
 
     }
 }

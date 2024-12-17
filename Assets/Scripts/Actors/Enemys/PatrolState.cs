@@ -29,14 +29,6 @@ namespace Actors.Enemys {
             
         }
 
-        public void OnAction(ActorStateController actor) {
-            
-        }
-
-        public void OnHurt(ActorStateController actor) {
-            
-        }
-
         public void OnExit(ActorStateController actor) {
             
         }

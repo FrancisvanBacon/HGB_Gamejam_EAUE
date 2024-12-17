@@ -15,14 +15,6 @@ namespace Actors.Player {
             
         }
 
-        public void OnAction(ActorStateController actor) {
-            
-        }
-
-        public void OnHurt(ActorStateController actor) {
-            ;
-        }
-
         public void OnExit(ActorStateController actor) {
             CharacterStateController character = actor as CharacterStateController;
             

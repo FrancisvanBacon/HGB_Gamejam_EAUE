@@ -1,4 +1,5 @@
-﻿using Items;
+﻿using Actors.Player;
+using Items;
 using UnityEngine;
 
 namespace Actors.Enemys {
@@ -17,6 +18,10 @@ namespace Actors.Enemys {
             var rigidbody = actor.gameObject.GetComponent<Rigidbody2D>();
             rigidbody.constraints = RigidbodyConstraints2D.None;
             rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+            if (actor is CharacterStateController) {
+                ((CharacterStateController)actor).LockInput = true;
+            }
         }
         
         public void FixedUpdateState(ActorStateController actor) {
@@ -36,17 +41,13 @@ namespace Actors.Enemys {
             
         }
 
-        public void OnAction(ActorStateController actor) {
-            
-        }
-
-        public void OnHurt(ActorStateController actor) {
-            
-        }
-
         public void OnExit(ActorStateController actor) {
             var rigidbody = actor.gameObject.GetComponent<Rigidbody2D>();
             rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
+            
+            if (actor is CharacterStateController) {
+                ((CharacterStateController)actor).LockInput = true;
+            }
         }
     }
 }

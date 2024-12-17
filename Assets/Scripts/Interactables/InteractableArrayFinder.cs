@@ -25,14 +25,10 @@ namespace Interactables {
             }
             
             m_interactables.Clear();
-            
-            var colliders = Physics2D.CircleCastAll(
-            gameObject.transform.position, 
-            searchRadius, 
-            Vector2.zero, 
-            LayerMask.GetMask("Interactable"));
 
-            foreach (var collider in colliders) {
+            var hits = GetRaycastHits2D();
+
+            foreach (var collider in hits) {
                 
                 if (collider.collider.gameObject.TryGetComponent<IInteractable>(out IInteractable interactable)) {
                     m_interactables.Add(interactable);
@@ -41,6 +37,32 @@ namespace Interactables {
 
             }
 
+        }
+
+        private RaycastHit2D[] GetRaycastHits2D() {
+            
+            switch (finderType) {
+                    
+                case FinderType.BoxFront:
+                    return Physics2D.BoxCastAll(
+                        transform.position + transform.up * searchRadius,
+                        boxScale,
+                        0,
+                        Vector2.zero
+                    );
+                case FinderType.CircleRadius:
+                    return Physics2D.CircleCastAll(
+                        transform.position,
+                        searchRadius,
+                        Vector2.zero
+                    );
+                    
+                default:
+                    return Physics2D.RaycastAll(transform.position,
+                gameObject.transform.up,
+                    searchRadius,
+                    m_layerMask);
+            }
         }
 
         private void OnCollisionExit2D(Collision2D collision) {
@@ -60,7 +82,7 @@ namespace Interactables {
         public override void Interact(ClassType classType, ItemType itemType, string param = "") {
 
             if (adressStopGlobally && param.Equals("Stop")) {
-                var interactables = GameObject.FindObjectsByType<InteractableObject>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+                var interactables = GameObject.FindObjectsByType<InteractableStateController>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
 
                 foreach (var interactable in interactables) {
                     interactable.Interact(classType, itemType, param);
@@ -72,6 +94,5 @@ namespace Interactables {
                 interactable.Interact(classType, itemType, param);
             }
         }
-        
     }
 }

@@ -9,6 +9,10 @@ public class Projectile : MonoBehaviour {
     private int m_layermask;
     [SerializeField] private ProjectileType projectileType;
 
+    [SerializeField] private float lifeTime = 10f;
+
+    private float m_elapsedTime;
+
     private void Start() {
 
         if (projectileType == ProjectileType.Unfriendly) {
@@ -21,6 +25,13 @@ public class Projectile : MonoBehaviour {
     }
 
     private void FixedUpdate() {
+        
+        m_elapsedTime += Time.fixedDeltaTime;
+
+        if (m_elapsedTime >= lifeTime) {
+            Destroy(gameObject);
+            return;
+        }
     
         transform.position = Vector3.MoveTowards(
                 transform.position,
@@ -40,7 +51,7 @@ public class Projectile : MonoBehaviour {
 
     private void HandleTrigger(GameObject other) {
         
-        if (projectileType == ProjectileType.Unfriendly && other.TryGetComponent<CharacterStateController>(
+        if (projectileType == ProjectileType.Unfriendly && other.TryGetComponent(
                 out CharacterStateController controller)) {
             controller.PlayerRespawn();
         }

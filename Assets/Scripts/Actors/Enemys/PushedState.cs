@@ -9,7 +9,7 @@ namespace Actors.Enemys {
         private bool m_isMoving;
 
         private float m_elapsedTime;
-        private const float MAXELAPSEDTIME = 2f;
+        private const float MAXELAPSEDTIME = 1f;
 
         public PushedState(Vector3 direction) {
             m_direction = direction;
@@ -30,17 +30,11 @@ namespace Actors.Enemys {
             
             if ((m_isMoving && m_gridSnap.IsSnapped) || m_elapsedTime > MAXELAPSEDTIME) {
                 m_isMoving = false;
+                m_gridSnap.StopAllCoroutines();
+                m_gridSnap.SnapToAdjacentCell(Vector3.zero);
                 actor.ResetState();
             }
             
-        }
-
-        public void OnAction(ActorStateController actor) {
-            throw new System.NotImplementedException();
-        }
-
-        public void OnHurt(ActorStateController actor) {
-            throw new System.NotImplementedException();
         }
 
         public void OnExit(ActorStateController actor) {

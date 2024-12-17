@@ -15,6 +15,9 @@ namespace Actors {
         private Vector2 m_movementInput = Vector2.zero;
         private Vector2 m_lookInput = Vector2.zero;
 
+        public Vector2 LookInput => m_lookInput;
+        public Vector2 MovementInput => m_movementInput;
+
         private GridSnap m_gridSnap;
 
         public bool LockRotation;
@@ -50,6 +53,21 @@ namespace Actors {
 
         public void Look(Vector2 lookDirection) {
             m_lookInput = lookDirection.normalized;
+        }
+        
+        public int GetDirection() {
+            int angle = (int)transform.rotation.eulerAngles.z % 360;
+            
+            switch (angle) {
+                case 270:
+                    return 1;
+                case 180:
+                    return 2; ;
+                case 90:
+                    return 3;
+                default:
+                    return 0;
+            }
         }
 
         private void HandleLookInput() {

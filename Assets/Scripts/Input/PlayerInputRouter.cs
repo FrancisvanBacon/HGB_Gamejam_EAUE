@@ -16,6 +16,7 @@ namespace Input {
 
         private void Awake() {
             m_currentCharacterController = characterControllers[0];
+            m_currentCharacterController.EnablePlayerControl();
         }
 
         public void MoveCharacter(InputAction.CallbackContext context) {

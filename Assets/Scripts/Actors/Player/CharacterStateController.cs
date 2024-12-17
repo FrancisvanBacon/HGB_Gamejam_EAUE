@@ -5,22 +5,22 @@ using Interactables;
 using Items;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
 namespace Actors.Player {
-    [RequireComponent(typeof(MoveController), typeof(InteractableFinder))]
+    [RequireComponent(typeof(MoveController), typeof(InteractableFinder), typeof(Respawner))]
     public class CharacterStateController : ActorStateController {
         
         [SerializeField] private ClassType classType;
         
         [SerializeField] private List<ItemReaction> itemReactions;
         private Dictionary<string, ItemReaction> m_eventDictionary = new Dictionary<string, ItemReaction>();
+        
+        [SerializeField] protected InteractableFinder standardInteractFinder;
+        
         public ClassType ClassType => classType;
         
         private bool m_isPLayerControlled = false;
         public bool IsPlayerControlled => m_isPLayerControlled;
-        
-        [SerializeField] protected InteractableFinder standardInteractFinder;
         
         private MoveController m_moveController;
         public void SetSpeed(float value) {
@@ -29,6 +29,8 @@ namespace Actors.Player {
         }
 
         private IEquippableItem m_equippedItem;
+        
+        public int CurrentDirection => m_moveController.GetDirection();
 
         public bool LockMovement;
         public bool LockRotation {
@@ -40,6 +42,9 @@ namespace Actors.Player {
             }
         }
 
+        public Vector2 LookInput => m_moveController.LookInput;
+        public Vector2 MoveInput => m_moveController.MovementInput;
+        
         public bool LockInput;
         public int MovmentConstraint = -1;
         public ItemType CurrentItemType {
@@ -49,11 +54,7 @@ namespace Actors.Player {
             }
         }
 
-        protected override void FixedUpdate() {
-            base.FixedUpdate();
-        }
-
-        private void Start() {
+        protected override void Start() {
             m_moveController = gameObject.GetComponent<MoveController>();
             m_moveController.Speed = Speed;
             foreach (var reaction in itemReactions) {
@@ -70,6 +71,8 @@ namespace Actors.Player {
             m_moveController.Stop();
             m_isPLayerControlled = false;
         }
+        
+        public void StopPlayerMovement() => m_moveController.Stop();
 
         public void PlayerMove(InputAction.CallbackContext context) {
         
@@ -110,7 +113,8 @@ namespace Actors.Player {
         public void PlayerUseItem() {
             
             if (m_equippedItem == null || LockInput) return;
-            StartCoroutine(ItemUseRoutine());
+            //StartCoroutine(ItemUseRoutine());
+            m_equippedItem.Use();
         }
 
         public void PlayerDropItem() {
@@ -120,12 +124,14 @@ namespace Actors.Player {
             m_equippedItem = null;
         }
         
-        public void PlayerEquipItem(IEquippableItem equippedItem) {
+        public void PlayerEquipItem(EquippableItemObject equippedItem) {
             if (m_equippedItem != null) {
                 m_equippedItem.Unequip();
             }
             m_equippedItem = equippedItem;
             
+            string key = classType.ToString() + equippedItem.ItemType.ToString();
+
         }
 
         public void PlayerInteract() {
@@ -133,7 +139,9 @@ namespace Actors.Player {
         }
 
         public void PlayerRespawn() {
-            Debug.Log("Respawning");
+            ChangeState(StateTypeToIState(defaultState));
+            ((EquippableItemObject)m_equippedItem).StopInteraction();
+            gameObject.GetComponent<Respawner>().Respawn();
         }
 
         public void InterpretToggleInteraction(ClassType _classType, ItemType itemType, string param) {
@@ -141,6 +149,8 @@ namespace Actors.Player {
             if (m_eventDictionary.TryGetValue(_classType.ToString() + itemType.ToString() + param, out ItemReaction reaction)) {
                 reaction.OnReaction?.Invoke();
             }
+            
+            Debug.Log("Interpreting interaction " + _classType.ToString() + itemType.ToString() + param);
         }
 
         public void Drag(bool enable) {
@@ -148,7 +158,7 @@ namespace Actors.Player {
                 ChangeState(new DraggingState());
             }
             else {
-                ChangeState(new DefaultState());
+                ChangeState(StateTypeToIState(defaultState));
             }
         }
         
@@ -157,7 +167,7 @@ namespace Actors.Player {
                 ChangeState(new HidingState());
             }
             else {
-                ChangeState(new DefaultState());
+                ChangeState(StateTypeToIState(defaultState));
             }
         }
 
@@ -170,7 +180,7 @@ namespace Actors.Player {
                 ChangeState(new GrapplingState());
             }
             else {
-                ChangeState(new DefaultState());
+                ChangeState(StateTypeToIState(defaultState));
             }
             
         }
@@ -180,7 +190,7 @@ namespace Actors.Player {
                 ChangeState(new LuringState(), false);
             }
             else {
-                ChangeState(new DefaultState(), false);
+                ChangeState(StateTypeToIState(defaultState), false);
             }
         }
 
@@ -189,7 +199,43 @@ namespace Actors.Player {
                 ChangeState(new SurfingState());
             }
             else {
-                ChangeState(new DefaultState());
+                ChangeState(StateTypeToIState(defaultState));
+            }
+        }
+
+        public void Block(bool enable) {
+            if (enable && !(m_currentState is GuardState)) {
+                ChangeState(new GuardState(StateType.Blocking));
+            }
+            else {
+                ChangeState(StateTypeToIState(defaultState));
+            }
+        }
+        
+        public void AimBow(bool enable) {
+            if (enable && !(m_currentState is GuardState)) {
+                ChangeState(new GuardState(StateType.AimingBow));
+            }
+            else {
+                ChangeState(StateTypeToIState(defaultState));
+            }
+        }
+
+        public void AimWhip(bool enable) {
+            if (enable && !(m_currentState is GuardState)) {
+                ChangeState(new GuardState(StateType.AimingWhip));
+            }
+            else {
+                ChangeState(StateTypeToIState(defaultState));
+            }
+        }
+        
+        public void AimGrapple(bool enable) {
+            if (enable && !(m_currentState is GuardState)) {
+                ChangeState(new GuardState(StateType.AimingGrapple));
+            }
+            else {
+                ChangeState(StateTypeToIState(defaultState));
             }
         }
         
@@ -201,7 +247,7 @@ namespace Actors.Player {
         }
         
         protected override IEnumerator StateChange(IState newState) {
-
+            
             LockInput = true;
             yield return m_gridSnap.SnapCoroutine();
             LockInput = false;

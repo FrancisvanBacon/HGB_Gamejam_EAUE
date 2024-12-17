@@ -7,6 +7,9 @@ TagManager:
   - HeavyObject
   - LightObject
   - Enemy
+  - ShieldBlockObject
+  - GrapplePointDynamic
+  - GrapplePointStatic
   layers:
   - Default
   - TransparentFX

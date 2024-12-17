@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 namespace Interactables {
@@ -6,16 +7,27 @@ namespace Interactables {
 
         [SerializeField] private float cooldown = 0.5f;
         private IEnumerator coroutine;
-        private bool m_cooldownActive;
+        protected bool m_cooldownActive;
 
+
+        private void OnDisable() {
+            if (coroutine != null) StopCoroutine(coroutine);
+            m_cooldownActive = false;
+        }
 
         public override void Shoot() {
+
+            if (m_cooldownActive) return;
+        
             base.Shoot();
             m_cooldownActive = true;
-            if (coroutine != null) {
-                coroutine = CooldownRoutine();
-                StartCoroutine(coroutine);
-            }
+            StartCooldown();
+        }
+
+        private void StartCooldown() {
+            Debug.Log("Starting CD");
+            coroutine = CooldownRoutine();
+            StartCoroutine(coroutine);
         }
 
         private IEnumerator CooldownRoutine() {

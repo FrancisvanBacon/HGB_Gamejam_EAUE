@@ -4,7 +4,6 @@ using Actors.Player;
 using Interactables;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
 namespace Items {
     [RequireComponent(typeof(BoxCollider2D), typeof(FinderSwitcher), typeof(GridSnap))]
@@ -24,7 +23,8 @@ namespace Items {
         
         private GridSnap m_gridSnap;
         
-        [SerializeField] private UnityEvent<ClassType> OnEquipped;
+        [SerializeField] private UnityEvent<ClassType, ItemType, string> onEquipped;
+        [SerializeField] private UnityEvent<ClassType, ItemType, string> onUnequipped;
 
         private void Start() {
             BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
@@ -72,6 +72,8 @@ namespace Items {
             if (optionalParamInteraction.Contains(m_currentClass.ClassType)) {
                 m_toggle = false;
             }
+            
+            onEquipped?.Invoke(m_currentClass.ClassType, type, "Equip");
         }
 
         public void Unequip() {
@@ -84,6 +86,9 @@ namespace Items {
             m_interactableFinder.enabled = false;
             transform.parent = null;
             transform.rotation = Quaternion.identity;
+            
+            onUnequipped?.Invoke(m_currentClass.ClassType, type, "Unequip");
+            
             m_currentClass = null;
             m_wasDropped = true;
             gameObject.GetComponent<Collider2D>().enabled = true;
@@ -103,11 +108,9 @@ namespace Items {
             m_currentClass.InterpretToggleInteraction(m_currentClass.ClassType, type, "");
             m_interactableFinder.Interact(m_currentClass.ClassType, type);
         }
-        
-        public void SetInteractableFinderStringTage(string tagName) {
-            if (m_interactableFinder is TagInteractableFinder) {
-                ((TagInteractableFinder)m_interactableFinder).InteractableTag = tagName;
-            }
+
+        public void StopInteraction() {
+            m_interactableFinder.Interact(m_currentClass.ClassType, type, "Stop");
         }
     }
 

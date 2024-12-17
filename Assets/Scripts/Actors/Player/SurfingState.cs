@@ -40,14 +40,6 @@ namespace Actors.Player {
                 
             }
         }
-
-        public void OnAction(ActorStateController actor) {
-            throw new System.NotImplementedException();
-        }
-
-        public void OnHurt(ActorStateController actor) {
-            throw new System.NotImplementedException();
-        }
         
         public void OnExit(ActorStateController actor) {
             CharacterStateController character = actor as CharacterStateController;
