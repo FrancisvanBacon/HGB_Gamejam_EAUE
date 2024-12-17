@@ -140,7 +140,11 @@ namespace Actors.Player {
 
         public void PlayerRespawn() {
             ChangeState(StateTypeToIState(defaultState));
-            ((EquippableItemObject)m_equippedItem).StopInteraction();
+
+            if (m_equippedItem != null && m_equippedItem is EquippableItemObject) {
+                ((EquippableItemObject)m_equippedItem).StopInteraction();
+            }
+            
             gameObject.GetComponent<Respawner>().Respawn();
         }
 

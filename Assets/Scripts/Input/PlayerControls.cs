@@ -134,6 +134,33 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwitchCameraMode"",
+                    ""type"": ""Button"",
+                    ""id"": ""f8626d08-18cc-40bc-a475-07d15241a966"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ZoomCameraIn"",
+                    ""type"": ""Button"",
+                    ""id"": ""ae605440-493d-4180-ac69-b7a6e50d00dd"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ZoomCameraOut"",
+                    ""type"": ""Button"",
+                    ""id"": ""33a51c27-2c6c-4eb8-8e10-ee01682bedfc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -554,6 +581,94 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""SwitchToPrevious"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""35c77ec3-616d-4818-a9fd-e3f909440db2"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""SwitchCameraMode"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f8fbff91-b5e5-40a0-9403-b5cbb3de5a8b"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""SwitchCameraMode"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7072a815-f8c4-4431-b1ac-e2b7d9e515c6"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": ""Hold(duration=0.1)"",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""ZoomCameraIn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""bb24da8d-c47b-4944-ac30-ba5c7f5ac775"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ZoomCameraIn"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""1eda2d65-a6be-49e1-b8f4-b36e69d2086b"",
+                    ""path"": ""<Mouse>/scroll/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""ZoomCameraIn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2ab434b0-cd91-4467-bbd8-b8efb5431de6"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": ""Hold(duration=0.1)"",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""ZoomCameraOut"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""b0a05de8-7e76-4b0d-8550-72878a71aec0"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ZoomCameraOut"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""c8f44e34-bb79-46e7-b610-641274ba2a9d"",
+                    ""path"": ""<Mouse>/scroll/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""ZoomCameraOut"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -597,6 +712,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Player_SwitchToLastUsed = m_Player.FindAction("SwitchToLastUsed", throwIfNotFound: true);
         m_Player_SwitchToNext = m_Player.FindAction("SwitchToNext", throwIfNotFound: true);
         m_Player_SwitchToPrevious = m_Player.FindAction("SwitchToPrevious", throwIfNotFound: true);
+        m_Player_SwitchCameraMode = m_Player.FindAction("SwitchCameraMode", throwIfNotFound: true);
+        m_Player_ZoomCameraIn = m_Player.FindAction("ZoomCameraIn", throwIfNotFound: true);
+        m_Player_ZoomCameraOut = m_Player.FindAction("ZoomCameraOut", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -670,6 +788,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_SwitchToLastUsed;
     private readonly InputAction m_Player_SwitchToNext;
     private readonly InputAction m_Player_SwitchToPrevious;
+    private readonly InputAction m_Player_SwitchCameraMode;
+    private readonly InputAction m_Player_ZoomCameraIn;
+    private readonly InputAction m_Player_ZoomCameraOut;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -686,6 +807,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @SwitchToLastUsed => m_Wrapper.m_Player_SwitchToLastUsed;
         public InputAction @SwitchToNext => m_Wrapper.m_Player_SwitchToNext;
         public InputAction @SwitchToPrevious => m_Wrapper.m_Player_SwitchToPrevious;
+        public InputAction @SwitchCameraMode => m_Wrapper.m_Player_SwitchCameraMode;
+        public InputAction @ZoomCameraIn => m_Wrapper.m_Player_ZoomCameraIn;
+        public InputAction @ZoomCameraOut => m_Wrapper.m_Player_ZoomCameraOut;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -731,6 +855,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @SwitchToPrevious.started += instance.OnSwitchToPrevious;
             @SwitchToPrevious.performed += instance.OnSwitchToPrevious;
             @SwitchToPrevious.canceled += instance.OnSwitchToPrevious;
+            @SwitchCameraMode.started += instance.OnSwitchCameraMode;
+            @SwitchCameraMode.performed += instance.OnSwitchCameraMode;
+            @SwitchCameraMode.canceled += instance.OnSwitchCameraMode;
+            @ZoomCameraIn.started += instance.OnZoomCameraIn;
+            @ZoomCameraIn.performed += instance.OnZoomCameraIn;
+            @ZoomCameraIn.canceled += instance.OnZoomCameraIn;
+            @ZoomCameraOut.started += instance.OnZoomCameraOut;
+            @ZoomCameraOut.performed += instance.OnZoomCameraOut;
+            @ZoomCameraOut.canceled += instance.OnZoomCameraOut;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -771,6 +904,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @SwitchToPrevious.started -= instance.OnSwitchToPrevious;
             @SwitchToPrevious.performed -= instance.OnSwitchToPrevious;
             @SwitchToPrevious.canceled -= instance.OnSwitchToPrevious;
+            @SwitchCameraMode.started -= instance.OnSwitchCameraMode;
+            @SwitchCameraMode.performed -= instance.OnSwitchCameraMode;
+            @SwitchCameraMode.canceled -= instance.OnSwitchCameraMode;
+            @ZoomCameraIn.started -= instance.OnZoomCameraIn;
+            @ZoomCameraIn.performed -= instance.OnZoomCameraIn;
+            @ZoomCameraIn.canceled -= instance.OnZoomCameraIn;
+            @ZoomCameraOut.started -= instance.OnZoomCameraOut;
+            @ZoomCameraOut.performed -= instance.OnZoomCameraOut;
+            @ZoomCameraOut.canceled -= instance.OnZoomCameraOut;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -820,5 +962,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnSwitchToLastUsed(InputAction.CallbackContext context);
         void OnSwitchToNext(InputAction.CallbackContext context);
         void OnSwitchToPrevious(InputAction.CallbackContext context);
+        void OnSwitchCameraMode(InputAction.CallbackContext context);
+        void OnZoomCameraIn(InputAction.CallbackContext context);
+        void OnZoomCameraOut(InputAction.CallbackContext context);
     }
 }

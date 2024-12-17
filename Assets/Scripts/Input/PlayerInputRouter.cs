@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Actors.Player;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 namespace Input {
@@ -13,6 +14,8 @@ namespace Input {
         
         private int m_currentIndex;
         private int m_lastIndex;
+
+        [SerializeField] private UnityEvent onCharacterSwitch;
 
         private void Awake() {
             m_currentCharacterController = characterControllers[0];
@@ -86,6 +89,8 @@ namespace Input {
             if (m_currentCharacterController.IsPlayerControlled) SwitchToNextCharacter();
             
             m_currentCharacterController.EnablePlayerControl();
+            
+            onCharacterSwitch?.Invoke();
         }
         
         private void SwitchToPrevCharacter() {
@@ -103,6 +108,8 @@ namespace Input {
             if (m_currentCharacterController.IsPlayerControlled) SwitchToPrevCharacter();
             
             m_currentCharacterController.EnablePlayerControl();
+            
+            onCharacterSwitch?.Invoke();
         }
         
         private void SwitchByIndex(int index) {
@@ -114,6 +121,8 @@ namespace Input {
             m_currentCharacterController = characterControllers[index];
             m_currentIndex = index;
             m_currentCharacterController.EnablePlayerControl();
+            
+            onCharacterSwitch?.Invoke();
         }
 
         private void SwitchToLastCharacter() {
@@ -126,6 +135,8 @@ namespace Input {
             m_currentIndex = index;
             m_currentCharacterController = characterControllers[index];
             m_currentCharacterController.EnablePlayerControl();
+            
+            onCharacterSwitch?.Invoke();
         }
 
 #endregion

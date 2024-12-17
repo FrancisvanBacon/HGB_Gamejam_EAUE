@@ -112,6 +112,33 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "SwitchCameraMode",
+                    "type": "Button",
+                    "id": "f8626d08-18cc-40bc-a475-07d15241a966",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ZoomCameraIn",
+                    "type": "Button",
+                    "id": "ae605440-493d-4180-ac69-b7a6e50d00dd",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ZoomCameraOut",
+                    "type": "Button",
+                    "id": "33a51c27-2c6c-4eb8-8e10-ee01682bedfc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -532,6 +559,94 @@
                     "action": "SwitchToPrevious",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "35c77ec3-616d-4818-a9fd-e3f909440db2",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "SwitchCameraMode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f8fbff91-b5e5-40a0-9403-b5cbb3de5a8b",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "SwitchCameraMode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7072a815-f8c4-4431-b1ac-e2b7d9e515c6",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "Hold(duration=0.1)",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "ZoomCameraIn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "bb24da8d-c47b-4944-ac30-ba5c7f5ac775",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ZoomCameraIn",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "1eda2d65-a6be-49e1-b8f4-b36e69d2086b",
+                    "path": "<Mouse>/scroll/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "ZoomCameraIn",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "2ab434b0-cd91-4467-bbd8-b8efb5431de6",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "Hold(duration=0.1)",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "ZoomCameraOut",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "b0a05de8-7e76-4b0d-8550-72878a71aec0",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ZoomCameraOut",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "c8f44e34-bb79-46e7-b610-641274ba2a9d",
+                    "path": "<Mouse>/scroll/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "ZoomCameraOut",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }
