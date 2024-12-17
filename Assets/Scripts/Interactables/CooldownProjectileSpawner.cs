@@ -9,6 +9,10 @@ namespace Interactables {
         private IEnumerator coroutine;
         protected bool m_cooldownActive;
 
+        private void OnEnable() {
+            if (coroutine != null) StopCoroutine(coroutine);
+            m_cooldownActive = false;
+        }
 
         private void OnDisable() {
             if (coroutine != null) StopCoroutine(coroutine);

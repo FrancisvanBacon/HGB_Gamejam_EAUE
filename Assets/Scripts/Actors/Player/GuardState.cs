@@ -45,8 +45,8 @@ namespace Actors.Player {
                 m_lockState = true;
                 return;
             }
-
-            if (m_lockState && m_character.MoveInput != Vector2.zero) {
+            
+            if (m_lockState && (m_character.MoveInput != Vector2.zero || m_character.LookInput != Vector2.zero)) {
                 m_lockState = false;
                 m_guardingObject.OnAutoGuardEnd?.Invoke();
                 m_guardingObject.OnGuardEnd?.Invoke();
@@ -61,6 +61,7 @@ namespace Actors.Player {
                 m_guarding = true;
             }
             else if (!m_lockState && m_character.MoveInput != Vector2.zero) {
+                m_guardingObject.OnAutoGuardEnd?.Invoke();
                 m_guardingObject.OnGuardEnd?.Invoke();
                 m_character.SetSpeed(m_lastSpeed);
                 m_guarding = false;

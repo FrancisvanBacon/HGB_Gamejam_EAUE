@@ -47,7 +47,7 @@ namespace Interactables {
             IInteractable interactable = hit.collider.gameObject.GetComponent<IInteractable>();
             
             if (interactable == null || interactable == m_currentInteractable) return;
-
+            
             m_currentInteractable?.Deselect();
 
             m_currentInteractable = interactable;

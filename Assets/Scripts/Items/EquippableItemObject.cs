@@ -38,6 +38,8 @@ namespace Items {
         }
 
         private void OnTriggerEnter2D(Collider2D other) {
+        
+            if (m_wasDropped) return;
             
             if (other.gameObject.TryGetComponent(out CharacterStateController character) 
             && character.CurrentItemType == ItemType.None) {
@@ -56,9 +58,9 @@ namespace Items {
         public ItemType ItemType { get; set; }
 
         public void Equip(CharacterStateController character) {
-            
-            if (m_wasDropped) return;
-            
+        
+            StopAllCoroutines();
+
             m_currentClass = character;
             transform.parent = character.transform;
             transform.rotation = character.transform.rotation;
@@ -112,11 +114,5 @@ namespace Items {
         public void StopInteraction() {
             m_interactableFinder.Interact(m_currentClass.ClassType, type, "Stop");
         }
-    }
-
-    [Serializable]
-    public class ClassStringWrapper {
-        public ClassType ClassType;
-        public string value;
     }
 }

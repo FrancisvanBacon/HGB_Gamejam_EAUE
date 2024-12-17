@@ -11,17 +11,17 @@ namespace Actors.Player {
     public class CharacterStateController : ActorStateController {
         
         [SerializeField] private ClassType classType;
-        
+
         [SerializeField] private List<ItemReaction> itemReactions;
         private Dictionary<string, ItemReaction> m_eventDictionary = new Dictionary<string, ItemReaction>();
         
         [SerializeField] protected InteractableFinder standardInteractFinder;
-        
+
         public ClassType ClassType => classType;
         
         private bool m_isPLayerControlled = false;
         public bool IsPlayerControlled => m_isPLayerControlled;
-        
+
         private MoveController m_moveController;
         public void SetSpeed(float value) {
             speed = value;
@@ -105,10 +105,21 @@ namespace Actors.Player {
         }
 
         public void PlayerLook(InputAction.CallbackContext context) {
-            if (!LockMovement && !LockInput && !LockRotation) {
-                m_moveController.Look(context.ReadValue<Vector2>());
-            }
-        } 
+        
+            if (LockMovement || LockInput || LockRotation) return;
+            
+            Vector2 lookInput = context.ReadValue<Vector2>();
+
+            m_moveController.Look(lookInput);
+        }
+
+        public void PlayerMouseLook(Vector2 mouseWorldPosition) {
+            m_moveController.Look((Vector3)mouseWorldPosition - transform.position);
+        }
+
+        public void ResetLookInput() {
+            m_moveController.Look(Vector2.zero);
+        }
 
         public void PlayerUseItem() {
             
@@ -119,9 +130,19 @@ namespace Actors.Player {
 
         public void PlayerDropItem() {
             if (m_equippedItem == null || LockInput) return;
+
+            if (TradeItemsWithPlayer()) return;
             
             m_equippedItem.Unequip();
             m_equippedItem = null;
+        }
+
+        private EquippableItemObject DropItem() {
+            if (m_equippedItem == null) return null;
+            var item = m_equippedItem as EquippableItemObject;
+            m_equippedItem.Unequip();
+            m_equippedItem = null;
+            return item;
         }
         
         public void PlayerEquipItem(EquippableItemObject equippedItem) {
@@ -154,7 +175,6 @@ namespace Actors.Player {
                 reaction.OnReaction?.Invoke();
             }
             
-            Debug.Log("Interpreting interaction " + _classType.ToString() + itemType.ToString() + param);
         }
 
         public void Drag(bool enable) {
@@ -259,6 +279,37 @@ namespace Actors.Player {
             m_currentState = newState;
             m_currentState.OnEnter(this);
        }
-        
+
+        private bool TradeItemsWithPlayer() {
+            if (m_equippedItem != null) {
+                
+                CharacterStateController partnerCharacter = null;
+
+                RaycastHit2D[] hits = Physics2D.CircleCastAll(
+                transform.position, 
+                m_gridSnap.CellSize, 
+                Vector2.zero,
+                m_gridSnap.CellSize,
+                LayerMask.GetMask(new []{"PlayerActors", "HidingPlayerActors"}));
+
+                foreach (var hit in hits) {
+                    if (hit.collider.gameObject.TryGetComponent(out CharacterStateController character)) {
+                        if (character == this) continue;
+                        partnerCharacter = character;
+                        break;
+                    }
+                }
+
+                if (partnerCharacter == null) return false;
+                
+                var partnerItem = partnerCharacter.DropItem();
+                var oldItem = DropItem();
+                if (partnerItem != null) partnerItem.Equip(this);
+                oldItem.Equip(partnerCharacter);
+                return true;
+            }
+
+            return false;
+        }
     }
 }

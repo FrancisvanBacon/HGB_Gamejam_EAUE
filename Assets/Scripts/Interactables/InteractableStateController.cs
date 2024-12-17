@@ -32,10 +32,10 @@ namespace Interactables {
         public void Interact(ClassType classType, ItemType item, string param = "") {
             if (m_eventDictionary.TryGetValue(classType.ToString() + item.ToString() + param, out UnityEvent reaction)) {
                 reaction?.Invoke();
-                Debug.Log(classType.ToString() + item.ToString() + param + "Succesfully interacted with Interactable");
+                //Debug.Log(classType.ToString() + item.ToString() + param + "Succesfully interacted with Interactable");
             }
             else {
-                Debug.Log(classType.ToString() + item.ToString() + param + "Interactable did not react");
+                //Debug.Log(classType.ToString() + item.ToString() + param + "Interactable did not react");
             }
             
         }

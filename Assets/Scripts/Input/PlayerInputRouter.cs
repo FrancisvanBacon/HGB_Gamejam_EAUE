@@ -4,6 +4,7 @@ using Actors.Player;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 namespace Input {
     [RequireComponent(typeof(PlayerInput))]
@@ -16,10 +17,54 @@ namespace Input {
         private int m_lastIndex;
 
         [SerializeField] private UnityEvent onCharacterSwitch;
+        
+        private string m_currentControlScheme;
+
+        private Vector2 m_currentMousePosition;
+
+        private bool m_isAimingWithMouse;
+        
+        [SerializeField] private Camera mainCamera;
 
         private void Awake() {
             m_currentCharacterController = characterControllers[0];
             m_currentCharacterController.EnablePlayerControl();
+        }
+
+        private void Start() {
+            m_currentControlScheme = gameObject.GetComponent<PlayerInput>().currentControlScheme;
+
+            if (mainCamera == null) mainCamera = Camera.main;
+        }
+
+        public void StartMouseAim(InputAction.CallbackContext context) {
+            
+            if (!m_currentControlScheme.Equals("Keyboard")) return;
+
+            if (context.started) {
+                m_isAimingWithMouse = true;
+                m_currentCharacterController.PlayerMouseLook(MouseToLookDirection(m_currentMousePosition));
+            }
+
+            if (context.canceled) {
+                m_isAimingWithMouse = false;
+                m_currentCharacterController.ResetLookInput();
+            }
+
+        }
+
+        public void UpdateMousePosition(InputAction.CallbackContext context) {
+
+            m_currentMousePosition = context.ReadValue<Vector2>();
+            
+            if (m_isAimingWithMouse && mainCamera != null) {
+                m_currentCharacterController.PlayerMouseLook(MouseToLookDirection(m_currentMousePosition));
+            }
+        }
+
+        private Vector3 MouseToLookDirection(Vector3 screenSpacePosition) {
+            screenSpacePosition.z = Mathf.Abs(mainCamera.transform.position.z);
+            return mainCamera.ScreenToWorldPoint(screenSpacePosition);
         }
 
         public void MoveCharacter(InputAction.CallbackContext context) {
@@ -28,8 +73,12 @@ namespace Input {
             m_currentCharacterController.PlayerMove(context);
         }
 
+        public void DeviceChanged(PlayerInput input) {
+            m_currentControlScheme = input.currentControlScheme;
+        }
+
         public void LookCharacter(InputAction.CallbackContext context) {
-        
+            
             if (m_currentCharacterController == null) return;
             m_currentCharacterController.PlayerLook(context);
         }

@@ -1,8 +1,5 @@
-using System;
-using System.Collections;
+
 using System.Collections.Generic;
-using Actors.Player;
-using UnityEditor;
 using UnityEngine;
 
 namespace Interactables {
