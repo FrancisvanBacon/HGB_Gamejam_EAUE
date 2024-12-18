@@ -9,7 +9,17 @@ namespace Actors {
             RespawnPosition = transform.position;
         }
         public void Respawn() {
+            
+            if (gameObject.TryGetComponent(out ActorStateController controller)) {
+                controller.ResetState();
+            }
+            if (gameObject.TryGetComponent(out GridSnap gridSnap)) {
+                gridSnap.StopAllCoroutines();
+            }
+        
             transform.position = RespawnPosition;
+
+            
         }
 
     }

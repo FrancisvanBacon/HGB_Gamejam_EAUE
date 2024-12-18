@@ -16,7 +16,7 @@ namespace Actors.Player {
             
             m_characterController.GetComponent<Collider2D>().enabled = false;
             m_gridSnap.SnapToAdjacentCell(actor.gameObject.transform.up * 100f, 5f);
-            
+
             m_layerMask = LayerMask.GetMask(new string[] { "Interactable", "Walls", "PassthroughWalls" });
         }
 
@@ -24,7 +24,7 @@ namespace Actors.Player {
             
             RaycastHit2D hit = Physics2D.Raycast(actor.gameObject.transform.position,
                 actor.gameObject.transform.up,
-                m_gridSnap.CellSize,
+                m_gridSnap.CellSize / 2,
                 m_layerMask);
 
             if (hit.collider != null) {
