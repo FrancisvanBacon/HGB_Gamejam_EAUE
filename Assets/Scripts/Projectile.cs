@@ -51,9 +51,8 @@ public class Projectile : MonoBehaviour {
 
     private void HandleTrigger(GameObject other) {
         
-        if (projectileType == ProjectileType.Unfriendly && other.TryGetComponent(
-                out CharacterStateController controller)) {
-            controller.PlayerRespawn();
+        if (projectileType == ProjectileType.Unfriendly && other.GetComponentInChildren<CharacterStateController>() != null) {
+            other.GetComponentInChildren<CharacterStateController>().PlayerRespawn();
         }
         
         if (projectileType == ProjectileType.Friendly && other.CompareTag("Enemy")) {

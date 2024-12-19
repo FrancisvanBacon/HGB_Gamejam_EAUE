@@ -12,6 +12,8 @@ namespace Actors.Player {
             var character = actor as CharacterStateController;
             
             character.SetSpeed(HIDINGSPEED);
+            
+            character.Animator.SetBool("IsHiding", true);
         }
 
         public void FixedUpdateState(ActorStateController actor) {
@@ -20,6 +22,8 @@ namespace Actors.Player {
 
         public void OnExit(ActorStateController actor) {
             var character = actor as CharacterStateController;
+            
+            character.Animator.SetBool("IsHiding", false);
             
             character.SetSpeed(m_lastSpeed);
             actor.gameObject.layer = LayerMask.NameToLayer("PlayerActors");

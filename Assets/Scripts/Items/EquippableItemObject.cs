@@ -40,8 +40,10 @@ namespace Items {
         private void OnTriggerEnter2D(Collider2D other) {
         
             if (m_wasDropped) return;
+
+            var character = other.gameObject.GetComponentInChildren<CharacterStateController>();
             
-            if (other.gameObject.TryGetComponent(out CharacterStateController character) 
+            if (character!= null 
             && character.CurrentItemType == ItemType.None) {
                 Equip(character);
             }
@@ -50,7 +52,7 @@ namespace Items {
 
         private void OnTriggerExit2D(Collider2D other) {
             
-            if (other.gameObject.TryGetComponent(out CharacterStateController character)) {
+            if (other.gameObject.GetComponentInChildren<CharacterStateController>() != null) {
                 m_wasDropped = false;
             }
         }

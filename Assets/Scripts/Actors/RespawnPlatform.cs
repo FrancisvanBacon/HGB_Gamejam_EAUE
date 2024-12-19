@@ -15,9 +15,9 @@ namespace Actors {
         
         private void OnTriggerEnter2D(Collider2D collision) {
         
-            if (collision.gameObject.TryGetComponent(out Respawner spawner)) {
+            if (collision.gameObject.GetComponentInChildren<Respawner>() != null) {
                 
-                spawner.RespawnPosition = respawnPoint.position;
+                collision.gameObject.GetComponentInChildren<Respawner>().RespawnPosition = respawnPoint.position;
             }
             
         }

@@ -1,15 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Actors {
-    [RequireComponent(typeof(Rigidbody2D), typeof(GridSnap))]
+    
     public class MoveController : MonoBehaviour {
         
         [HideInInspector] public float Speed = 4.0f;
         
-        private Rigidbody2D m_rigidbody2D;
+        [SerializeField] private Rigidbody2D rigidBody2D;
         private Vector3 m_playerVelocity;
         
         private Vector2 m_movementInput = Vector2.zero;
@@ -18,28 +16,23 @@ namespace Actors {
         public Vector2 LookInput => m_lookInput;
         public Vector2 MovementInput => m_movementInput;
 
-        private GridSnap m_gridSnap;
+        [SerializeField] private GridSnap gridSnap;
 
-        public bool LockRotation;
+        [HideInInspector] public bool LockRotation;
         
         private void Start() {
-            m_rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
+            if (rigidBody2D == null) rigidBody2D = gameObject.GetComponent<Rigidbody2D>();
             m_lookInput = gameObject.transform.up;
-            m_gridSnap = GetComponent<GridSnap>();
+            if (gridSnap == null) gridSnap = GetComponent<GridSnap>();
         }
         
         private void FixedUpdate() {
                 
             if (m_movementInput != Vector2.zero) {
-                m_rigidbody2D.MovePosition(m_rigidbody2D.position + (m_movementInput * Speed * Time.fixedDeltaTime));
+                rigidBody2D.MovePosition(rigidBody2D.position + (m_movementInput * Speed * Time.fixedDeltaTime));
             }
             
             HandleLookInput();
-        }
-
-        public IEnumerator Snap() {
-            m_movementInput = Vector2.zero;
-            yield return m_gridSnap.SnapCoroutine();
         }
 
         public void Stop() {
@@ -89,7 +82,7 @@ namespace Actors {
                 angle = look.y > 0 ? 0f : -180f;
             }
             
-            m_rigidbody2D.SetRotation(angle);
+            transform.rotation = Quaternion.Euler(0f, 0f, angle);
         }
     }
 }

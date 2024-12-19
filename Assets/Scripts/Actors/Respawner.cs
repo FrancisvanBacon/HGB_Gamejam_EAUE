@@ -6,18 +6,18 @@ namespace Actors {
         public Vector3 RespawnPosition;
         
         private void Start() {
-            RespawnPosition = transform.position;
+            RespawnPosition = transform.parent.position;
         }
         public void Respawn() {
             
             if (gameObject.TryGetComponent(out ActorStateController controller)) {
                 controller.ResetState();
             }
-            if (gameObject.TryGetComponent(out GridSnap gridSnap)) {
+            if (transform.parent.TryGetComponent(out GridSnap gridSnap)) {
                 gridSnap.StopAllCoroutines();
             }
-        
-            transform.position = RespawnPosition;
+            
+            transform.parent.position = RespawnPosition;
 
             
         }

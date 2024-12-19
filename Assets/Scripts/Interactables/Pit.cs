@@ -15,8 +15,8 @@ namespace Interactables {
 
             if (otherTag.Equals("Player")) {
             
-                if (other.TryGetComponent(out CharacterStateController character)) {
-                    character.PlayerRespawn();
+                if (other.GetComponentInChildren<CharacterStateController>() != null) {
+                    other.GetComponentInChildren<CharacterStateController>().PlayerRespawn();
                     return;
                 }
                 

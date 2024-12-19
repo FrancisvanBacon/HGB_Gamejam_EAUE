@@ -10,14 +10,16 @@ namespace Actors.Player {
         
         public void OnEnter(ActorStateController actor) {
             m_characterController = actor as CharacterStateController;
-            m_gridSnap = actor.GetComponent<GridSnap>();
+            m_gridSnap = actor.transform.parent.GetComponent<GridSnap>();
             
             m_characterController.LockInput = true;
             
-            m_characterController.GetComponent<Collider2D>().enabled = false;
+            m_characterController.transform.parent.GetComponent<Collider2D>().enabled = false;
             m_gridSnap.SnapToAdjacentCell(actor.gameObject.transform.up * 100f, 5f);
 
             m_layerMask = LayerMask.GetMask(new string[] { "Interactable", "Walls", "PassthroughWalls" });
+            
+            m_characterController.Animator.SetBool("IsPullingSelf", true);
         }
 
         public void FixedUpdateState(ActorStateController actor) {
@@ -37,8 +39,10 @@ namespace Actors.Player {
         public void OnExit(ActorStateController actor) {
             
             m_characterController.LockInput = false;
-            m_characterController.GetComponent<Collider2D>().enabled = true;
+            m_characterController.transform.parent.GetComponent<Collider2D>().enabled = true;
             m_gridSnap.SnapToAdjacentCell(Vector3.zero);
+            
+            m_characterController.Animator.SetBool("IsPullingSelf", false);
         }
     }
 }

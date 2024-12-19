@@ -7,12 +7,11 @@ using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 namespace Actors {
-    [RequireComponent(typeof(GridSnap))]
     public class ActorStateController : MonoBehaviour {
 
         protected IState m_currentState;
         
-        protected GridSnap m_gridSnap;
+        [SerializeField] protected GridSnap gridSnap;
         
         [SerializeField] protected StateType defaultState;
         public StateType DefaultState => defaultState;
@@ -24,7 +23,7 @@ namespace Actors {
         
         private void Awake() {
             m_currentState = StateTypeToIState(defaultState);
-            m_gridSnap = GetComponent<GridSnap>();
+            if (gridSnap == null) gridSnap = GetComponent<GridSnap>();
         }
 
         protected virtual void Start() {
@@ -62,7 +61,7 @@ namespace Actors {
         public void Push(Transform originTransform) {
             
             if (m_currentState is PushedState) return;
-            ChangeState(new PushedState(originTransform.transform.up * m_gridSnap.CellSize));
+            ChangeState(new PushedState(originTransform.transform.up * gridSnap.CellSize));
 
         }
         
@@ -105,7 +104,7 @@ namespace Actors {
         }
         
         protected virtual IEnumerator StateChange(IState newState) {
-            yield return m_gridSnap.SnapCoroutine();
+            yield return gridSnap.SnapCoroutine();
             m_currentState.OnExit(this);
             onAnyStateChange?.Invoke();
             m_currentState = newState;

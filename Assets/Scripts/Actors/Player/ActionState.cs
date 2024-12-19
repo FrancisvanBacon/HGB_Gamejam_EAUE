@@ -6,7 +6,6 @@ namespace Actors.Player {
 
         private float m_duration;
         private float m_timeElapsed;
-        private StateType m_lastState;
 
         public ActionState(float actionDuration) {
             m_duration = actionDuration;
@@ -16,7 +15,8 @@ namespace Actors.Player {
             var character = actor as CharacterStateController;
             character.LockInput = true;
             character.StopPlayerMovement();
-            m_lastState = actor.DefaultState;
+            character.Animator.SetBool("IsWalking", false);
+            character.Animator.SetBool("IsAction", true);
         }
 
         public void FixedUpdateState(ActorStateController actor) {
@@ -31,6 +31,7 @@ namespace Actors.Player {
             var character = actor as CharacterStateController;
             character.StopPlayerMovement();
             character.LockInput = false;
+            character.Animator.SetBool("IsAction", false);
         }
     }
 }

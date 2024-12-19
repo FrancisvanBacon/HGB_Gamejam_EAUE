@@ -4,6 +4,7 @@ using Actors.Enemys;
 using Interactables;
 using Items;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 namespace Actors.Player {
@@ -17,6 +18,8 @@ namespace Actors.Player {
         
         [SerializeField] protected InteractableFinder standardInteractFinder;
 
+        [SerializeField] private UnityEvent<ClassType, ItemType> onItemAction;
+
         public ClassType ClassType => classType;
         
         private bool m_isPLayerControlled = false;
@@ -27,7 +30,7 @@ namespace Actors.Player {
             speed = value;
             m_moveController.Speed = value;
         }
-
+        
         private IEquippableItem m_equippedItem;
         
         public int CurrentDirection => m_moveController.GetDirection();
@@ -53,6 +56,8 @@ namespace Actors.Player {
                 return m_equippedItem.ItemType;
             }
         }
+        
+        public Animator Animator;
 
         protected override void Start() {
             m_moveController = gameObject.GetComponent<MoveController>();
@@ -63,6 +68,13 @@ namespace Actors.Player {
                 reaction.optionalparam, 
                 reaction);
             }
+            if (Animator == null) Animator = gameObject.GetComponent<Animator>();
+        }
+
+        private void Update() {
+            Animator.SetInteger("Direction", CurrentDirection);
+            
+            Animator.SetBool("IsWalking", m_moveController.MovementInput != Vector2.zero);
         }
 
         public void EnablePlayerControl() => m_isPLayerControlled = true;
@@ -70,9 +82,13 @@ namespace Actors.Player {
         public void DisablePlayerControl() {
             m_moveController.Stop();
             m_isPLayerControlled = false;
+            Animator.SetBool("IsWalking", false);
         }
-        
-        public void StopPlayerMovement() => m_moveController.Stop();
+
+        public void StopPlayerMovement() {
+            m_moveController.Stop();
+            Animator.SetBool("IsWalking", false);
+        }
 
         public void PlayerMove(InputAction.CallbackContext context) {
         
@@ -99,6 +115,10 @@ namespace Actors.Player {
         
             if (!LockMovement && !LockInput) {
                 m_moveController.Move(input);
+                Animator.SetBool("IsWalking", true);
+            }
+            else {
+                Animator.SetBool("IsWalking", false);
             }
 
             
@@ -152,7 +172,7 @@ namespace Actors.Player {
             m_equippedItem = equippedItem;
             
             string key = classType.ToString() + equippedItem.ItemType.ToString();
-
+            
         }
 
         public void PlayerInteract() {
@@ -196,6 +216,7 @@ namespace Actors.Player {
         }
 
         public void Action(float actionDuration) {
+            onItemAction?.Invoke(classType, m_equippedItem.ItemType);
             ChangeState(new ActionState(actionDuration));
         }
 
@@ -263,17 +284,10 @@ namespace Actors.Player {
             }
         }
         
-        private IEnumerator ItemUseRoutine() {
-            LockInput = true;
-            yield return StartCoroutine(m_moveController.Snap());
-            LockInput = false;
-            m_equippedItem.Use();
-        }
-        
         protected override IEnumerator StateChange(IState newState) {
             
             LockInput = true;
-            yield return m_gridSnap.SnapCoroutine();
+            yield return gridSnap.SnapCoroutine();
             LockInput = false;
             m_currentState.OnExit(this);
             m_currentState = newState;
@@ -287,9 +301,9 @@ namespace Actors.Player {
 
                 RaycastHit2D[] hits = Physics2D.CircleCastAll(
                 transform.position, 
-                m_gridSnap.CellSize, 
+                gridSnap.CellSize, 
                 Vector2.zero,
-                m_gridSnap.CellSize,
+                gridSnap.CellSize,
                 LayerMask.GetMask(new []{"PlayerActors", "HidingPlayerActors"}));
 
                 foreach (var hit in hits) {

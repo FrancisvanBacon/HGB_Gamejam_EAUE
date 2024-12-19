@@ -8,8 +8,8 @@ namespace Actors.Enemys {
 
         private void OnTriggerEnter2D(Collider2D other) {
 
-            if (other.TryGetComponent(out CharacterStateController controller)) {
-                controller.PlayerRespawn();
+            if (other.GetComponentInChildren<CharacterStateController>() != null) {
+                other.GetComponentInChildren<CharacterStateController>().PlayerRespawn();
             }
 
         }

@@ -17,6 +17,8 @@ namespace Actors.Player {
             m_gridSnap.SnapToAdjacentCell(Vector3.zero);
 
             m_character.LockInput = true;
+            
+            m_character.Animator.SetTrigger("DragStart");
         }
 
         public void FixedUpdateState(ActorStateController actor) {
@@ -38,6 +40,8 @@ namespace Actors.Player {
             m_character.SetSpeed(m_character.Speed * 3);
             m_character.LockRotation = false;
             m_character.LockInput = false;
+            
+            m_character.Animator.SetTrigger("DragLeave");
         }
 
         private int CalculateConstraint(ActorStateController actor) {
