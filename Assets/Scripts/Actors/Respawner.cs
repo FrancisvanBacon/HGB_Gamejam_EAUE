@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 namespace Actors {
     public class Respawner : MonoBehaviour {
 
         public Vector3 RespawnPosition;
+
+        [SerializeField] private UnityEvent onRespawn;
         
         private void Start() {
             RespawnPosition = transform.parent.position;

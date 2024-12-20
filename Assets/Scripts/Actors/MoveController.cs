@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Actors {
     
@@ -18,7 +19,12 @@ namespace Actors {
 
         [SerializeField] private GridSnap gridSnap;
 
+        [SerializeField] private UnityEvent onWalkStart;
+        [SerializeField] private UnityEvent onWalkEnd;
+
         [HideInInspector] public bool LockRotation;
+
+        private bool m_triggeredEventState;
         
         private void Start() {
             if (rigidBody2D == null) rigidBody2D = gameObject.GetComponent<Rigidbody2D>();
@@ -33,6 +39,17 @@ namespace Actors {
             }
             
             HandleLookInput();
+
+            if (m_movementInput != Vector2.zero && !m_triggeredEventState) {
+                onWalkStart?.Invoke();
+                m_triggeredEventState = true;
+            }
+
+            if (m_movementInput == Vector2.zero && m_triggeredEventState) {
+                onWalkEnd?.Invoke();
+                m_triggeredEventState = false;
+            }
+
         }
 
         public void Stop() {
