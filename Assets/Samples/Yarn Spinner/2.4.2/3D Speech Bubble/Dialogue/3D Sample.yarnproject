@@ -3,14 +3,7 @@
   "sourceFiles": [
     "**/*.yarn"
   ],
-  "excludeFiles": [
-    "**/*~/*"
-  ],
-  "localisation": {
-    "en": {
-      "assets": "."
-    }
-  },
+  "localisation": {},
   "baseLanguage": "en",
   "compilerOptions": {}
 }

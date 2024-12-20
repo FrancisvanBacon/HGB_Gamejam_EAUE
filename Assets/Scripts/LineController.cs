@@ -23,7 +23,7 @@ public class LineController : MonoBehaviour {
         
         lineRenderer.SetPosition(0, transform.localPosition);
             
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, Mathf.Infinity, m_layermask);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, lineMaxLength, m_layermask);
 
         float distance = lineMaxLength;
         

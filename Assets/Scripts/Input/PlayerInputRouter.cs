@@ -26,6 +26,10 @@ namespace Input {
         
         [SerializeField] private Camera mainCamera;
 
+        private bool m_lockCharacterInput;
+
+        [SerializeField] private UnityEvent onMainButtonClicked;
+
         private void Awake() {
             m_currentCharacterController = characterControllers[0];
             m_currentCharacterController.EnablePlayerControl();
@@ -37,7 +41,11 @@ namespace Input {
             if (mainCamera == null) mainCamera = Camera.main;
         }
 
+        public void LockCharacterInput(bool lockInput) => m_lockCharacterInput = lockInput;
+
         public void StartMouseAim(InputAction.CallbackContext context) {
+
+            if (m_lockCharacterInput) return;
             
             if (!m_currentControlScheme.Equals("Keyboard")) return;
 
@@ -54,6 +62,8 @@ namespace Input {
         }
 
         public void UpdateMousePosition(InputAction.CallbackContext context) {
+            
+            if (m_lockCharacterInput) return;
 
             m_currentMousePosition = context.ReadValue<Vector2>();
             
@@ -68,6 +78,8 @@ namespace Input {
         }
 
         public void MoveCharacter(InputAction.CallbackContext context) {
+        
+            if (m_lockCharacterInput) return;
 
             if (m_currentCharacterController == null) return;
             m_currentCharacterController.PlayerMove(context);
@@ -78,19 +90,25 @@ namespace Input {
         }
 
         public void LookCharacter(InputAction.CallbackContext context) {
+        
+            if (m_lockCharacterInput) return;
             
             if (m_currentCharacterController == null) return;
             m_currentCharacterController.PlayerLook(context);
         }
 
         public void UseItem(InputAction.CallbackContext context) {
-
+            
             if (context.performed && m_currentCharacterController != null) {
+                onMainButtonClicked?.Invoke();
+                if (m_lockCharacterInput) return;
                 m_currentCharacterController.PlayerUseItem();
             }
         }
 
         public void DropItem(InputAction.CallbackContext context) {
+        
+            if (m_lockCharacterInput) return;
             
             if (context.performed && m_currentCharacterController != null) {
                 m_currentCharacterController.PlayerDropItem();
@@ -98,32 +116,53 @@ namespace Input {
         }
 
         public void Interact(InputAction.CallbackContext context) {
+        
+            if (m_lockCharacterInput) return;
+        
             if (context.performed && m_currentCharacterController != null) {
                 m_currentCharacterController.PlayerInteract();
             }
         }
 
         public void SwitchNextCharacter(InputAction.CallbackContext context) {
+        
+            if (m_lockCharacterInput) return;
+        
             if (context.performed) SwitchToNextCharacter();
         }
         
         public void SwitchPrevCharacter(InputAction.CallbackContext context) {
+        
+            if (m_lockCharacterInput) return;
+        
             if (context.performed) SwitchToPrevCharacter();
         }
         
         public void SwitchLastCharacter(InputAction.CallbackContext context) {
+        
+            if (m_lockCharacterInput) return;
+        
             if (context.performed) SwitchToLastCharacter();
         }
         
         public void SwitchToWarrior(InputAction.CallbackContext context) {
+        
+            if (m_lockCharacterInput) return;
+        
             if (context.performed) SwitchByIndex(1);
         }
         
         public void SwitchToJester(InputAction.CallbackContext context) {
+        
+            if (m_lockCharacterInput) return;
+        
             if (context.performed) SwitchByIndex(0);
         }
         
         public void SwitchToHunter(InputAction.CallbackContext context) {
+        
+            if (m_lockCharacterInput) return;
+        
             if (context.performed) SwitchByIndex(2);
         }
 

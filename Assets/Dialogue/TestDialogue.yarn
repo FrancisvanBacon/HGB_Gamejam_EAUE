@@ -1,0 +1,13 @@
+﻿title: TestDialogue
+tags:
+---
+<<SwitchBubble SpeechBubble "Jester">>
+Jester: Hello from me!
+<<SwitchBubble SpeechBubble "Warrior">>
+Warrior: Hello from me!
+<<SwitchBubble SpeechBubble "Hunter">>
+Hunter: Hello from me!
+<<SwitchBubble SpeechBubble "Narrator">>
+Narrator: Hello from me!
+
+===
