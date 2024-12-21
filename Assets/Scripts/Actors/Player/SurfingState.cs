@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using Debug = FMOD.Debug;
 
 namespace Actors.Player {
     public class SurfingState : IState {
@@ -17,7 +16,8 @@ namespace Actors.Player {
             m_gridSnap.SnapToAdjacentCell(actor.gameObject.transform.up);
             m_characterController.transform.parent.GetComponent<Collider2D>().enabled = false;
             
-            m_characterController.Animator.SetBool("IsSurfing", true);
+            m_characterController.Animator.ResetTrigger("Shield_Stop");
+            m_characterController.Animator.SetTrigger("Shield_Start");
 
             m_collider = actor.transform.parent.GetComponent<Collider2D>();
         }
@@ -26,7 +26,7 @@ namespace Actors.Player {
 
             if (!m_surfing && m_gridSnap.IsSnapped) {
                 m_characterController.SetSpeed(m_characterController.Speed * 2);
-                m_characterController.gameObject.layer = LayerMask.NameToLayer("SurfingPlayerActors");
+                m_characterController.gameObject.transform.parent.gameObject.layer = LayerMask.NameToLayer("SurfingPlayerActors");
                 m_collider.enabled = true;
                 m_surfing = true;
                 
@@ -52,9 +52,11 @@ namespace Actors.Player {
             m_characterController.LockInput = false;
             
             character.SetSpeed(character.Speed / 2);
-            character.gameObject.layer = LayerMask.NameToLayer("PlayerActors");
+            actor.gameObject.transform.parent.gameObject.layer = LayerMask.NameToLayer("PlayerActors");
             
-            m_characterController.Animator.SetBool("IsSurfing", false);   
+            m_characterController.Animator.SetTrigger("Shield_Stop");
+
+            Debug.Log("Ended surf");
         }
     }
 }

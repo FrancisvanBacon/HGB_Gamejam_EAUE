@@ -72,9 +72,8 @@ namespace Actors.Player {
         }
 
         private void Update() {
-            Animator.SetInteger("Direction", CurrentDirection);
-            
-            Animator.SetBool("IsWalking", m_moveController.MovementInput != Vector2.zero);
+            Animator.SetFloat("Dir_X", Mathf.Round(transform.up.x));
+            Animator.SetFloat("Dir_Y", Mathf.Round(transform.up.y));
         }
 
         public void EnablePlayerControl() => m_isPLayerControlled = true;
@@ -82,12 +81,10 @@ namespace Actors.Player {
         public void DisablePlayerControl() {
             m_moveController.Stop();
             m_isPLayerControlled = false;
-            Animator.SetBool("IsWalking", false);
         }
 
         public void StopPlayerMovement() {
             m_moveController.Stop();
-            Animator.SetBool("IsWalking", false);
         }
 
         public void PlayerMove(InputAction.CallbackContext context) {
@@ -115,12 +112,7 @@ namespace Actors.Player {
         
             if (!LockMovement && !LockInput) {
                 m_moveController.Move(input);
-                Animator.SetBool("IsWalking", true);
             }
-            else {
-                Animator.SetBool("IsWalking", false);
-            }
-
             
         }
 
@@ -145,6 +137,7 @@ namespace Actors.Player {
             
             if (m_equippedItem == null || LockInput) return;
             //StartCoroutine(ItemUseRoutine());
+            onItemAction?.Invoke(classType, m_equippedItem.ItemType);
             m_equippedItem.Use();
         }
 
@@ -216,7 +209,6 @@ namespace Actors.Player {
         }
 
         public void Action(float actionDuration) {
-            onItemAction?.Invoke(classType, m_equippedItem.ItemType);
             ChangeState(new ActionState(actionDuration));
         }
 

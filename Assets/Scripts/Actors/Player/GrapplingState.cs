@@ -19,7 +19,8 @@ namespace Actors.Player {
 
             m_layerMask = LayerMask.GetMask(new string[] { "Interactable", "Walls", "PassthroughWalls" });
             
-            m_characterController.Animator.SetBool("IsPullingSelf", true);
+            m_characterController.Animator.ResetTrigger("Whip_Stop");
+            m_characterController.Animator.SetTrigger("Whip_Start");
         }
 
         public void FixedUpdateState(ActorStateController actor) {
@@ -42,7 +43,7 @@ namespace Actors.Player {
             m_characterController.transform.parent.GetComponent<Collider2D>().enabled = true;
             m_gridSnap.SnapToAdjacentCell(Vector3.zero);
             
-            m_characterController.Animator.SetBool("IsPullingSelf", false);
+            m_characterController.Animator.SetTrigger("Whip_Stop");
         }
     }
 }

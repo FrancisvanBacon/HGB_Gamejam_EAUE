@@ -18,7 +18,7 @@ namespace Actors.Player {
 
             m_character.LockInput = true;
             
-            m_character.Animator.SetTrigger("DragStart");
+            m_character.Animator.SetTrigger("Whip_Start");
         }
 
         public void FixedUpdateState(ActorStateController actor) {
@@ -27,7 +27,7 @@ namespace Actors.Player {
 
             if (m_gridSnap.IsSnapped) {
                 m_isDragging = true;
-                m_character.MovmentConstraint = CalculateConstraint(actor);
+                m_character.MovmentConstraint = CalculateConstraint();
                 m_character.SetSpeed(m_character.Speed / 3);
                 m_character.LockInput = false;
                 m_character.LockRotation = true;
@@ -41,10 +41,10 @@ namespace Actors.Player {
             m_character.LockRotation = false;
             m_character.LockInput = false;
             
-            m_character.Animator.SetTrigger("DragLeave");
+            m_character.Animator.SetTrigger("Whip_Stop");
         }
 
-        private int CalculateConstraint(ActorStateController actor) {
+        private int CalculateConstraint() {
             switch (m_character.CurrentDirection) {
                 case 0:
                     return 2;

@@ -7,13 +7,13 @@ namespace Actors.Player {
         private const float HIDINGSPEED = 2;
         public void OnEnter(ActorStateController actor) {
             m_lastSpeed = actor.Speed;
-            actor.gameObject.layer = LayerMask.NameToLayer("HidingPlayerActors");
+            actor.gameObject.transform.parent.gameObject.layer = LayerMask.NameToLayer("HidingPlayerActors");
 
             var character = actor as CharacterStateController;
             
             character.SetSpeed(HIDINGSPEED);
             
-            character.Animator.SetBool("IsHiding", true);
+            character.Animator.SetTrigger("Shield_Start");
         }
 
         public void FixedUpdateState(ActorStateController actor) {
@@ -23,10 +23,10 @@ namespace Actors.Player {
         public void OnExit(ActorStateController actor) {
             var character = actor as CharacterStateController;
             
-            character.Animator.SetBool("IsHiding", false);
+            character.Animator.SetTrigger("Shield_Stop");
             
             character.SetSpeed(m_lastSpeed);
-            actor.gameObject.layer = LayerMask.NameToLayer("PlayerActors");
+            actor.gameObject.transform.parent.gameObject.layer = LayerMask.NameToLayer("PlayerActors");
         }
     }
 }
