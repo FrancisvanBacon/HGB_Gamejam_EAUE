@@ -4,7 +4,6 @@ using Actors.Player;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
 namespace Input {
     [RequireComponent(typeof(PlayerInput))]
@@ -42,7 +41,10 @@ namespace Input {
             if (mainCamera == null) mainCamera = Camera.main;
         }
 
-        public void LockCharacterInput(bool lockInput) => m_lockCharacterInput = lockInput;
+        public void LockCharacterInput(bool lockInput) {
+            m_lockCharacterInput = lockInput;
+            m_currentCharacterController.StopPlayerMovement();
+        }
 
         public void StartMouseAim(InputAction.CallbackContext context) {
 

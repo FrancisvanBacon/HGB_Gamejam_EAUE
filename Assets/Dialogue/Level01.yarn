@@ -1,0 +1,70 @@
+﻿title: Level01_Intro_Jester
+tags:
+---
+<<SwitchBubble SpeechBubble "Jester">>
+Jester: what da hell!!!!! that felt weird!!!!!
+Jester: where am I......
+===
+title: Level01_Pickup_Jester
+tags:
+---
+<<SwitchBubble SpeechBubble "Jester">>
+Jester: omg my lute
+===
+
+
+
+title: Level01_Intro_Warrior
+tags:
+---
+<<SwitchBubble SpeechBubble "Warrior">>
+Warrior: I have been Teleported from my Home Town!
+Warrior: This must be the Start to a Massive Heroic Adventure...
+Warrior: I must Complete the Quests before me with Ease and Confidence - 
+Warrior: - to become the Greatest Hero of our Time!
+===
+title: Level01_Pickup_Warrior
+tags:
+---
+<<SwitchBubble SpeechBubble "Warrior">>
+Warrior: My Trusty Shield!
+Warrior: It shall Protect me against all Manner of Evils!
+Warrior: ... Like Rocks!
+===
+
+
+
+title: Level01_Intro_Hunter
+tags:
+---
+<<SwitchBubble SpeechBubble "Hunter">>
+Hunter: ...
+Hunter: Not again ..
+===
+title: Level01_Pickup_Hunter
+tags:
+---
+<<SwitchBubble SpeechBubble "Hunter">>
+Hunter: My Whip -!
+Hunter: How refreshing to have it with me.
+===
+
+
+
+title: Level01_Ending
+tags:
+---
+<<SwitchBubble SpeechBubble "Jester">>
+Jester: wow theres three of us!! mmaybe 3gether we can find a way home!
+<<SwitchBubble SpeechBubble "Warrior">>
+Warrior: The More the Merrier to Complete this Great and Mighty Quest!
+<<SwitchBubble SpeechBubble "Hunter">>
+Hunter: We must be quiet in case there's danger around. This road seems to lead back to town...
+<<SwitchBubble SpeechBubble "Jester">>
+Jester: Yippiee!!
+<<SwitchBubble SpeechBubble "Warrior">>
+Warrior: Onwards!
+<<SwitchBubble SpeechBubble "Hunter">>
+Hunter: What did I just say!
+<<InvokeEvent DialogueEventMapper "Level_End">>
+===

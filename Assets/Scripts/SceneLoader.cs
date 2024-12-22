@@ -10,4 +10,14 @@ public class SceneLoader : MonoBehaviour {
                 SceneManager.LoadScene(targetScene.Name);
         }
 
+        public void QuitGame() {
+
+                if (SceneManager.GetActiveScene().name == "Main_Menu") {
+                        Application.Quit();
+                }
+                else {
+                        SceneManager.LoadScene("Main_Menu");
+                }
+        }
+
 }
