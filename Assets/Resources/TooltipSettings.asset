@@ -17,7 +17,7 @@ MonoBehaviour:
     KeyboardSprite: {fileID: 1361870644, guid: e05fd4286ebf1f440ae974f2f18c2ba9, type: 3}
     XBoxControllerSprite: {fileID: 3402381044848946325, guid: e05fd4286ebf1f440ae974f2f18c2ba9, type: 3}
   - InputType: 2
-    KeyboardSprite: {fileID: -2536888034891503274, guid: e05fd4286ebf1f440ae974f2f18c2ba9, type: 3}
+    KeyboardSprite: {fileID: 4034496524749331948, guid: e05fd4286ebf1f440ae974f2f18c2ba9, type: 3}
     XBoxControllerSprite: {fileID: 2802296858104811205, guid: e05fd4286ebf1f440ae974f2f18c2ba9, type: 3}
   - InputType: 3
     KeyboardSprite: {fileID: -6608794443370690001, guid: e05fd4286ebf1f440ae974f2f18c2ba9, type: 3}

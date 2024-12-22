@@ -574,7 +574,7 @@ TextureImporter:
         width: 11
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -595,7 +595,7 @@ TextureImporter:
         width: 11
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -616,7 +616,7 @@ TextureImporter:
         width: 11
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -624,6 +624,27 @@ TextureImporter:
       bones: []
       spriteID: 3e434b7cddcf87f449c06067ed1deb58
       internalID: 517778448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guardline_target
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 226
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a395dc64e8bfd418a2ef1f3eee38f3
+      internalID: 601106205
       vertices: []
       indices: 
       edges: []
@@ -657,6 +678,7 @@ TextureImporter:
       buttonIcon_Y: 4096690903969239582
       buttonIcon_blank: 517778448
       buttonIcon_wasd: -6608794443370690001
+      guardline_target: 601106205
       textboxA_border: 4112234308533986566
       textboxA_fill: 8968544206982148115
       textboxB_Fill: -5602485301881491137

@@ -840,8 +840,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cc91c8d2b16446498a656cf41cc012f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finderType: 1
-  searchRadius: 0.86
+  finderType: 0
+  searchRadius: 0.4
   layers:
   - Interactable
   - PlayerActors

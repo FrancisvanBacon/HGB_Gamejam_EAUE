@@ -9,8 +9,6 @@ namespace Actors.Player {
             
             m_lastSpeed = character.Speed;
             character.SetSpeed(2);
-            
-            character.Animator.SetBool("IsPlayingLute", true);   
         }
 
         public void FixedUpdateState(ActorStateController actor) {
@@ -21,8 +19,6 @@ namespace Actors.Player {
             CharacterStateController character = actor as CharacterStateController;
             
             character.SetSpeed(m_lastSpeed);
-            
-            character.Animator.SetBool("IsPlayingLute", false);
         }
     }
 }

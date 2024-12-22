@@ -812,10 +812,10 @@ MonoBehaviour:
     weight: 1
     radius: 0
   - target: {fileID: 0}
-    weight: 1
+    weight: 0
     radius: 0
   - target: {fileID: 0}
-    weight: 1
+    weight: 0
     radius: 0
 --- !u!114 &4891746592725300466
 MonoBehaviour:

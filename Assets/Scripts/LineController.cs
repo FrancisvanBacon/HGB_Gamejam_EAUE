@@ -12,6 +12,8 @@ public class LineController : MonoBehaviour {
 
     private int m_layermask;
 
+    [SerializeField] private GameObject endObject;
+
     private void Start() {
             
         m_layermask = LayerMask.GetMask(obstructingLayers.ToArray());
@@ -19,7 +21,12 @@ public class LineController : MonoBehaviour {
     }
     private void FixedUpdate() {
 
-        if (lineRenderer == null || lineRenderer.enabled == false) return;
+        if (lineRenderer == null || lineRenderer.enabled == false) {
+            endObject.SetActive(false);
+            return;
+        }
+        
+        endObject.SetActive(true);
         
         lineRenderer.SetPosition(0, transform.localPosition);
             
@@ -32,6 +39,8 @@ public class LineController : MonoBehaviour {
         }
         
         lineRenderer.SetPosition(1, transform.localPosition + Vector3.up * distance);
+
+        endObject.transform.position = lineRenderer.transform.position + lineRenderer.transform.up * distance;
 
     }
 }

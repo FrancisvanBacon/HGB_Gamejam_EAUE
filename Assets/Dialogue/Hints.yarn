@@ -79,3 +79,11 @@ Narrator: ...nor courageous enough to stand ground.
 Narrator: In fact noone has ever SEEN Hunter use a shield in all of time.
 Narrator: Use the SHIELD as HUNTER to hide from enemies and duck under projectiles!
 ===
+
+title: Hint_Characterswitch
+tags:
+---
+<<SwitchBubble SpeechBubble "Narrator">>
+Narrator: Adventurers are seldom alone...
+Narrator: SWITCH Characters to get to the flag!
+===

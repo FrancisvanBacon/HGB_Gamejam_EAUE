@@ -68,7 +68,7 @@ namespace Input {
 
         private InputType CheckForDistantInteraction() {
 
-            RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, 1f, Vector2.zero);
+            RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, 2f, Vector2.zero);
             InputType inputType = InputType.UseItem;
 
             foreach (var hit in hits) {
