@@ -6,12 +6,13 @@ namespace Actors.Enemys {
     public class LuredState : IState {
 
         private Transform m_targetTransform;
-        private float m_lureDistance = 3f;
+        private ItemType m_targetItemtype;
+        private float m_lureDistance = 1f;
         private float m_maxDistance = 5f;
         private float m_moveSpeed = 2.3f;
 
-        public LuredState(Transform mTargetTransform) {
-            m_targetTransform = mTargetTransform;
+        public LuredState(ItemType item) {
+            m_targetItemtype = item;
         }
 
         public void OnEnter(ActorStateController actor) {
@@ -22,6 +23,18 @@ namespace Actors.Enemys {
             if (actor is CharacterStateController) {
                 ((CharacterStateController)actor).LockInput = true;
             }
+
+            var box = actor.gameObject.GetComponentInChildren<DamageBox>();
+
+            if (box != null) box.GetComponent<Collider2D>().enabled = false;
+
+            var targetObj = GameObject.FindObjectsByType<EquippableItemObject>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+            foreach (var obj in targetObj) {
+                if (!obj.Type.Equals(m_targetItemtype)) continue;
+                m_targetTransform = obj.transform;
+                break;
+            }
+            
         }
         
         public void FixedUpdateState(ActorStateController actor) {
@@ -48,6 +61,10 @@ namespace Actors.Enemys {
             if (actor is CharacterStateController) {
                 ((CharacterStateController)actor).LockInput = true;
             }
+            
+            var box = actor.gameObject.GetComponentInChildren<DamageBox>();
+
+            if (box != null) box.GetComponent<Collider2D>().enabled = true;
         }
     }
 }

@@ -19,6 +19,7 @@ namespace Input {
         [SerializeField] private UnityEvent onCharacterSwitch;
         
         private string m_currentControlScheme;
+        public string CurrentControlScheme => m_currentControlScheme;
 
         private Vector2 m_currentMousePosition;
 

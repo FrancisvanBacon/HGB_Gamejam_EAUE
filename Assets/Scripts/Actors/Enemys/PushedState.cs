@@ -1,4 +1,5 @@
 ﻿
+using Items;
 using UnityEngine;
 
 namespace Actors.Enemys {
@@ -6,22 +7,33 @@ namespace Actors.Enemys {
 
         private GridSnap m_gridSnap;
         private Vector3 m_direction;
+        private ItemType m_itemype;
         private bool m_isMoving;
 
         private float m_elapsedTime;
         private const float MAXELAPSEDTIME = 1f;
 
-        public PushedState(Vector3 direction) {
-            m_direction = direction;
+        public PushedState(ItemType itemType) {
+            m_itemype = itemType;
         }
         public void OnEnter(ActorStateController actor) {
+        
             m_gridSnap = actor.gameObject.GetComponent<GridSnap>();
+            
+            var targetObj = GameObject.FindObjectsByType<EquippableItemObject>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+            foreach (var obj in targetObj) {
+                if (!obj.Type.Equals(m_itemype)) continue;
+                m_direction = obj.transform.up * m_gridSnap.CellSize;
+                break;
+            }
+            
             m_gridSnap.SnapToAdjacentCell(m_direction);
             m_isMoving = true;
             
             var rigidbody = actor.gameObject.GetComponent<Rigidbody2D>();
             rigidbody.constraints = RigidbodyConstraints2D.None;
             rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
+            
         }
 
         public void FixedUpdateState(ActorStateController actor) {

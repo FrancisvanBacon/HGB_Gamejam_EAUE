@@ -10,7 +10,6 @@ public class ClassEnterTrigger : MonoBehaviour
 {
     [SerializeField] private ClassType[] _triggerOnClasses;
     [SerializeField] private bool _isRetriggerable;
-    [SerializeField] private String _yarnTitle;
     [SerializeField] private UnityEvent onAllClassesEntered;
 
     private LayerMask _mask;

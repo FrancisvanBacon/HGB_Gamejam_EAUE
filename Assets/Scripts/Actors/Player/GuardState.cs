@@ -58,14 +58,12 @@ namespace Actors.Player {
                 m_guardingObject.OnGuard?.Invoke();
                 m_character.SetSpeed(BLOCKINGMOVESPEED);
                 m_guarding = true;
-                m_character.Animator.SetBool("IsGuardState", true);
             }
             else if (!m_lockState && m_character.MoveInput != Vector2.zero) {
                 m_guardingObject.OnAutoGuardEnd?.Invoke();
                 m_guardingObject.OnGuardEnd?.Invoke();
                 m_character.SetSpeed(m_lastSpeed);
                 m_guarding = false;
-                m_character.Animator.SetBool("IsGuardState", false);
             }
             
         }
@@ -75,8 +73,6 @@ namespace Actors.Player {
             m_guardingObject.OnGuardEnd?.Invoke();
             m_character.SetSpeed(m_lastSpeed);
             m_guarding = false;
-            Debug.Log("Guard state exited");
-            m_character.Animator.SetBool("IsGuardState", false);
         }
     }
 }

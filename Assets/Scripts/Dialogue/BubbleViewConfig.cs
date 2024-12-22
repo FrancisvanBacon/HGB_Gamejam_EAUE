@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Dialogue {
 
-    [CreateAssetMenu(menuName = "Configs", fileName = "DialogueBubbleSettings")]
+    [CreateAssetMenu(menuName = "Configs/DialogueBubbleSettings", fileName = "DialogueBubbleSettings")]
     public class BubbleViewConfig : ScriptableObject {
 
         [SerializeField] private List<ClassDialogueSettings> settings;

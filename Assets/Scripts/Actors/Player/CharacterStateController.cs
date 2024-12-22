@@ -297,9 +297,10 @@ namespace Actors.Player {
                 Vector2.zero,
                 gridSnap.CellSize,
                 LayerMask.GetMask(new []{"PlayerActors", "HidingPlayerActors"}));
-
+                
                 foreach (var hit in hits) {
-                    if (hit.collider.gameObject.TryGetComponent(out CharacterStateController character)) {
+                    if (hit.collider.gameObject.GetComponentInChildren<CharacterStateController>() != null) {
+                        var character = hit.collider.gameObject.GetComponentInChildren<CharacterStateController>();
                         if (character == this) continue;
                         partnerCharacter = character;
                         break;

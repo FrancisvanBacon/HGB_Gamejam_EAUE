@@ -19,6 +19,14 @@ public class GridSnap : MonoBehaviour {
             StartCoroutine(SnapCoroutine());
         }
     }
+    
+    public void SnapTo(Transform target) {
+        StopAllCoroutines();
+        
+        m_target = target.position;
+        
+        StartCoroutine(SnapCoroutine(2f));
+    }
 
     public void SnapToAdjacentCell(Vector3 direction, float speed = 2f) {
         StopAllCoroutines();

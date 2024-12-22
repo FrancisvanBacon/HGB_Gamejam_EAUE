@@ -44,6 +44,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Floor
+    uniqueID: 469315869
+    locked: 0
+  - name: Background
+    uniqueID: 3301809683
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: HeroObjects
+    uniqueID: 1350782795
+    locked: 0
+  - name: Foreground
+    uniqueID: 2951130797
     locked: 0

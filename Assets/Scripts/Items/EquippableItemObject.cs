@@ -10,6 +10,7 @@ namespace Items {
     public class EquippableItemObject : MonoBehaviour, IEquippableItem {
 
         [SerializeField] protected ItemType type;
+        public ItemType Type => type;
         [SerializeField] private List<ClassType> optionalParamInteraction;
         
         private bool m_toggle;

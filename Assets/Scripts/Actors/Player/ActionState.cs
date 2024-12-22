@@ -15,8 +15,6 @@ namespace Actors.Player {
             var character = actor as CharacterStateController;
             character.LockInput = true;
             character.StopPlayerMovement();
-            character.Animator.SetBool("IsWalking", false);
-            character.Animator.SetBool("IsAction", true);
         }
 
         public void FixedUpdateState(ActorStateController actor) {
@@ -31,7 +29,6 @@ namespace Actors.Player {
             var character = actor as CharacterStateController;
             character.StopPlayerMovement();
             character.LockInput = false;
-            character.Animator.SetBool("IsAction", false);
         }
     }
 }

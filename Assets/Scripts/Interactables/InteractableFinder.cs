@@ -22,7 +22,7 @@ namespace Interactables {
 
             RaycastHit2D hit = GetRaycastHit2D();
             
-            if (hit) {
+            if (hit.collider != null) {
                 HandleRaycastHit(hit);
             }
             else if (m_currentInteractable != null) {
@@ -45,11 +45,17 @@ namespace Interactables {
         protected virtual void HandleRaycastHit(RaycastHit2D hit) {
             
             IInteractable interactable = hit.collider.gameObject.GetComponent<IInteractable>();
+
+            if (interactable == null && m_currentInteractable != null) {
+                m_currentInteractable.Deselect();
+                m_currentInteractable = null;
+                return;
+            }
             
             if (interactable == null || interactable == m_currentInteractable) return;
             
             m_currentInteractable?.Deselect();
-
+            
             m_currentInteractable = interactable;
             m_currentInteractable.Select();
             

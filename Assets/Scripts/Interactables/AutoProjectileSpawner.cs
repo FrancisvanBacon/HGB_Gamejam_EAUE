@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Interactables {
     public class AutoProjectileSpawner : ProjectileSpawner {
@@ -8,11 +7,15 @@ namespace Interactables {
         [SerializeField] private float loopPeriodInSeconds = 1f;
         [SerializeField] private bool StartShootingOnStart;
         private IEnumerator coroutine;
-
-        private void Start() {
-            coroutine = ShootRoutine();
-            
-            StartCoroutine(coroutine);
+        
+        private void OnEnable() {
+            if (StartShootingOnStart) {
+                StartShooting();
+            }
+        }
+        
+        private void OnDisable() {
+            Stop();
         }
         
         public void StartShooting() {
@@ -25,7 +28,10 @@ namespace Interactables {
         }
 
         public void Stop() {
-            if (coroutine != null) StopCoroutine(coroutine);
+            if (coroutine != null) {
+                StopCoroutine(coroutine);
+                coroutine = null;
+            }
         }
 
         private IEnumerator ShootRoutine() {

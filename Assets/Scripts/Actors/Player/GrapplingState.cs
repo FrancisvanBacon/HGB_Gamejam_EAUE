@@ -24,10 +24,10 @@ namespace Actors.Player {
         }
 
         public void FixedUpdateState(ActorStateController actor) {
-            
-            RaycastHit2D hit = Physics2D.Raycast(actor.gameObject.transform.position,
-                actor.gameObject.transform.up,
-                m_gridSnap.CellSize / 2,
+            var gameObject = actor.gameObject;
+            RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position,
+                gameObject.transform.up,
+                m_gridSnap.CellSize * 0.1f,
                 m_layerMask);
 
             if (hit.collider != null) {

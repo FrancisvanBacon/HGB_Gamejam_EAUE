@@ -2,6 +2,7 @@
 using System.Collections;
 using Actors.Enemys;
 using Actors.Player;
+using Items;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -19,9 +20,14 @@ namespace Actors {
         [SerializeField] protected float speed = 4.0f;
         public float Speed => speed;
         [SerializeField] protected Transform targetTransform;
-        [FormerlySerializedAs("onAnyStateExit")] [FormerlySerializedAs("onAnyStateEnter")] [SerializeField] private UnityEvent onAnyStateChange;
+        [SerializeField] private UnityEvent onAnyStateChange;
+
+        [SerializeField]private Vector3 m_startingPos;
+        [SerializeField]private Quaternion m_startingRot;
         
         private void Awake() {
+            m_startingPos = transform.position;
+            m_startingRot = transform.rotation;
             m_currentState = StateTypeToIState(defaultState);
             if (gridSnap == null) gridSnap = GetComponent<GridSnap>();
         }
@@ -47,21 +53,24 @@ namespace Actors {
             }
         }
         
-        public void Lure(Transform _targetTransform) {
-        
-            targetTransform = _targetTransform;
-            
+        public void Lure(string itemType) {
+
             if (m_currentState is LuredState) {
                 return;
             }
-            
-            ChangeState(new LuredState(targetTransform));
+
+            if (Enum.TryParse(itemType, out ItemType _itemType)) {
+                ChangeState(new LuredState(_itemType));
+            }
         }
         
-        public void Push(Transform originTransform) {
+        public void Push(string originItem) {
             
             if (m_currentState is PushedState) return;
-            ChangeState(new PushedState(originTransform.transform.up * gridSnap.CellSize));
+            
+            if (Enum.TryParse(originItem, out ItemType _itemType)) {
+                ChangeState(new PushedState(_itemType));
+            }
 
         }
         
@@ -83,9 +92,9 @@ namespace Actors {
                 case StateType.Patrol:
                     return gameObject.GetComponent<PatrolState>();
                 case StateType.Sentry:
-                    return new SentryState();
+                    return new SentryState(m_startingPos, m_startingRot);
                 case StateType.Lured:
-                    return new LuredState(targetTransform);
+                    return new LuredState(ItemType.Lute);
                 case StateType.Blocking:
                     return new GuardState(StateType.Blocking);
                 case StateType.AimingBow:

@@ -11,8 +11,8 @@ namespace Actors.Player {
         public void OnEnter(ActorStateController actor) {
         
             m_character = actor as CharacterStateController;
-            
-            m_gridSnap = actor.GetComponent<GridSnap>();
+
+            m_gridSnap = actor.GetComponentInParent<GridSnap>();
             
             m_gridSnap.SnapToAdjacentCell(Vector3.zero);
 

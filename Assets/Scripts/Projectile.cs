@@ -16,7 +16,7 @@ public class Projectile : MonoBehaviour {
     private void Start() {
 
         if (projectileType == ProjectileType.Unfriendly) {
-            m_layermask = LayerMask.GetMask(new []{"Walls", "PlayerActors", "SurfingPlayerActors", "Interactable"});
+            m_layermask = LayerMask.GetMask(new []{"Walls", "PlayerActors", "SurfingPlayerActors"});
         }
         else if (projectileType == ProjectileType.Friendly) {
             m_layermask = LayerMask.GetMask(new []{"Walls", "Interactable"});

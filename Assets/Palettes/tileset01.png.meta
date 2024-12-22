@@ -378,10 +378,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset01_12
+      name: flag_tooltip
       rect:
         serializedVersion: 2
-        x: 192
+        x: 200
         y: 200
         width: 16
         height: 16
@@ -3697,6 +3697,7 @@ TextureImporter:
       fence_right: -533182383
       fence_rightUp: -1706640122
       fence_upRight: -454309160
+      flag_tooltip: -1433946908
       goal_flag: -1726808522
       laser: 61966883
       lever: 1729741583
@@ -3732,7 +3733,6 @@ TextureImporter:
       tileset01_117: 1137284604
       tileset01_118: 1088913598
       tileset01_119: -1156833579
-      tileset01_12: -1433946908
       tileset01_120: 2050036947
       tileset01_121: 2121191006
       tileset01_125: 1571034294

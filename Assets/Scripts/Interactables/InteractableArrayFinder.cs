@@ -3,16 +3,21 @@ using System.Numerics;
 using Actors.Player;
 using Items;
 using UnityEngine;
+using UnityEngine.Events;
 using Vector2 = UnityEngine.Vector2;
 
 namespace Interactables {
     [RequireComponent(typeof(Collider2D))]
-    public class InteractableArrayFinder : InteractableFinder {
+    public class InteractableArrayFinder : TagInteractableFinder {
         
         private List<IInteractable> m_interactables = new List<IInteractable>();
-        public override bool HasInteractable() => m_interactables.Count > 0;
+        public override bool HasInteractable() => m_interactables.Count > 0 || triggerOnNone;
 
         [SerializeField] private bool adressStopGlobally;
+
+        [SerializeField] private bool triggerOnNone;
+        
+        [SerializeField] private UnityEvent<ClassType, ItemType, string> onInteraction;
 
         private void Start() {
             gameObject.GetComponent<Collider2D>().isTrigger = true;
@@ -28,9 +33,11 @@ namespace Interactables {
 
             var hits = GetRaycastHits2D();
 
-            foreach (var collider in hits) {
+            foreach (var hit in hits) {
+            
+                if (!InteractableTags.Contains(hit.collider.tag)) continue;
                 
-                if (collider.collider.gameObject.TryGetComponent<IInteractable>(out IInteractable interactable)) {
+                if (hit.collider.gameObject.TryGetComponent<IInteractable>(out IInteractable interactable)) {
                     m_interactables.Add(interactable);
                     interactable.Select();
                 }
@@ -80,7 +87,9 @@ namespace Interactables {
         }
         
         public override void Interact(ClassType classType, ItemType itemType, string param = "") {
-
+            
+            onInteraction?.Invoke(classType, itemType, param);
+            
             if (adressStopGlobally && param.Equals("Stop")) {
                 var interactables = GameObject.FindObjectsByType<InteractableStateController>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
 

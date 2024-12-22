@@ -14,18 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings:
   - Class: 0
-    BorderSprite: {fileID: -1271548380, guid: 2520bdef426c23345a01b2b6ccff7a6b, type: 3}
-    FillSprite: {fileID: 6868671092004490162, guid: 7ae607175e734d845b5f5557e712b674, type: 3}
+    BorderSprite: {fileID: 7691749000343556257, guid: e05fd4286ebf1f440ae974f2f18c2ba9, type: 3}
+    FillSprite: {fileID: -5602485301881491137, guid: e05fd4286ebf1f440ae974f2f18c2ba9, type: 3}
     FillColour: {r: 0.42857128, g: 0.4222178, b: 0.4222178, a: 1}
   - Class: 1
-    BorderSprite: {fileID: 1328347267, guid: 2520bdef426c23345a01b2b6ccff7a6b, type: 3}
-    FillSprite: {fileID: -6672259548771403201, guid: 7ae607175e734d845b5f5557e712b674, type: 3}
+    BorderSprite: {fileID: 4112234308533986566, guid: e05fd4286ebf1f440ae974f2f18c2ba9, type: 3}
+    FillSprite: {fileID: 8968544206982148115, guid: e05fd4286ebf1f440ae974f2f18c2ba9, type: 3}
     FillColour: {r: 0.2509804, g: 0.2509804, b: 0.45098042, a: 1}
   - Class: 2
-    BorderSprite: {fileID: 1328347267, guid: 2520bdef426c23345a01b2b6ccff7a6b, type: 3}
-    FillSprite: {fileID: -6672259548771403201, guid: 7ae607175e734d845b5f5557e712b674, type: 3}
+    BorderSprite: {fileID: 4112234308533986566, guid: e05fd4286ebf1f440ae974f2f18c2ba9, type: 3}
+    FillSprite: {fileID: 8968544206982148115, guid: e05fd4286ebf1f440ae974f2f18c2ba9, type: 3}
     FillColour: {r: 0.8745099, g: 0.4431373, b: 0.14901961, a: 1}
   - Class: 3
-    BorderSprite: {fileID: 1328347267, guid: 2520bdef426c23345a01b2b6ccff7a6b, type: 3}
-    FillSprite: {fileID: -6672259548771403201, guid: 7ae607175e734d845b5f5557e712b674, type: 3}
+    BorderSprite: {fileID: 4112234308533986566, guid: e05fd4286ebf1f440ae974f2f18c2ba9, type: 3}
+    FillSprite: {fileID: 8968544206982148115, guid: e05fd4286ebf1f440ae974f2f18c2ba9, type: 3}
     FillColour: {r: 0.35686275, g: 0.4431373, b: 0.19607845, a: 1}

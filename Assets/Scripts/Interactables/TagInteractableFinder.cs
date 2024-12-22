@@ -10,6 +10,11 @@ namespace Interactables {
             
             IInteractable interactable = hit.collider.gameObject.GetComponent<IInteractable>();
             
+            if (interactable == null && m_currentInteractable != null) {
+                m_currentInteractable.Deselect();
+                m_currentInteractable = null;
+            }
+            
             if (interactable == null || 
             interactable == m_currentInteractable ||
             !InteractableTags.Contains(hit.collider.tag)) return;

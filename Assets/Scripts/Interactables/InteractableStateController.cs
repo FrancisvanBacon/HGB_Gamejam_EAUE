@@ -13,14 +13,12 @@ namespace Interactables {
         
         private Dictionary<string, UnityEvent> m_eventDictionary = new Dictionary<string, UnityEvent>();
         
+        [SerializeField] private UnityEvent onSelect;
+        [SerializeField] private UnityEvent onDeselect;
+        
         protected override void Start() {
             base.Start();
-            
-            SpriteRenderer image = gameObject.GetComponent<SpriteRenderer>();
-            if (image != null) {
-                image.color = Color.yellow;
-            }
-            
+
             foreach (var itemReaction in itemInteractions) {
                 m_eventDictionary.Add(itemReaction.ClassType.ToString() + 
                 itemReaction.ItemType.ToString() + 
@@ -41,19 +39,27 @@ namespace Interactables {
         }
 
         public void Select() {
-            SpriteRenderer image = gameObject.GetComponent<SpriteRenderer>();
 
-            if (image != null) {
-                image.color = Color.red;
-            }
+            var spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
+            if (spriteRenderer == null) return;
+
+            spriteRenderer.material = Resources.Load<Material>("Materials/Sprite-Unlit-Outline");
+            
+            Debug.Log("Selected");
+            onSelect?.Invoke();
         }
 
         public void Deselect() {
-            SpriteRenderer image = gameObject.GetComponent<SpriteRenderer>();
 
-            if (image != null) {
-                image.color = Color.yellow;
-            }
+            var spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+            
+            if (spriteRenderer == null) return;
+
+            spriteRenderer.material = Resources.Load<Material>("Materials/Sprite-Lit-Default");
+            
+            Debug.Log("Deselected");
+            onDeselect?.Invoke();
         }
     }
 

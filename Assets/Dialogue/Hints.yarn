@@ -1,6 +1,7 @@
 ﻿title: Hint_Jester_Lute
 tags:
 ---
+<<SwitchBubble SpeechBubble "Narrator">>
 Narrator: The joyful Jester had a knack for singing ballads so beautifully...
 Narrator: ...enemies dismiss the ground they were standing on.
 Narrator: Use the LUTE as JESTER to LURE enemies away from their positions!
@@ -8,6 +9,7 @@ Narrator: Use the LUTE as JESTER to LURE enemies away from their positions!
 title: Hint_Warrior_Shield
 tags:
 ---
+<<SwitchBubble SpeechBubble "Narrator">>
 Narrator: The mighty Warrior paired with the shield is a bullwark...
 Narrator: ...unwinching and unstoppable, even the greatest of arrows and boulder budge.
 Narrator: Use the SHIELD as WARRIOR to BLOCK projectiles or PUSH heavy objects!
@@ -15,6 +17,7 @@ Narrator: Use the SHIELD as WARRIOR to BLOCK projectiles or PUSH heavy objects!
 title: Hint_Hunter_Whip
 tags:
 ---
+<<SwitchBubble SpeechBubble "Narrator">>
 Narrator: The dexterous Hunter with the whip was a true sight to behold...
 Narrator: ...with ease levers, buttons and switches were flicked as it were childsplay.
 Narrator: Use the WHIP as HUNTER to INTERACT with objects far away.
@@ -25,6 +28,7 @@ Narrator: Use the WHIP as HUNTER to INTERACT with objects far away.
 title: Hint_Jester_Shield
 tags:
 ---
+<<SwitchBubble SpeechBubble "Narrator">>
 Narrator: Not as mighty as Warrior, Jester using the shield could not withstand the force of projectiles...
 Narrator: ...but instead used it as a surfboard!
 Narrator: Use the SHIELD as JESTER to surf along water surfaces.
@@ -32,6 +36,7 @@ Narrator: Use the SHIELD as JESTER to surf along water surfaces.
 title: Hint_Warrior_Whip
 tags:
 ---
+<<SwitchBubble SpeechBubble "Narrator">>
 Narrator: Not as dexterous as Hunter, Warrior could not grab levers from afar...
 Narrator: ...but instead dragged heavy boulders instead!
 Narrator: Use the WHIP as WARRIOR to drag heavy boulders with anchorpoints.
@@ -39,6 +44,7 @@ Narrator: Use the WHIP as WARRIOR to drag heavy boulders with anchorpoints.
 title: Hint_Hunter_Lute
 tags:
 ---
+<<SwitchBubble SpeechBubble "Narrator">>
 Narrator: Not as musical as Jester, Hunter could never play a single note on a lute...
 Narrator: ...but its strings prooved to be quite flexible.
 Narrator: Use the LUTE as HUNTER to shoot projectiles and eliminate enemies.
@@ -49,6 +55,7 @@ Narrator: Use the LUTE as HUNTER to shoot projectiles and eliminate enemies.
 title: Hint_Jester_Whip
 tags:
 ---
+<<SwitchBubble SpeechBubble "Narrator">>
 Narrator: Jester using the whip was neither strong enough to drag objects...
 Narrator: ...nor dexterous enough to interact with them. 
 Narrator: But acrobatic enough to grapple onto anchorpoints.
@@ -57,6 +64,7 @@ Narrator: Use the WHIP as JESTER to GRAPPLE over obstacles!
 title: Hint_Warrior_Lute
 tags:
 ---
+<<SwitchBubble SpeechBubble "Narrator">>
 Narrator: Warrior had miserable aim...
 Narrator: ...and despite having had a beautiful voice cannot lure enemies. 
 Narrator: But Warriors skill with the lute still proved to be 'heart'breaking!
@@ -65,6 +73,7 @@ Narrator: Use the LUTE as WARRIOR to SMASH breakable objects!
 title: Hint_Hunter_Shield
 tags:
 ---
+<<SwitchBubble SpeechBubble "Narrator">>
 Narrator: Hunter using the shield wasn't as creative as Jester...
 Narrator: ...nor courageous enough to stand ground.
 Narrator: In fact noone has ever SEEN Hunter use a shield in all of time.
