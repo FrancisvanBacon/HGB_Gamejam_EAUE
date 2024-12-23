@@ -11,10 +11,12 @@ namespace Interactables {
     
         public void ToggleLever() {
         
+            m_isright = !m_isright;
+        
             if (m_isright) OnLeverRight.Invoke();
             if (!m_isright) OnLeverLeft.Invoke();
         
-            m_isright = !m_isright;
+            
         }
 
     }

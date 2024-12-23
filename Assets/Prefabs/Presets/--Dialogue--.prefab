@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 5
-    m_Right: 5
+    m_Left: 9
+    m_Right: 9
     m_Top: 2
     m_Bottom: 3
   m_ChildAlignment: 4
@@ -436,10 +436,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: WHAT ARE YOU DOING???
+  m_text: Test text with LARGE stuff Test text with LARGE stuff Test text with LARGE
+    stuff
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bebb1df903492664ebd2e02e59e2d64f, type: 2}
+  m_sharedMaterial: {fileID: -7187346528292338701, guid: bebb1df903492664ebd2e02e59e2d64f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -620,8 +621,8 @@ MonoBehaviour:
       m_Calls: []
   typewriterEffectSpeed: 40
   continueButton: {fileID: 0}
-  holdTime: 1
-  autoAdvance: 0
+  holdTime: 3
+  autoAdvance: 1
   palette: {fileID: 0}
 --- !u!225 &7819757259661251354
 CanvasGroup:
@@ -650,6 +651,7 @@ MonoBehaviour:
   config: {fileID: 11400000, guid: f7a5bcd57aa080c47a59e323cf7a21fb, type: 2}
   bubbleBorderImage: {fileID: 7602107686962097477}
   bubbleFillImage: {fileID: 256337845465101137}
+  textfield: {fileID: 70046098356705255}
 --- !u!1 &7009307823999923109
 GameObject:
   m_ObjectHideFlags: 0

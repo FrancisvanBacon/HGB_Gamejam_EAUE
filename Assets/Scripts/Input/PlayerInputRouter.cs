@@ -103,7 +103,6 @@ namespace Input {
         public void UseItem(InputAction.CallbackContext context) {
             
             if (context.performed && m_currentCharacterController != null) {
-                onMainButtonClicked?.Invoke();
                 if (m_lockCharacterInput) return;
                 m_currentCharacterController.PlayerUseItem();
             }
@@ -119,10 +118,10 @@ namespace Input {
         }
 
         public void Interact(InputAction.CallbackContext context) {
-        
-            if (m_lockCharacterInput) return;
-        
+            
             if (context.performed && m_currentCharacterController != null) {
+                onMainButtonClicked?.Invoke();
+                if (m_lockCharacterInput) return;
                 m_currentCharacterController.PlayerInteract();
             }
         }

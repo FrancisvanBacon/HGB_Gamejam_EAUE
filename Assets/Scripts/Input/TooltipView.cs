@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Input {
     [RequireComponent(typeof(SpriteRenderer), typeof(Animator))]
@@ -10,13 +12,30 @@ namespace Input {
         private SpriteRenderer m_spriteRenderer;
         private Animator m_animator;
 
-        private void Start() {
+        private InputType m_currentInputType;
+
+        private void OnEnable() {
             m_spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
             m_animator = gameObject.GetComponent<Animator>();
             m_currentInputDevice = GameObject.FindFirstObjectByType<PlayerInputRouter>();
             m_spriteRenderer.enabled = false;
             m_animator.enabled = false;
             m_config = Resources.Load<TooltipViewConfig>("TooltipSettings");
+
+            var playerInput = GameObject.FindFirstObjectByType<PlayerInput>();
+            if (playerInput != null) playerInput.controlsChangedEvent.AddListener(OnInputSwitch);
+        }
+
+        private void OnDisable() {
+            var playerInput = GameObject.FindFirstObjectByType<PlayerInput>();
+            if (playerInput != null) playerInput.controlsChangedEvent.RemoveListener(OnInputSwitch);
+        }
+
+        private void OnInputSwitch(PlayerInput input) {
+
+            if (m_currentInputType != InputType.None) {
+                ShowTooltip(m_currentInputType);
+            }
         }
 
         public void ShowInteractTooltip() {
@@ -57,6 +76,8 @@ namespace Input {
                 m_spriteRenderer.sprite = sprite;
                 m_spriteRenderer.enabled = true;
                 m_animator.enabled = true;
+
+                m_currentInputType = inputType;
             }
 
         }
@@ -64,6 +85,7 @@ namespace Input {
         public void HideTooltip() {
             m_spriteRenderer.enabled = false;
             m_animator.enabled = false;
+            m_currentInputType = InputType.None;
         }
 
         private InputType CheckForDistantInteraction() {
@@ -90,8 +112,6 @@ namespace Input {
 
             Sprite sprite = null;
             
-            Debug.Log(m_currentInputDevice.CurrentControlScheme);
-
             foreach (var obj in list) {
                 if (obj.InputType.Equals(type)) {
                     switch (m_currentInputDevice.CurrentControlScheme) {

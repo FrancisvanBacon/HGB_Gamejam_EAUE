@@ -46,7 +46,6 @@ namespace Interactables {
 
             spriteRenderer.material = Resources.Load<Material>("Materials/Sprite-Unlit-Outline");
             
-            Debug.Log("Selected");
             onSelect?.Invoke();
         }
 
@@ -58,7 +57,6 @@ namespace Interactables {
 
             spriteRenderer.material = Resources.Load<Material>("Materials/Sprite-Lit-Default");
             
-            Debug.Log("Deselected");
             onDeselect?.Invoke();
         }
     }

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Actors.Player;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Dialogue {
 
@@ -32,6 +34,7 @@ namespace Dialogue {
         public Sprite BorderSprite;
         public Sprite FillSprite;
         public Color FillColour;
+        [FormerlySerializedAs("font")] public TMP_FontAsset Font;
 
     }
 } 

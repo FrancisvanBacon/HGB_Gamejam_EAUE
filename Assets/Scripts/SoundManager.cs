@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
@@ -12,6 +13,10 @@ public class SoundManager : MonoBehaviour
     private float m_musicvolume = 1f;
     private float m_sfxVolume = 1f;
     private float m_masterVolume = 1f;
+
+    [SerializeField] private Slider masterSlider;
+    [SerializeField] private Slider sfxSlider;
+    [SerializeField] private Slider musicSlider;
 
     // Start is called before the first frame update
     void Start()
@@ -64,6 +69,10 @@ public class SoundManager : MonoBehaviour
         m_musicvolume = PlayerPrefs.GetFloat("musicVolume");
         m_sfxVolume = PlayerPrefs.GetFloat("sfxVolume");
         m_masterVolume = PlayerPrefs.GetFloat("masterVolume");
+
+        if (masterSlider != null) masterSlider.value = m_masterVolume;
+        if (sfxSlider != null) sfxSlider.value = m_masterVolume;
+        if (musicSlider != null) musicSlider.value = m_masterVolume;
     }
 
     private void Save()

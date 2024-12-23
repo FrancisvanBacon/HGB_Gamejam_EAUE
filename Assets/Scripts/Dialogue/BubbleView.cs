@@ -1,5 +1,6 @@
 ﻿using System;
 using Actors.Player;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Yarn.Unity;
@@ -11,6 +12,7 @@ namespace Dialogue {
 
         [SerializeField] private Image bubbleBorderImage;
         [SerializeField] private Image bubbleFillImage;
+        [SerializeField] private TMP_Text textfield;
 
         private void Start() {
             if (config == null) {
@@ -40,6 +42,7 @@ namespace Dialogue {
             bubbleBorderImage.sprite = setting.BorderSprite;
             bubbleFillImage.sprite = setting.FillSprite;
             bubbleFillImage.color = setting.FillColour;
+            textfield.font = setting.Font;
 
         }
 

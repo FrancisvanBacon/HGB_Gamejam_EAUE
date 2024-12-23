@@ -87,3 +87,13 @@ tags:
 Narrator: Adventurers are seldom alone...
 Narrator: SWITCH Characters to get everyone to the flag!
 ===
+
+title: Hint_DropItem
+tags:
+---
+<<SwitchBubble SpeechBubble "Narrator">>
+Narrator: To some, an adventurers weapon of choice defines the adventurer...
+Narrator: To others, the weapon is merely a tool.
+Narrator: True innovation lies in how to use it!
+Narrator: DROP or SWITCH your weapons with comrades to solve puzzles!
+===
