@@ -1,0 +1,76 @@
+﻿title: Level04_Jester_Grapple
+tags:
+---
+<<SwitchBubble SpeechBubble "Jester">>
+Jester: hmmm thats a large pit!!....
+Jester: hmmmmmm thats also a large, sturdy tree...
+Jester: mmmayhaps I can use hunters WHIP to swing myself across!!!!!!
+
+<<InvokeEvent DialogueEventMapper "Enable_Trigger_Hunter">>
+===
+
+title: Level04_Warrior_Smash
+tags:
+---
+<<SwitchBubble SpeechBubble "Jester">>
+Jester: jinQusGnaAaAA!!!
+<<SwitchBubble SpeechBubble "Warrior">>
+Warrior: What a potent weapon you wield Jester!
+Warrior: Even this super shiny iron is no match for your wooden Lute!
+
+<<SwitchBubble SpeechBubble "Hunter">>
+Hunter: I don't even feel bad for using it as a bow anymore
+
+<<SwitchBubble SpeechBubble "Jester">>
+Jester: mmmy luuuuute... ;-;
+
+===
+
+title: Level04_Jester_Hunter
+---
+<<SwitchBubble SpeechBubble "Jester">>
+Jester: ummm ummm Hunter?!?! can I borrow your whip?
+<<SwitchBubble SpeechBubble "Hunter">>
+Hunter: ...
+Hunter: why?
+<<SwitchBubble SpeechBubble "Jester">>
+Jester: I'd like to use my extreme acrobatic skill to hurl myself across a giant cavern with the only thing stopping me and your whip from falling into an endless abyss being a tree barely as large as we are that i am holding onto for life
+
+<<SwitchBubble SpeechBubble "Hunter">>
+Hunter: Uh, no
+Hunter: Sorry.
+
+<<SwitchBubble SpeechBubble "Jester">>
+Jester: pleeeeeaase please please pleeeeaseeee!!!!
+Jester: you know, my lute is still out of tune from last time......
+
+<<SwitchBubble SpeechBubble "Warrior">>
+Warrior: Does the tree look sturdy?
+
+<<SwitchBubble SpeechBubble "Jester">>
+Jester: the sturdiest
+
+<<SwitchBubble SpeechBubble "Hunter">>
+Hunter: ...
+Hunter: please don't fall.
+
+<<SwitchBubble SpeechBubble "Jester">>
+Jester: yippieeeeeee omggg thank uuuuu!!!!!
+
+===
+
+title: Level04_End
+---
+
+<<SwitchBubble SpeechBubble "Warrior">>
+Warrior: By the mighty Queen!
+Warrior: That looks like one sturdy tree!
+
+<<SwitchBubble SpeechBubble "Hunter">>
+Hunter: Wow, indeed!
+
+<<SwitchBubble SpeechBubble "Jester">>
+Jester: hihi lets continue!!! that was fun!!!!
+
+<<InvokeEvent DialogueEventMapper "Level_End">>
+===

@@ -33,6 +33,14 @@ public class CameraTargetGroupController : MonoBehaviour {
         m_currentCamera = dynamicCamera;
         m_currentCamera.Priority = 11;
         staticCamera.Priority = 10;
+
+        var inputManager = GameObject.FindFirstObjectByType<PlayerInputManager>();
+
+        if (inputManager != null) {
+            inputManager.onPlayerJoined += input => {
+                SwitchToStaticCamera(true);
+            };
+        }
     }
 
     public void SwitchCameraViews(InputAction.CallbackContext context) {

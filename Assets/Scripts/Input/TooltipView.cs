@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,33 +8,57 @@ namespace Input {
     public class TooltipView : MonoBehaviour {
 
         public bool showTooltips = true;
-        private PlayerInputRouter m_currentInputDevice;
+        private string m_currentInputDevice;
         private TooltipViewConfig m_config;
         private SpriteRenderer m_spriteRenderer;
         private Animator m_animator;
 
         private InputType m_currentInputType;
 
+        private bool m_multiplePlayers;
+
+        private IEnumerator m_switchCoroutine;
+
+        private void Start() {
+            var playerInput = GameObject.FindObjectsByType<PlayerInput>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+            var inputManager = GameObject.FindFirstObjectByType<PlayerInputManager>();
+            
+            inputManager.onPlayerJoined += input => {
+                Debug.Log("Player joined");
+                m_multiplePlayers = true;
+                m_switchCoroutine = SwitchTooltips();
+                StartCoroutine(m_switchCoroutine);
+            };
+            inputManager.onPlayerLeft += input => {
+                if (inputManager.playerCount == 1) m_multiplePlayers = false;
+            };
+            
+            foreach (var input in playerInput) {
+                input.controlsChangedEvent.AddListener(OnInputSwitch);
+                m_currentInputDevice = input.currentControlScheme;
+            }
+        }
+
         private void OnEnable() {
             m_spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
             m_animator = gameObject.GetComponent<Animator>();
-            m_currentInputDevice = GameObject.FindFirstObjectByType<PlayerInputRouter>();
+            
             m_spriteRenderer.enabled = false;
             m_animator.enabled = false;
             m_config = Resources.Load<TooltipViewConfig>("TooltipSettings");
-
-            var playerInput = GameObject.FindFirstObjectByType<PlayerInput>();
-            if (playerInput != null) playerInput.controlsChangedEvent.AddListener(OnInputSwitch);
         }
 
         private void OnDisable() {
             var playerInput = GameObject.FindFirstObjectByType<PlayerInput>();
+            if (m_switchCoroutine != null) StopCoroutine(m_switchCoroutine);
+            m_switchCoroutine = null;
             if (playerInput != null) playerInput.controlsChangedEvent.RemoveListener(OnInputSwitch);
         }
 
         private void OnInputSwitch(PlayerInput input) {
 
             if (m_currentInputType != InputType.None) {
+                m_currentInputDevice = input.currentControlScheme;
                 ShowTooltip(m_currentInputType);
             }
         }
@@ -66,6 +91,11 @@ namespace Input {
 
             if (!showTooltips) return;
 
+            if (m_multiplePlayers && m_switchCoroutine == null) {
+                m_switchCoroutine = SwitchTooltips();
+                StartCoroutine(m_switchCoroutine);
+            }
+            
             if (inputType == InputType.Interact) {
                 inputType = CheckForDistantInteraction();
             }
@@ -85,6 +115,8 @@ namespace Input {
         public void HideTooltip() {
             m_spriteRenderer.enabled = false;
             m_animator.enabled = false;
+            if (m_switchCoroutine != null) StopCoroutine(m_switchCoroutine);
+            m_switchCoroutine = null;
             m_currentInputType = InputType.None;
         }
 
@@ -114,8 +146,7 @@ namespace Input {
             
             foreach (var obj in list) {
                 if (obj.InputType.Equals(type)) {
-                    switch (m_currentInputDevice.CurrentControlScheme) {
-                
+                    switch (m_currentInputDevice) {
                         case "Keyboard":
                             return obj.KeyboardSprite;
                         case "Gamepad":
@@ -126,6 +157,17 @@ namespace Input {
             }
 
             return sprite;
+        }
+
+        private IEnumerator SwitchTooltips() {
+            
+            while (m_multiplePlayers) {
+                yield return new WaitForSeconds(1.4f);
+                m_currentInputDevice = m_currentInputDevice.Equals("Keyboard") ? "Gamepad" : "Keyboard";
+                ShowTooltip(m_currentInputType);
+            }
+
+            yield return null;
         }
 
     }

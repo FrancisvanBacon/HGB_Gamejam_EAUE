@@ -1,0 +1,358 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2121051962219678385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3532470441296607945}
+  - component: {fileID: 7420518337834394497}
+  - component: {fileID: 4698672319505257912}
+  m_Layer: 0
+  m_Name: PlayerController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3532470441296607945
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121051962219678385}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.4719524, y: -0.6509838, z: -0.01517764}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7420518337834394497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121051962219678385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 09ee071d3ac364642b812cc82863053b, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4698672319505257912}
+        m_TargetAssemblyTypeName: Input.PlayerInputRouter, Assembly-CSharp
+        m_MethodName: DeviceChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4698672319505257912}
+        m_TargetAssemblyTypeName: Input.PlayerInputRouter, Assembly-CSharp
+        m_MethodName: MoveCharacter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5d2ff1af-e075-4cb9-8b7c-97e6ef4ace57
+    m_ActionName: 'Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/XInputControllerWindows1/leftStick]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4698672319505257912}
+        m_TargetAssemblyTypeName: Input.PlayerInputRouter, Assembly-CSharp
+        m_MethodName: LookCharacter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 05e16452-e552-46ae-98a5-037b60fa22da
+    m_ActionName: 'Player/Look[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow,/XInputControllerWindows1/rightStick]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4698672319505257912}
+        m_TargetAssemblyTypeName: Input.PlayerInputRouter, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a63caf3c-fda4-46c2-8b86-d5acf86b4535
+    m_ActionName: 'Player/Interact[/Keyboard/f,/XInputControllerWindows1/rightTrigger,/Mouse/rightButton,/XInputControllerWindows1/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4698672319505257912}
+        m_TargetAssemblyTypeName: Input.PlayerInputRouter, Assembly-CSharp
+        m_MethodName: DropItem
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 276d8f80-2f18-43b3-85a7-d462894485f1
+    m_ActionName: 'Player/DropItem[/Keyboard/c,/XInputControllerWindows1/buttonEast]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4698672319505257912}
+        m_TargetAssemblyTypeName: Input.PlayerInputRouter, Assembly-CSharp
+        m_MethodName: UseItem
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e7444619-bb4c-4826-82fc-1a4d7fc6210f
+    m_ActionName: 'Player/UseItem[/Mouse/press,/XInputControllerWindows1/leftTrigger,/Keyboard/space,/XInputControllerWindows1/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c4bf60ac-1678-45b4-8e43-da82e218a1f1
+    m_ActionName: 'Player/Pause[/Keyboard/escape,/Keyboard/p,/XInputControllerWindows1/start,/XInputControllerWindows1/select]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4698672319505257912}
+        m_TargetAssemblyTypeName: Input.PlayerInputRouter, Assembly-CSharp
+        m_MethodName: SwitchToJester
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3fb7809e-2972-4f07-b8be-fe3d4541d392
+    m_ActionName: 'Player/SwitchToJester[/Keyboard/1,/XInputControllerWindows1/dpad/left]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4698672319505257912}
+        m_TargetAssemblyTypeName: Input.PlayerInputRouter, Assembly-CSharp
+        m_MethodName: SwitchToWarrior
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 331eae7c-543b-4394-9c75-d7443a308866
+    m_ActionName: 'Player/SwitchToWarrior[/Keyboard/2,/XInputControllerWindows1/dpad/up]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4698672319505257912}
+        m_TargetAssemblyTypeName: Input.PlayerInputRouter, Assembly-CSharp
+        m_MethodName: SwitchToHunter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 447f1325-4033-4b8b-8ca3-34943a5dff8c
+    m_ActionName: 'Player/SwitchToHunter[/Keyboard/3,/XInputControllerWindows1/dpad/right]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4698672319505257912}
+        m_TargetAssemblyTypeName: Input.PlayerInputRouter, Assembly-CSharp
+        m_MethodName: SwitchLastCharacter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b72e9ba8-9e08-4cd7-98f2-5937087ec06b
+    m_ActionName: 'Player/SwitchToLastUsed[/XInputControllerWindows1/dpad/down,/Keyboard/4]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4698672319505257912}
+        m_TargetAssemblyTypeName: Input.PlayerInputRouter, Assembly-CSharp
+        m_MethodName: SwitchNextCharacter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 49e1ab51-218f-4b59-862e-e493436353e1
+    m_ActionName: 'Player/SwitchToNext[/Keyboard/e,/XInputControllerWindows1/rightShoulder]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4698672319505257912}
+        m_TargetAssemblyTypeName: Input.PlayerInputRouter, Assembly-CSharp
+        m_MethodName: SwitchPrevCharacter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: bc6d5392-4bce-4fab-aa4a-af0082e17cf3
+    m_ActionName: 'Player/SwitchToPrevious[/Keyboard/q,/XInputControllerWindows1/leftShoulder]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4698672319505257912}
+        m_TargetAssemblyTypeName: Input.PlayerInputRouter, Assembly-CSharp
+        m_MethodName: SwitchCameraMode
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f8626d08-18cc-40bc-a475-07d15241a966
+    m_ActionName: 'Player/SwitchCameraMode[/Keyboard/tab]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4698672319505257912}
+        m_TargetAssemblyTypeName: Input.PlayerInputRouter, Assembly-CSharp
+        m_MethodName: ZoomCameraIn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ae605440-493d-4180-ac69-b7a6e50d00dd
+    m_ActionName: 'Player/ZoomCameraIn[/Mouse/scroll/up]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4698672319505257912}
+        m_TargetAssemblyTypeName: Input.PlayerInputRouter, Assembly-CSharp
+        m_MethodName: ZoomCameraOut
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 33a51c27-2c6c-4eb8-8e10-ee01682bedfc
+    m_ActionName: 'Player/ZoomCameraOut[/Mouse/scroll/down]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4698672319505257912}
+        m_TargetAssemblyTypeName: Input.PlayerInputRouter, Assembly-CSharp
+        m_MethodName: UpdateMousePosition
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 46ca89f5-7e5d-4d29-875a-a9ffa568a051
+    m_ActionName: 'Player/MousePosition[/Mouse/position]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4698672319505257912}
+        m_TargetAssemblyTypeName: Input.PlayerInputRouter, Assembly-CSharp
+        m_MethodName: StartMouseAim
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f5d06953-3afd-4c5c-a2d8-409fae7dd11c
+    m_ActionName: 'Player/StartMouseLook[/Mouse/rightButton]'
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &4698672319505257912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121051962219678385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b9c2a06b5647cfa0bbb8389c34aa4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterControllers: []
+  m_currentCharacterController: {fileID: 0}
+  onCharacterSwitch:
+    m_PersistentCalls:
+      m_Calls: []
+  mainCamera: {fileID: 0}
+  onMainButtonClicked:
+    m_PersistentCalls:
+      m_Calls: []

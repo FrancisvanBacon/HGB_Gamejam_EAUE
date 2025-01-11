@@ -1,0 +1,28 @@
+﻿title: Level03_Intro
+tags:
+---
+<<SwitchBubble SpeechBubble "Warrior">>
+Warrior: This enemy seems to block the magic device opening our exit!
+<<SwitchBubble SpeechBubble "Jester">>
+Jester: oh noooo!! what are we to do, everything is lost!!!
+<<SwitchBubble SpeechBubble "Hunter">>
+Hunter: ... I have an idea
+Hunter: Jester, I need your lute.
+
+<<SwitchBubble SpeechBubble "Jester">>
+Jester: my lute?
+
+===
+
+title: Level03_End
+---
+
+<<SwitchBubble SpeechBubble "Warrior">>
+Warrior: Incredible marksmanship Hunter!
+Warrior: The enemy has no chance against our might!
+
+<<SwitchBubble SpeechBubble "Jester">>
+Jester: jmslnjmsl my lute is out of tuneeeee...
+
+<<InvokeEvent DialogueEventMapper "Level_End">>
+===

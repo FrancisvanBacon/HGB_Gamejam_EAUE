@@ -20,6 +20,8 @@ namespace Actors.Player {
 
         [SerializeField] private UnityEvent<ClassType, ItemType> onItemAction;
 
+        [SerializeField] private UnityEvent<ClassType, ItemType> onEquippedItemChange;
+
         public ClassType ClassType => classType;
         
         private bool m_isPLayerControlled = false;
@@ -143,11 +145,14 @@ namespace Actors.Player {
 
         public void PlayerDropItem() {
             if (m_equippedItem == null || LockInput) return;
-
+            
             if (TradeItemsWithPlayer()) return;
             
             m_equippedItem.Unequip();
+
             m_equippedItem = null;
+            
+            onEquippedItemChange.Invoke(this.classType, ItemType.None);
         }
 
         private EquippableItemObject DropItem() {
@@ -155,6 +160,8 @@ namespace Actors.Player {
             var item = m_equippedItem as EquippableItemObject;
             m_equippedItem.Unequip();
             m_equippedItem = null;
+            
+            onEquippedItemChange.Invoke(this.classType, ItemType.None);
             return item;
         }
         
@@ -164,8 +171,7 @@ namespace Actors.Player {
             }
             m_equippedItem = equippedItem;
             
-            string key = classType.ToString() + equippedItem.ItemType.ToString();
-            
+            onEquippedItemChange.Invoke(this.classType, m_equippedItem.ItemType);
         }
 
         public void PlayerInteract() {
@@ -247,6 +253,7 @@ namespace Actors.Player {
             else {
                 ChangeState(StateTypeToIState(defaultState));
             }
+            
         }
         
         public void AimBow(bool enable) {
@@ -274,6 +281,8 @@ namespace Actors.Player {
             else {
                 ChangeState(StateTypeToIState(defaultState));
             }
+            
+            Debug.Log(m_currentState);
         }
         
         protected override IEnumerator StateChange(IState newState) {
@@ -284,7 +293,7 @@ namespace Actors.Player {
             m_currentState.OnExit(this);
             m_currentState = newState;
             m_currentState.OnEnter(this);
-       }
+        }
 
         private bool TradeItemsWithPlayer() {
             if (m_equippedItem != null) {

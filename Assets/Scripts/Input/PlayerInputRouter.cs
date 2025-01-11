@@ -4,13 +4,14 @@ using Actors.Player;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using Yarn.Unity;
 
 namespace Input {
     [RequireComponent(typeof(PlayerInput))]
     public class PlayerInputRouter : MonoBehaviour {
 
-        [SerializeField] private List<CharacterStateController> characterControllers;
-        private CharacterStateController m_currentCharacterController;
+        [SerializeField] private List<CharacterStateController> characterControllers = new List<CharacterStateController>();
+        [SerializeField] private CharacterStateController m_currentCharacterController;
         
         private int m_currentIndex;
         private int m_lastIndex;
@@ -30,16 +31,51 @@ namespace Input {
 
         [SerializeField] private UnityEvent onMainButtonClicked;
 
-        private void Awake() {
-            m_currentCharacterController = characterControllers[0];
-            m_currentCharacterController.EnablePlayerControl();
-        }
+        private CameraTargetGroupController m_camController;
 
         private void Start() {
-            m_currentControlScheme = gameObject.GetComponent<PlayerInput>().currentControlScheme;
+        
+            if (characterControllers.Count == 0) {
+                var controllers = GameObject.FindObjectsByType<CharacterStateController>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+                foreach (var controller in controllers) {
+                    characterControllers.Add(controller);
+                }
+            }
+        
+            foreach (var controller in characterControllers) {
+                if (controller.IsPlayerControlled == false) {
+                    m_currentCharacterController = controller;
+                    break;
+                }
+            }
+
+            if (m_currentCharacterController != null) {
+                m_currentCharacterController.EnablePlayerControl();
+            }
+            
+            var playerInput = gameObject.GetComponent<PlayerInput>();
+            var playerManager = GameObject.FindFirstObjectByType<PlayerInputManager>();
+
+            if (PlayerPrefs.HasKey("ControlDevice") && playerManager.playerCount == 1) {
+                ConfigurePlayerOnePrefs(playerInput);
+            }
+            
+            m_currentControlScheme = playerInput.currentControlScheme;
 
             if (mainCamera == null) mainCamera = Camera.main;
+            
+            m_camController = GameObject.FindAnyObjectByType<CameraTargetGroupController>();
+            onCharacterSwitch?.AddListener(m_camController.OnSwitchAdjustCamera);
+            
+            LineView lineView = GameObject.FindAnyObjectByType<LineView>();
+            onMainButtonClicked?.AddListener(lineView.UserRequestedViewAdvancement);
+
+            DialogueRunner runner = GameObject.FindAnyObjectByType<DialogueRunner>();
+            runner.onNodeStart?.AddListener((string s) => LockCharacterInput(true));
+            runner.onNodeComplete?.AddListener((string s) => LockCharacterInput(false));
         }
+        
+        
 
         public void LockCharacterInput(bool lockInput) {
             m_lockCharacterInput = lockInput;
@@ -101,9 +137,13 @@ namespace Input {
         }
 
         public void UseItem(InputAction.CallbackContext context) {
-            
+
             if (context.performed && m_currentCharacterController != null) {
+            
+                onMainButtonClicked?.Invoke();
+                
                 if (m_lockCharacterInput) return;
+                
                 m_currentCharacterController.PlayerUseItem();
             }
         }
@@ -118,9 +158,11 @@ namespace Input {
         }
 
         public void Interact(InputAction.CallbackContext context) {
+        
+            if (m_lockCharacterInput) return;
             
             if (context.performed && m_currentCharacterController != null) {
-                onMainButtonClicked?.Invoke();
+                
                 if (m_lockCharacterInput) return;
                 m_currentCharacterController.PlayerInteract();
             }
@@ -166,6 +208,45 @@ namespace Input {
             if (m_lockCharacterInput) return;
         
             if (context.performed) SwitchByIndex(2);
+        }
+        
+        public void SwitchCameraMode(InputAction.CallbackContext context) {
+
+            if (context.performed) {
+                m_camController.SwitchCameraViews(context);
+            }
+            
+        }
+
+        public void ZoomCameraIn(InputAction.CallbackContext context) {
+
+            if (context.performed) {
+                m_camController.ZoomCameraIn(context);
+            }
+            
+        }
+        
+        public void ZoomCameraOut(InputAction.CallbackContext context) {
+
+            if (context.performed) {
+                m_camController.ZoomCameraOut(context);
+            }
+            
+        }
+
+        private void ConfigurePlayerOnePrefs(PlayerInput playerInput) {
+            playerInput.defaultControlScheme = PlayerPrefs.GetString("ControlDevice");
+
+            InputDevice device = PlayerPrefs.GetString("ControlDevice").Equals("Keyboard")
+                ? Keyboard.current
+                : Gamepad.current;
+
+            if (Gamepad.current == null) {
+                device = Keyboard.current;
+            } else if (Gamepad.current == null) {
+                device = Gamepad.current;
+            }
+            playerInput.SwitchCurrentControlScheme(PlayerPrefs.GetString("ControlDevice"), device);
         }
 
 #region CharacterSwitching
@@ -228,6 +309,8 @@ namespace Input {
             
             onCharacterSwitch?.Invoke();
         }
+
+        
 
 #endregion
         

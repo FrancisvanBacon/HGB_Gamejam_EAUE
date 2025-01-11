@@ -1,5 +1,49 @@
-﻿title: Level02
+﻿title: Level02_Intro
 tags:
 ---
+
+<<SwitchBubble SpeechBubble "Jester">>
+Jester: careful!!!
+Jester: this enemy is firing towards one of these magic devices!
+
+<<SwitchBubble SpeechBubble "Hunter">>
+Hunter: I can't activate the devices spell without getting shot in the back!
+
+<<SwitchBubble SpeechBubble "Warrior">>
+Warrior: Fear not friends!
+Warrior: My mighty shield can block even these otherworldly arrows!
+
+<<SwitchBubble SpeechBubble "Hunter">>
+Hunter: Are you sure?
+
+<<SwitchBubble SpeechBubble "Warrior">>
+Warrior: I am confident!
+
+===
+
+title: Level02_End
+---
+
+<<SwitchBubble SpeechBubble "Hunter">>
+Hunter: Thanks back there...
+Hunter: I guess
+
+<<SwitchBubble SpeechBubble "Warrior">>
+Warrior: You are most welcome!
+
+<<SwitchBubble SpeechBubble "Jester">>
+Jester: hihihuhu I was sure Warrior was going to get vaporized
+Jester: what an amazing dis-BLAZE of your skills!
+
+<<SwitchBubble SpeechBubble "Hunter">>
+Hunter: ...
+
+<<SwitchBubble SpeechBubble "Warrior">>
+Warrior: ...
+
+<<SwitchBubble SpeechBubble "Narrator">>
+Narrator: ...
+
+<<InvokeEvent DialogueEventMapper "Level_End">>
 
 ===
